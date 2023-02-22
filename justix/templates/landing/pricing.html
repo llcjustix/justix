@@ -1,0 +1,16 @@
+{% autoescape off %}
+{% for price in prices %}
+
+<div class="col-lg-3 mt-3" data-aos="fade-up" data-aos-delay="100">
+    <div class="box">
+        <h3>{{price.stack}}</h3>
+        <h4>{{price.price}}</h4>
+        <ul>
+            {{price.skills}}
+        </ul>
+    </div>
+</div>
+
+
+{% endfor %}
+{% endautoescape %}
