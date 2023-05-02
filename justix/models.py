@@ -31,6 +31,7 @@ class Team(models.Model):
     full_name = models.CharField(max_length=100, verbose_name='Фамилия и имя')
     image = models.ImageField(upload_to='media', blank=True, verbose_name='Фото')
     position = models.CharField(max_length=100, verbose_name='Должность', blank=True)
+    description = models.TextField(verbose_name='подробно', blank=True)
     twitter = models.CharField(max_length=255, verbose_name='Твиттер', blank=True)
     facebook = models.CharField(max_length=255, verbose_name='Фейзбук', blank=True)
     instagram = models.CharField(max_length=255, verbose_name='Инстаграм', blank=True)
