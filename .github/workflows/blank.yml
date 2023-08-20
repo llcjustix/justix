@@ -42,4 +42,4 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: docker pull jvmshid/justix:latest && docker run -it -p 8000:8000 jvmshid/justix
