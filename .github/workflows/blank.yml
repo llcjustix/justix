@@ -31,16 +31,15 @@ jobs:
           context: .
           push: true
           tags: jvmshid/justix:latest
+
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-
-    - uses: alex-ac/github-action-ssh-docker-compose@master
-      name: Docker-Compose Remote Deployment
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@v1.0.0
       with:
-        ssh_host: 195.158.27.187
-        ssh_port: 51002
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-        ssh_user: ${{ secrets.SSH_USER }}
-        docker_compose_prefix: justix
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.PORT }}
+        script: whoami
