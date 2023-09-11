@@ -41,6 +41,6 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        key: ${{ secrets.SSH_PRIVATE_KEY2 }}
         port: ${{ secrets.PORT }}
         script: docker pull jvmshid/justix:latest && docker rm -f justix && docker run -d -p 8000:8000 --name justix jvmshid/justix
