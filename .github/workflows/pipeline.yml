@@ -43,4 +43,4 @@ jobs:
         username: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.PORT }}
-        script: docker pull jvmshid/justix:latest && docker rm -f justix && docker run -d -p 8000:8000 --name justix jvmshid/justix
+        script: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }} && docker pull jvmshid/justix:latest && docker rm -f justix && docker run -d -p 8000:8000 --name justix jvmshid/justix
