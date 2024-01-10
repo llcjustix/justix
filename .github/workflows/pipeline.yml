@@ -46,4 +46,4 @@ jobs:
         script: |
           docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }} \
           && docker pull jvmshid/justix:latest && docker rm -f justix \
-          && docker run --restart=always --network academy -d -p 8000:8000 --name justix jvmshid/justix
+          && docker run -e TZ=Asia/Tashkent --restart=always --network academy -d -p 8000:8000 --name justix jvmshid/justix
