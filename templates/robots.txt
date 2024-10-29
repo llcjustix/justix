@@ -1,2 +1,6 @@
-User-Agent: *
-Allowed:/
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Allow: /private/allowed-page.html
+
+Sitemap: https://www.justix.uz/sitemap.xml
