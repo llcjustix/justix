@@ -26,12 +26,13 @@ urlpatterns = [
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
+    path('googledb8b253f021793de.html', TemplateView.as_view(template_name="googledb8b253f021793de.html"))
 ]
 
 if settings.DEBUG:
     import debug_toolbar
+
     # urlpatterns = [
     #          path('__debug__/', include('debug_toolbar.urls')),
     # ]
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
