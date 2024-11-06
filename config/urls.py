@@ -27,7 +27,8 @@ urlpatterns = [
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
     ),
     path('googledb8b253f021793de.html', TemplateView.as_view(template_name="googledb8b253f021793de.html")),
-    path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml"))
+    path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml")),
+    path('favicon.png', TemplateView.as_view(template_name="favicon.png")),
 ]
 
 if settings.DEBUG:
