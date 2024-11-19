@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-6$@yr%or=-gex1k95%cv0ubddd&xr+777y$c9umxijxun8t(ku
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['justix.uz', 'localhost', '127.0.0.1', '195.158.27.187:443']
+ALLOWED_HOSTS = ['www.justix.uz', 'justix.uz', 'localhost', '127.0.0.1', '195.158.27.187:443']
 # ALLOWED_HOSTS = []
 
 # Application definition
