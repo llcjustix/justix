@@ -9,8 +9,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        black: "#000",
+        white: "#fff",
+        gray: {
+          DEFAULT: "#424242",
+          light: "rgb(243 244 246)",
+          dark: "#282829",
+        },
       },
     },
   },
