@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  }
-}
-
 * {
   padding: 0;
   margin: 0;
