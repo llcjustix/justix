@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack -p 5736",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,7 +15,8 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "remixicon": "^4.6.0",
-    "remixicon-react": "^1.0.0"
+    "remixicon-react": "^1.0.0",
+    "swiper": "^11.2.1"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
