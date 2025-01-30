@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import clsx from "clsx";
 import "remixicon/fonts/remixicon.css";
+import GlobalProvider from "./global-provider";
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
@@ -37,7 +38,9 @@ const RootLayout = ({
   children: React.ReactNode;
 }>) => (
   <html lang="en">
-    <body className={clsx(manrope.className)}>{children}</body>
+    <body className={clsx(manrope.className)}>
+      <GlobalProvider>{children}</GlobalProvider>
+    </body>
   </html>
 );
 

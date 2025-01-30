@@ -26,6 +26,7 @@ module.exports = {
           DEFAULT: "#424242",
           light: "rgb(243 244 246)",
           dark: "#282829",
+          "secondary-text": "#7D8387",
         },
       },
     },

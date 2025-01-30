@@ -1,6 +1,7 @@
 import Header from "@/components/header";
-import ArrowRightUpLineIcon from "remixicon-react/ArrowRightUpLineIcon";
 import ClientsSlider from "@/components/clients-slider/clients-slider";
+import ChatButton from "@/app/(home)/components/chat-button";
+import SuccessStories from "./components/success-stories";
 
 const Home = () => (
   <main>
@@ -17,18 +18,17 @@ const Home = () => (
             We are your trusted development partner with just one goal in focus to build products
             that generate a lasting, profitable impact.
           </p>
-          <button
-            type="button"
-            className="w-[176px] h-[176px] rounded-full flex items-center justify-center flex-col gap-2 text-xl bg-gray-dark hover:bg-black shadow-2xl shadow-gray-dark hover:shadow-black transition ease-in-out duration-150 text-white
-          p-2 absolute -bottom-36 -right-36"
-          >
-            <ArrowRightUpLineIcon size={36} />
-            Let's Discuss Your Idea
-          </button>
+          <ChatButton />
         </div>
       </div>
-      <ClientsSlider />
+      <div className="border-b border-gray-300">
+        <ClientsSlider />
+      </div>
     </div>
+    <div className="my-10" />
+    <section className="container">
+      <SuccessStories />
+    </section>
   </main>
 );
 

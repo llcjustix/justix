@@ -10,14 +10,17 @@ const sizes = {
 const colors = {
   black: "bg-black text-white",
   white: "bg-white text-black",
+  gray: "bg-gray-light text-black",
 };
 
 interface ButtonProps {
   children: React.ReactNode;
   type?: "button" | "submit" | "reset";
   rounded?: boolean;
+  fullWidth?: boolean;
   size?: keyof typeof sizes;
   color?: keyof typeof colors;
+  onClick?: () => void;
 }
 
 const Button = ({
@@ -26,15 +29,25 @@ const Button = ({
   size = "medium",
   color = "black",
   rounded = false,
+  fullWidth = false,
+  onClick,
 }: ButtonProps) => (
   <button
     type={type}
     className={clsx(
       "px-2 py-1 font-medium text-base",
+      fullWidth && "w-full",
       rounded ? "rounded-3xl" : "rounded-xl",
       sizes[size],
       colors[color]
     )}
+    onClick={(e) => {
+      e.stopPropagation();
+      e.stopPropagation();
+      if (onClick) {
+        onClick();
+      }
+    }}
   >
     {children}
   </button>
