@@ -5,7 +5,7 @@ import SuccessStories from "./components/success-stories";
 const Home = () => (
   <main>
     <div className="h-screen flex flex-col">
-      <div className="container">
+      <div className="container fixed inset-0">
         <Header />
       </div>
       <div className="container flex-1 flex flex-col items-center justify-center">

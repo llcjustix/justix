@@ -11,7 +11,8 @@ const categories = ["AI Solutions", "Customer Software", "Mobile App", "Web App"
 
 const schema = yup.object({
   category: yup.string(),
-  name: yup.string().required(),
+  firstname: yup.string().required(),
+  lastname: yup.string().required(),
   email: yup.string().email().required(),
   phone: yup.string().required(),
   message: yup.string().required(),
@@ -67,8 +68,11 @@ const Chat = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-y-4 gap-x-2">
-          <div className="col-span-2">
-            <Input placeholder="Name" {...register("name")} />
+          <div className="col-span-1">
+            <Input placeholder="Firstname" {...register("firstname")} />
+          </div>
+          <div className="col-span-1">
+            <Input placeholder="Lastname" {...register("lastname")} />
           </div>
           <div className="col-span-1">
             <Input placeholder="Email" {...register("email")} />
