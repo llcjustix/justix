@@ -8,7 +8,7 @@ const sizes = {
 };
 
 const colors = {
-  black: "bg-black text-white",
+  black: "bg-black text-white hover:bg-gray-dark",
   white: "bg-white text-black",
   gray: "bg-gray-light text-black",
 };
@@ -35,7 +35,7 @@ const Button = ({
   <button
     type={type}
     className={clsx(
-      "px-2 py-1 font-medium text-base",
+      "px-2 py-1 font-medium text-base active:translate-y-px hover:brightness-95 transition-all duration-200",
       fullWidth && "w-full",
       rounded ? "rounded-3xl" : "rounded-xl",
       sizes[size],

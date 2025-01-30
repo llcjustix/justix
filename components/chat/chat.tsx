@@ -5,6 +5,7 @@ import clsx from "clsx";
 import Input from "@/components/input";
 import Button from "@/components/button";
 import Link from "next/link";
+import Textarea from "@/components/textarea";
 
 const categories = ["AI Solutions", "Customer Software", "Mobile App", "Web App"];
 
@@ -76,7 +77,7 @@ const Chat = () => {
             <Input placeholder="Phone" {...register("phone")} />
           </div>
           <div className="col-span-2">
-            <Input placeholder="Message" {...register("message")} />
+            <Textarea placeholder="Message" {...register("message")} />
           </div>
           <div className="col-span-2">
             <Button type="submit" color="gray" fullWidth rounded>

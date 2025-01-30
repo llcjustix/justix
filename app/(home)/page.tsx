@@ -1,6 +1,5 @@
 import Header from "@/components/header";
-import ClientsSlider from "@/components/clients-slider/clients-slider";
-import ChatButton from "@/app/(home)/components/chat-button";
+import ChatButton from "./components/chat-button";
 import SuccessStories from "./components/success-stories";
 
 const Home = () => (
@@ -20,9 +19,6 @@ const Home = () => (
           </p>
           <ChatButton />
         </div>
-      </div>
-      <div className="border-b border-gray-300">
-        <ClientsSlider />
       </div>
     </div>
     <div className="my-10" />
