@@ -27,7 +27,7 @@ const Header = () => {
       case "services":
         return <HeaderServicesBody />;
       default:
-        return <div className="container">{link}</div>;
+        return link;
     }
   };
 
@@ -45,9 +45,9 @@ const Header = () => {
               </PopoverButton>
               <PopoverPanel
                 transition
-                className="w-full h-fit py-5 bg-white shadow-xl shadow-black-shadow fixed top-[68px] left-0"
+                className="w-full h-hit py-5 bg-white shadow-xl shadow-black-shadow fixed top-[68px] left-0"
               >
-                <div className="container">{renderPopover(link)}</div>
+                <div className="container min-h-full">{renderPopover(link)}</div>
               </PopoverPanel>
             </Popover>
           ))}

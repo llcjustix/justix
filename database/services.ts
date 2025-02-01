@@ -7,7 +7,18 @@ export const servicesDatabase = [
     ],
   },
   {
-    title: "Web and MVP Development",
+    title: "Blockchain",
+    children: [
+      { title: "NFT Development", link: "/nft-development" },
+      { title: "Web3 Development", link: "/web3-development" },
+      {
+        title: "DApp Development",
+        link: "/dapp-development",
+      },
+    ],
+  },
+  {
+    title: "Web and MVP",
     children: [
       { title: "Web Development", link: "/web-development" },
       {
@@ -23,17 +34,6 @@ export const servicesDatabase = [
       { title: "Android App Development", link: "/android-app-development" },
       { title: "Ecommerce App Development", link: "/ecommerce-app-development" },
       { title: "Enterprise App Development", link: "/enterprise-app-development" },
-    ],
-  },
-  {
-    title: "Blockchain Development",
-    children: [
-      { title: "NFT Development", link: "/nft-development" },
-      { title: "Web3 Development", link: "/web3-development" },
-      {
-        title: "DApp Development",
-        link: "/dapp-development",
-      },
     ],
   },
 ];
