@@ -1,3 +1,5 @@
+import BlockchainIcon from "@/assets/icons/blockchain";
+import FlutterIcon from "@/assets/icons/flutter";
 import GoLangIcon from "@/assets/icons/golang";
 import JavaIcon from "@/assets/icons/java";
 import NextJSIcon from "@/assets/icons/nextjs";
@@ -21,5 +23,13 @@ export const technologiesDatabase = [
   {
     title: "Java",
     icon: <JavaIcon />,
+  },
+  {
+    title: "Blockchain",
+    icon: <BlockchainIcon />,
+  },
+  {
+    title: "Flutter",
+    icon: <FlutterIcon />,
   },
 ];

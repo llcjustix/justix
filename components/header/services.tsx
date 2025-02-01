@@ -1,20 +1,22 @@
-import { RiArrowRightLine } from "@remixicon/react";
+import { RiArrowRightLongLine } from "@remixicon/react";
 import { servicesDatabase } from "@/database/services";
 import Link from "next/link";
 import { technologiesDatabase } from "@/database/technologies";
 
 const HeaderServicesBody = () => (
-  <div className="grid grid-cols-[auto,1px,auto] gap-5 w-full">
+  <div className="grid grid-cols-[200px,1px,auto] gap-5 w-full">
     <div className="h-full flex flex-col justify-between">
-      <div className="flex-1 flex justify-between gap-4">
+      <div className="flex items-center justify-between gap-4">
         <h2 className="text-2xl font-semibold">Services</h2>
-        <RiArrowRightLine size={24} />
+        <RiArrowRightLongLine size={24} />
       </div>
       <div className="flex flex-col gap-2">
         <h3 className="text-base font-medium">Technologies</h3>
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-x-2 gap-y-3 flex-wrap justify-between">
           {technologiesDatabase.map((technology) => (
-            <div key={technology.title}>{technology.icon}</div>
+            <div key={technology.title} aria-label={technology.title}>
+              {technology.icon}
+            </div>
           ))}
         </div>
       </div>

@@ -9,12 +9,16 @@ import { useState } from "react";
 import clsx from "clsx";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
-const HeaderServicesBody = dynamic(() => import("@/components/header/services"));
+const HeaderServicesBody = dynamic(() => import("./services"));
+const HeaderSolutionBody = dynamic(() => import("./solution"));
+const HeaderCompanyBody = dynamic(() => import("./company"));
 
 const navLinks = ["services", "solution", "work", "company", "contact"];
 
 const Header = () => {
+  const { push } = useRouter();
   const { toggleChat } = useSettingsStore();
   const [showPhone, setShowPhone] = useState(false);
 
@@ -26,6 +30,10 @@ const Header = () => {
     switch (link) {
       case "services":
         return <HeaderServicesBody />;
+      case "solution":
+        return <HeaderSolutionBody />;
+      case "company":
+        return <HeaderCompanyBody />;
       default:
         return link;
     }
@@ -40,7 +48,16 @@ const Header = () => {
         <nav className="flex items-center gap-6">
           {navLinks.map((link) => (
             <Popover key={link}>
-              <PopoverButton className="capitalize text-sm font-semibold hover:text-gray focus:outline-none">
+              <PopoverButton
+                className="capitalize text-sm font-semibold hover:text-gray focus:outline-none"
+                onClick={(e) => {
+                  if (link === "work" || link === "contact") {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    push(`/${link}`);
+                  }
+                }}
+              >
                 {link}
               </PopoverButton>
               <PopoverPanel
