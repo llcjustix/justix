@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ArrowRightLineIcon from "remixicon-react/ArrowRightLineIcon";
+import { RiArrowRightLine } from "@remixicon/react";
 
 const SuccessStories = () => (
   <div>
@@ -10,7 +10,7 @@ const SuccessStories = () => (
         className="flex items-center gap-2 text-xl hover:underline transform transition ease-in-out duration-300"
       >
         More case studies
-        <ArrowRightLineIcon className="w-[20px] h-[20px]" />
+        <RiArrowRightLine className="w-[20px] h-[20px]" />
       </Link>
     </div>
   </div>

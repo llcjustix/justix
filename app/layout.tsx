@@ -3,7 +3,6 @@ import { Manrope } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import clsx from "clsx";
-import "remixicon/fonts/remixicon.css";
 import GlobalProvider from "./global-provider";
 
 const manrope = Manrope({

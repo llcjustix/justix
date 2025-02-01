@@ -3,11 +3,11 @@
 import Logo from "@/components/logo/logo";
 import Link from "next/link";
 import Button from "@/components/button";
-import PhoneFillIcon from "remixicon-react/PhoneFillIcon";
+import { RiPhoneFill } from "@remixicon/react";
 import useSettingsStore from "@/store/settings";
 import { useState } from "react";
 import clsx from "clsx";
-import { Popover } from "@headlessui/react";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import dynamic from "next/dynamic";
 
 const HeaderServicesBody = dynamic(() => import("@/components/header/services"));
@@ -32,7 +32,6 @@ const Header = () => {
   };
 
   return (
-    // <div className="border border-black">
     <div className="container bg-white">
       <div className="flex justify-between items-center py-4">
         <Link href="/">
@@ -40,24 +39,22 @@ const Header = () => {
         </Link>
         <nav className="flex items-center gap-6">
           {navLinks.map((link) => (
-            <Popover key={link} className="relative">
-              <Popover.Button
-                as="button"
-                className="capitalize text-sm font-semibold hover:text-gray focus:outline-none"
-              >
-                {/* <Link href={`/${link}`} className="capitalize text-sm font-semibold hover:text-gray"> */}
+            <Popover key={link}>
+              <PopoverButton className="capitalize text-sm font-semibold hover:text-gray focus:outline-none">
                 {link}
-                {/* </Link> */}
-              </Popover.Button>
-              <Popover.Panel className="fixed top-[70px] left-0 w-full bg-white py-5">
+              </PopoverButton>
+              <PopoverPanel
+                transition
+                className="w-full h-fit py-5 bg-white shadow-xl shadow-black-shadow fixed top-[68px] left-0"
+              >
                 <div className="container">{renderPopover(link)}</div>
-              </Popover.Panel>
+              </PopoverPanel>
             </Popover>
           ))}
         </nav>
         <div className="flex items-center gap-2">
           <button type="button" onClick={togglePhone}>
-            <PhoneFillIcon size={20} />
+            <RiPhoneFill size={20} />
           </button>
           <Link
             href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
@@ -74,7 +71,6 @@ const Header = () => {
         </div>
       </div>
     </div>
-    // </div>
   );
 };
 

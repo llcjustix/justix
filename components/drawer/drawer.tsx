@@ -1,6 +1,6 @@
 "use client";
 
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 import clsx from "clsx";
 import React, { Fragment } from "react";
 import CrossIcon from "@/assets/icons/cross";
@@ -42,9 +42,9 @@ const Drawer = ({
   color = "white",
   duration = 500,
 }: DrawerProps) => (
-  <Transition.Root show={open} as={Fragment}>
-    <Dialog as="div" className="relative z-10" onClose={onClose} unmount>
-      <Transition.Child
+  <Transition show={open} as={Fragment} unmount>
+    <Dialog as="div" className="z-10 fixed" onClose={onClose}>
+      <TransitionChild
         as={Fragment}
         enter="ease-in-out duration-2500"
         enterFrom="opacity-0"
@@ -54,7 +54,7 @@ const Drawer = ({
         leaveTo="opacity-0"
       >
         <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-      </Transition.Child>
+      </TransitionChild>
 
       <div className={clsx("fixed inset-0 overflow-hidden")}>
         <div className="absolute inset-0 overflow-hidden">
@@ -66,7 +66,7 @@ const Drawer = ({
               drawerPosition[position].height
             )}
           >
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter={`transform transition ease-in-out duration-${duration}`}
               enterFrom={drawerPosition[position].translateFrom}
@@ -75,12 +75,12 @@ const Drawer = ({
               leaveFrom={drawerPosition[position].translateTo}
               leaveTo={drawerPosition[position].translateFrom}
             >
-              <Dialog.Panel
-                className={`pointer-events-auto relative ${
+              <DialogPanel
+                className={`pointer-events-auto relative z-10 ${
                   drawerPosition[position].fullScreen ? "w-screen" : drawerPosition[position].width
                 } ${color === "black" ? "bg-black" : "bg-white"}`}
               >
-                <Transition.Child
+                <TransitionChild
                   as={Fragment}
                   enter={`ease-in-out duration-${duration}`}
                   enterFrom="opacity-0"
@@ -100,19 +100,19 @@ const Drawer = ({
                       <CrossIcon aria-hidden="true" size="24" />
                     </button>
                   </div>
-                </Transition.Child>
+                </TransitionChild>
                 <div
                   className={clsx("flex h-full flex-col overflow-y-auto", container && "container")}
                 >
                   <div className="relative flex-1">{children}</div>
                 </div>
-              </Dialog.Panel>
-            </Transition.Child>
+              </DialogPanel>
+            </TransitionChild>
           </div>
         </div>
       </div>
     </Dialog>
-  </Transition.Root>
+  </Transition>
 );
 
 export default Drawer;

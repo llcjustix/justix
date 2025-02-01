@@ -1,7 +1,7 @@
 "use client";
 
 import useSettingsStore from "@/store/settings";
-import ArrowRightUpLineIcon from "remixicon-react/ArrowRightUpLineIcon";
+import { RiArrowRightUpLine } from "@remixicon/react";
 
 const ChatButton = () => {
   const { toggleChat } = useSettingsStore();
@@ -12,7 +12,7 @@ const ChatButton = () => {
           p-2 active:translate-y-px absolute -bottom-36 -right-36"
       onClick={toggleChat}
     >
-      <ArrowRightUpLineIcon size={36} />
+      <RiArrowRightUpLine size={36} />
       Let's Discuss Your Idea
     </button>
   );
