@@ -19,7 +19,7 @@ const Technologies = () => {
         </p>
       </div>
       <div className="flex flex-wrap flex-col md:flex-row mt-8 md:mt-12 lg:mt-20 md:border-t border-gray-300">
-        <div className="md:border-r border-gray-300 md:pt-12 md:pr-12">
+        <div className="md:border-r border-gray-300 md:pt-12 md:pr-12 w-[25%]">
           <div className="flex flex-col gap-2">
             {categorisedTechnologiesDatabase.map((item) => (
               <button
@@ -27,9 +27,10 @@ const Technologies = () => {
                 key={item.title}
                 onClick={() => setCurrentType(item)}
                 className={clsx(
-                  "whitespace-nowrap md:whitespace-normal outline-none md:w-full md:rounded-full py-5 md:px-7 font-medium text-left text-xl",
-                  currentType.title === item.title &&
-                    "font-bold bg-gradient-to-r from-gray-300 to-white"
+                  "whitespace-nowrap md:whitespace-normal outline-none md:w-full md:rounded-full py-5 md:px-7 text-left text-xl",
+                  currentType.title === item.title
+                    ? "font-bold bg-gradient-to-r from-gray-300 to-white"
+                    : "font-medium"
                 )}
               >
                 {item.title}
@@ -48,7 +49,7 @@ const Technologies = () => {
                   <div
                     key={technology.title}
                     aria-label={technology.title}
-                    className="cursor-pointer md:w-52 lg:w-[215px] w-[150px] bg-gray-100 px-3.5 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] hover:bg-black text-black hover:text-white hover:shadow-lg hover:shadow-gray transition duration-100"
+                    className="cursor-pointer md:w-52 lg:w-[215px] w-[150px] bg-gray-100 px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] hover:bg-black text-black hover:text-white hover:shadow-md hover:shadow-gray transition duration-100"
                   >
                     <span className="font-normal md:text-lg text-sm">{technology.title}</span>
                   </div>

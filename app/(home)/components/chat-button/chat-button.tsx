@@ -3,7 +3,7 @@
 import useSettingsStore from "@/store/settings";
 import { RiArrowRightUpLine } from "@remixicon/react";
 
-const ChatButton = () => {
+export const ChatButton = () => {
   const { toggleChat } = useSettingsStore();
   return (
     <button
@@ -17,5 +17,3 @@ const ChatButton = () => {
     </button>
   );
 };
-
-export default ChatButton;

@@ -4,7 +4,7 @@ import clsx from "clsx";
 const sizes = {
   small: "px-3 py-1.5 text-xs",
   medium: "px-4 py-2 text-sm",
-  large: "px-4 py-3 text-lg",
+  large: "px-4 py-2 text-lg",
 };
 
 const colors = {

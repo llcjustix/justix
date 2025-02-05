@@ -2,6 +2,7 @@ import { RiArrowRightLongLine } from "@remixicon/react";
 import { servicesDatabase } from "@/database/services";
 import Link from "next/link";
 import { technologiesDatabase } from "@/database/technologies";
+import clsx from "clsx";
 
 const HeaderServicesBody = () => (
   <div className="grid grid-cols-[200px,1px,auto] gap-5 w-full">
@@ -31,9 +32,17 @@ const HeaderServicesBody = () => (
               <Link
                 key={child.link}
                 href={child.link}
-                className="flex items-center gap-2 hover:underline font-medium text-sm"
+                className={clsx(
+                  "flex items-center gap-2 hover:underline font-medium text-sm",
+                  child.title === "Web3 Development" ? "text-primary" : "text-black"
+                )}
               >
-                <span className="min-w-1 min-h-1 rounded-full bg-black" />
+                <span
+                  className={clsx(
+                    "min-w-1 min-h-1 rounded-full",
+                    child.title === "Web3 Development" ? "bg-primary" : "bg-black"
+                  )}
+                />
                 {child.title}
               </Link>
             ))}
