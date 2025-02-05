@@ -36,16 +36,16 @@ const Company = () => (
             <Link
               key={client.name}
               href={client.link}
-              className="h-[70px] w-[70px] flex items-center justify-center"
+              className="h-[100px] w-[100px] flex items-center justify-center"
               target="_blank"
             >
               <Image
                 src={client.img}
                 alt={client.name}
-                width={70}
-                height={70}
+                width={100}
+                height={100}
                 className="object-contain object-center"
-                sizes="70px"
+                sizes="100px"
               />
             </Link>
           ))}

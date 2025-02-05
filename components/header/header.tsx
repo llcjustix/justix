@@ -3,13 +3,14 @@
 import Logo from "@/components/logo/logo";
 import Link from "next/link";
 import Button from "@/components/button";
-import { RiPhoneFill } from "@remixicon/react";
+import { RiCustomerService2Fill } from "@remixicon/react";
 import useSettingsStore from "@/store/settings";
 import { useState } from "react";
 import clsx from "clsx";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
+import IconButton from "@/components/icon-button";
 
 const HeaderServicesBody = dynamic(() => import("./services"));
 const HeaderSolutionBody = dynamic(() => import("./solution"));
@@ -70,14 +71,14 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex items-center gap-2">
-          <button type="button" onClick={togglePhone}>
-            <RiPhoneFill size={20} />
-          </button>
+          <IconButton onClick={togglePhone} className="text-white">
+            <RiCustomerService2Fill size={20} />
+          </IconButton>
           <Link
             href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
             className={clsx(
-              "capitalize text-sm font-semibold hover:text-gray items-center gap-[2px] cursor-pointer transition-opacity duration-500",
-              showPhone ? "flex" : "hidden"
+              "capitalize text-sm font-semibold hover:text-gray items-center gap-[2px] cursor-pointer transition-all duration-200 h-5 overflow-hidden text-center",
+              showPhone ? "flex w-[124px] min-w-max" : "w-0 invisible"
             )}
           >
             {process.env.NEXT_PUBLIC_PHONE}

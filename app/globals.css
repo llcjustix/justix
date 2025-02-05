@@ -13,3 +13,7 @@
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.custom-button {
+  background: linear-gradient(to right, #d8f3dc, #ffffff);
+}

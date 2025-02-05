@@ -1,39 +1,55 @@
 export const servicesDatabase = [
   {
-    title: "AI and Big Data",
-    children: [
-      { title: "AI Development", link: "/ai-development" },
-      { title: "Big Data Development", link: "/big-data-development" },
-    ],
+    title: "AI",
+    children: [{ title: "AI Development", link: "/ai-development" }],
   },
   {
-    title: "Blockchain",
+    title: "Development",
     children: [
-      { title: "NFT Development", link: "/nft-development" },
       { title: "Web3 Development", link: "/web3-development" },
-      {
-        title: "DApp Development",
-        link: "/dapp-development",
-      },
-    ],
-  },
-  {
-    title: "Web and MVP",
-    children: [
       { title: "Web Development", link: "/web-development" },
       {
         title: "MVP Development",
         link: "/mvp-development",
       },
+      { title: "iOS App Development", link: "/ios-app-development" },
+      { title: "Android App Development", link: "/android-app-development" },
+      // { title: "Ecommerce App Development", link: "/ecommerce-app-development" },
+      // { title: "Enterprise App Development", link: "/enterprise-app-development" },
     ],
   },
   {
-    title: "Mobile Application",
+    title: "Unified Engineering",
     children: [
-      { title: "iOS App Development", link: "/ios-app-development" },
-      { title: "Android App Development", link: "/android-app-development" },
-      { title: "Ecommerce App Development", link: "/ecommerce-app-development" },
-      { title: "Enterprise App Development", link: "/enterprise-app-development" },
+      {
+        title: "MLOps",
+        link: "/mlops",
+      },
+      {
+        title: "DevOps",
+        link: "/devops",
+      },
+      {
+        title: "DevSecOps",
+        link: "/devsecops",
+      },
+    ],
+  },
+  {
+    title: "Others",
+    children: [
+      {
+        title: "UX/UI Design",
+        link: "/ux-ui-design",
+      },
+      {
+        title: "System/Business Analytics",
+        link: "/system-business-analytics",
+      },
+      {
+        title: "Product Management",
+        link: "/product-management",
+      },
     ],
   },
 ];

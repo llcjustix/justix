@@ -10,10 +10,6 @@ export const companyDatabase = [
         title: "Clients",
         link: "/company/clients",
       },
-      {
-        title: "Testimonials",
-        link: "/company/testimonials",
-      },
     ],
   },
 ];

@@ -83,7 +83,8 @@
     "no-restricted-exports": "off",
     "react/no-unescaped-entities": "off",
     "no-shadow": "off", // replaced by ts-eslint rule below
-    "@typescript-eslint/no-shadow": "error"
+    "@typescript-eslint/no-shadow": "error",
+    "no-bitwise": "off"
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
