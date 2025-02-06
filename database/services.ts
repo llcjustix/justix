@@ -1,19 +1,23 @@
 export const servicesDatabase = [
   {
-    title: "AI",
-    children: [{ title: "AI Development", link: "/ai-development" }],
+    title: "AI & Big Data",
+    children: [
+      { title: "AI Development", link: "/ai-development" },
+      { title: "Big Data", link: "/big-data" },
+    ],
   },
   {
     title: "Development",
     children: [
-      { title: "Web3 Development", link: "/web3-development" },
+      { title: "Web3.0 Development", link: "/web3-development" },
       { title: "Web Development", link: "/web-development" },
-      {
-        title: "MVP Development",
-        link: "/mvp-development",
-      },
-      { title: "iOS App Development", link: "/ios-app-development" },
-      { title: "Android App Development", link: "/android-app-development" },
+      { title: "Mobile Development", link: "/mobile-development" },
+      // {
+      //   title: "MVP Development",
+      //   link: "/mvp-development",
+      // },
+      // { title: "iOS App Development", link: "/ios-app-development" },
+      // { title: "Android App Development", link: "/android-app-development" },
       // { title: "Ecommerce App Development", link: "/ecommerce-app-development" },
       // { title: "Enterprise App Development", link: "/enterprise-app-development" },
     ],

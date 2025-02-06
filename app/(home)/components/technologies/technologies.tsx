@@ -29,7 +29,7 @@ const Technologies = () => {
                 className={clsx(
                   "whitespace-nowrap md:whitespace-normal outline-none md:w-full md:rounded-full py-5 md:px-7 text-left text-xl",
                   currentType.title === item.title
-                    ? "font-bold bg-gradient-to-r from-gray-300 to-white"
+                    ? "font-bold bg-gradient-to-r from-primary-light to-white"
                     : "font-medium"
                 )}
               >

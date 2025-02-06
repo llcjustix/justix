@@ -7,9 +7,9 @@ export const successStoriesDatabase = [
     websiteLink: "https://planix.uz/",
   },
   {
-    title: "Academy Justix",
+    title: "Justix Academy",
     description:
-      "Academy Justix is an Uzbek-language platform offering programming courses tailored for learners in Uzbekistan.",
+      "Justix Academy is an Uzbek-language platform offering programming courses tailored for learners in Uzbekistan.",
     link: "/success-stories/academy-justix",
     websiteLink: "https://academy.justix.uz/",
   },
