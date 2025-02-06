@@ -3,9 +3,15 @@
 import { useState } from "react";
 import { categorisedTechnologiesDatabase } from "@/database/technologies";
 import clsx from "clsx";
+import Modal from "@/components/modal";
+import { useModal } from "@/hooks/use-modal";
 
 const Technologies = () => {
+  const [isOpen, handleOpen, handleClose] = useModal();
   const [currentType, setCurrentType] = useState(categorisedTechnologiesDatabase[0]);
+  const [viewCategory, setViewCategory] = useState(
+    categorisedTechnologiesDatabase[0].categories[0]
+  );
   return (
     <>
       <div className="max-w-3xl xl:max-w-4xl pb-8 pt-14 md:pt-24 lg:pt-[10.5rem]">
@@ -24,13 +30,12 @@ const Technologies = () => {
             {categorisedTechnologiesDatabase.map((item) => (
               <button
                 type="button"
-                key={item.title}
+                key={item.id}
                 onClick={() => setCurrentType(item)}
                 className={clsx(
-                  "whitespace-nowrap md:whitespace-normal outline-none md:w-full md:rounded-full py-5 md:px-7 text-left text-xl",
-                  currentType.title === item.title
-                    ? "font-bold bg-gradient-to-r from-primary-light to-white"
-                    : "font-medium"
+                  "whitespace-nowrap md:whitespace-normal outline-none md:w-full rounded-full py-5 md:px-7 text-left text-xl",
+                  currentType.id === item.id ? "font-bold bg-gray-light" : "font-medium"
+                  // ? "font-bold bg-gradient-to-r from-primary to-white"
                 )}
               >
                 {item.title}
@@ -38,27 +43,59 @@ const Technologies = () => {
             ))}
           </div>
         </div>
-        <div className="pt-8 w-full md:w-8/12 lg:w-9/12 md:ps-12 lg:pb-[18px] flex flex-col gap-6">
+        <div className="pt-12 w-full md:w-8/12 lg:w-9/12 md:ps-12 lg:pb-[18px] flex flex-col gap-6">
           {currentType.categories.map((category) => (
-            <div key={category.title}>
+            <div key={category.id}>
               <h4 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
                 {category.title}
               </h4>
               <div className="flex flex-wrap gap-2 lg:gap-4">
-                {category.technologies.map((technology) => (
-                  <div
-                    key={technology.title}
+                {category.technologies.slice(0, 6).map((technology, index) => (
+                  <button
+                    type="button"
+                    key={technology.id}
                     aria-label={technology.title}
-                    className="cursor-pointer md:w-52 lg:w-[215px] w-[150px] bg-gray-100 px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] hover:bg-black text-black hover:text-white hover:shadow-md hover:shadow-gray transition duration-100"
+                    onClick={() => {
+                      if (index === 5 && category.technologies.length > 6) {
+                        setViewCategory(category);
+                        handleOpen();
+                      }
+                    }}
+                    className={clsx(
+                      "text-left md:w-52 lg:w-[215px] w-[150px] bg-gray-light px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] hover:bg-black text-black hover:text-white hover:shadow-md hover:shadow-gray transition duration-100",
+                      index === 5 && category.technologies.length > 6
+                        ? "bg-transparent hover:bg-transparent hover:text-black hover:shadow-none cursor-pointer"
+                        : "cursor-default "
+                    )}
                   >
-                    <span className="font-normal md:text-lg text-sm">{technology.title}</span>
-                  </div>
+                    <span className="font-normal md:text-lg text-sm">
+                      {index === 5 && category.technologies.length > 6 ? "..." : technology.title}
+                    </span>
+                  </button>
                 ))}
               </div>
             </div>
           ))}
         </div>
       </div>
+      <Modal isOpen={isOpen} onClose={handleClose} withCloseButton>
+        <div key={viewCategory.id} className="py-6 px-5">
+          <h4 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px] w-full">
+            {viewCategory.title}
+          </h4>
+          <div className="grid grid-cols-2 gap-4">
+            {viewCategory.technologies.map((technology) => (
+              <div
+                key={technology.id}
+                aria-label={technology.title}
+                className="cursor-default w-full bg-gray-light px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] hover:bg-black text-black hover:text-white hover:shadow-md hover:shadow-gray transition duration-100"
+              >
+                <span className="font-normal md:text-lg text-sm">{technology.title}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Modal>
     </>
   );
 };

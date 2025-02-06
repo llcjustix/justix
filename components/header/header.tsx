@@ -16,7 +16,7 @@ const HeaderServicesBody = dynamic(() => import("./services"));
 const HeaderSolutionBody = dynamic(() => import("./solution"));
 const HeaderCompanyBody = dynamic(() => import("./company"));
 
-const navLinks = ["services", "solution", "work", "company", "contact"];
+const navLinks = ["services", "solutions", "work", "company", "contact"];
 
 const Header = () => {
   const { push } = useRouter();
@@ -31,7 +31,7 @@ const Header = () => {
     switch (link) {
       case "services":
         return <HeaderServicesBody />;
-      case "solution":
+      case "solutions":
         return <HeaderSolutionBody />;
       case "company":
         return <HeaderCompanyBody />;
@@ -49,24 +49,31 @@ const Header = () => {
         <nav className="flex items-center gap-6">
           {navLinks.map((link) => (
             <Popover key={link}>
-              <PopoverButton
-                className="capitalize text-sm font-semibold hover:text-gray focus:outline-none"
-                onClick={(e) => {
-                  if (link === "work" || link === "contact") {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    push(`/${link}`);
-                  }
-                }}
-              >
-                {link}
-              </PopoverButton>
-              <PopoverPanel
-                transition
-                className="w-full h-hit py-5 bg-white shadow-xl shadow-black-shadow fixed top-[68px] left-0"
-              >
-                <div className="container min-h-full">{renderPopover(link)}</div>
-              </PopoverPanel>
+              {({ open }) => (
+                <>
+                  <PopoverButton
+                    className={clsx(
+                      "capitalize text-sm font-semibold hover:text-gray focus:outline-none",
+                      open && "text-primary hover:text-primary"
+                    )}
+                    onClick={(e) => {
+                      if (link === "work" || link === "contact") {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        push(`/${link}`);
+                      }
+                    }}
+                  >
+                    {link}
+                  </PopoverButton>
+                  <PopoverPanel
+                    transition
+                    className="w-full h-hit py-5 bg-white shadow-xl shadow-black-shadow fixed top-[68px] left-0"
+                  >
+                    <div className="container min-h-full">{renderPopover(link)}</div>
+                  </PopoverPanel>
+                </>
+              )}
             </Popover>
           ))}
         </nav>

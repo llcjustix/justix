@@ -25,22 +25,22 @@ const HeaderServicesBody = () => (
     <div className="w-[1px] bg-gray-300" />
     <div className="grid lg:grid-cols-4 grid-cols-3 gap-8 items-start justify-between">
       {servicesDatabase.map((service) => (
-        <div className="flex flex-col gap-3" key={service.title}>
+        <div className="flex flex-col gap-3" key={service.id}>
           <h3 className="font-semibold text-base">{service.title}</h3>
           <div className="flex flex-col gap-2">
             {service.children.map((child) => (
               <Link
-                key={child.link}
+                key={child.id}
                 href={child.link}
                 className={clsx(
                   "flex items-center gap-2 hover:underline font-medium text-sm",
-                  child.title === "Web3 Development" ? "text-primary" : "text-black"
+                  child.id === "web3" ? "text-primary" : "text-black"
                 )}
               >
                 <span
                   className={clsx(
                     "min-w-1 min-h-1 rounded-full",
-                    child.title === "Web3 Development" ? "bg-primary" : "bg-black"
+                    child.id === "web3" ? "bg-primary" : "bg-black"
                   )}
                 />
                 {child.title}

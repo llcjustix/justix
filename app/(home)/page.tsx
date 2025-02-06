@@ -45,6 +45,7 @@ const Home = () => (
     <section className="container">
       <ChatButton2 />
     </section>
+    <div className="my-20" />
   </main>
 );
 

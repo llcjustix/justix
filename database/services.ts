@@ -1,58 +1,69 @@
 export const servicesDatabase = [
   {
     title: "AI & Big Data",
+    link: "/ai-big-data",
+    id: "ai-big-data",
     children: [
-      { title: "AI Development", link: "/ai-development" },
-      { title: "Big Data", link: "/big-data" },
+      { title: "AI Development", link: "ai-big-data/?section=ai", id: "ai" },
+      { title: "Big Data", link: "ai-big-data/?section=big-data", id: "big-data" },
     ],
   },
   {
     title: "Development",
+    link: "/developent",
+    id: "development",
     children: [
-      { title: "Web3.0 Development", link: "/web3-development" },
-      { title: "Web Development", link: "/web-development" },
-      { title: "Mobile Development", link: "/mobile-development" },
-      // {
-      //   title: "MVP Development",
-      //   link: "/mvp-development",
-      // },
-      // { title: "iOS App Development", link: "/ios-app-development" },
-      // { title: "Android App Development", link: "/android-app-development" },
-      // { title: "Ecommerce App Development", link: "/ecommerce-app-development" },
-      // { title: "Enterprise App Development", link: "/enterprise-app-development" },
+      { title: "Web3.0 Development", link: "developent/?section=web3", id: "web3" },
+      {
+        title: "Cloud & Backend",
+        link: "developent/?section=cloud-backend",
+        id: "cloud-backend",
+      },
+      { title: "Web Development", link: "developent/?section=web", id: "web" },
+      { title: "Mobile Development", link: "developent/?section=mobile", id: "mobile" },
     ],
   },
   {
     title: "Unified Engineering",
+    link: "/unified-engineering",
+    id: "unified-engineering",
     children: [
       {
         title: "MLOps",
-        link: "/mlops",
+        link: "unified-engineering/?section=mlops",
+        id: "mlops",
       },
       {
         title: "DevOps",
-        link: "/devops",
+        link: "unified-engineering/?section=devops",
+        id: "devops",
       },
       {
         title: "DevSecOps",
-        link: "/devsecops",
+        link: "unified-engineering/?section=devsecops",
+        id: "devsecops",
       },
     ],
   },
   {
     title: "Others",
+    link: "/others",
+    id: "others",
     children: [
       {
         title: "UX/UI Design",
-        link: "/ux-ui-design",
+        link: "others/?section=ux-ui",
+        id: "ux-ui",
       },
       {
         title: "System/Business Analytics",
-        link: "/system-business-analytics",
+        link: "others/?section=system-business-analytics",
+        id: "system-business-analytics",
       },
       {
         title: "Product Management",
-        link: "/product-management",
+        link: "others/?section=product-management",
+        id: "product-management",
       },
     ],
   },

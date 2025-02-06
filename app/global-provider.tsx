@@ -3,8 +3,8 @@
 import useSettingsStore from "@/store/settings";
 import dynamic from "next/dynamic";
 import React from "react";
+import Drawer from "@/components/drawer";
 
-const Drawer = dynamic(() => import("@/components/drawer"));
 const Chat = dynamic(() => import("@/components/chat"));
 
 interface GlobalProviderProps extends React.PropsWithChildren {}
