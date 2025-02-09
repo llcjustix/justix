@@ -2,7 +2,7 @@ import clsx from "clsx";
 import React from "react";
 
 const colors = {
-  black: "bg-black text-white hover:bg-gray-dark",
+  black: "bg-black text-white hover:bg-primary",
   white: "bg-white text-black",
   gray: "bg-gray-light text-black",
 };

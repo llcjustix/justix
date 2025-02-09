@@ -8,7 +8,7 @@ const sizes = {
 };
 
 const colors = {
-  black: "bg-black text-white hover:bg-gray-dark",
+  black: "bg-black text-white hover:bg-primary",
   white: "bg-white text-black",
   gray: "bg-gray-light text-black",
 };

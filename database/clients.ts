@@ -1,11 +1,11 @@
 export const clientsDatabase = [
   {
-    img: "/img/texnopark.png",
+    img: "/img/partners/texnopark.png",
     name: "Texnopark",
     link: "https://texnopark.uz/",
   },
   {
-    img: "/img/ministryOfCulture.png",
+    img: "/img/partners/ministryOfCulture.png",
     name: "Ministry of Culture",
     link: "https://gov.uz/en/madaniyat",
   },

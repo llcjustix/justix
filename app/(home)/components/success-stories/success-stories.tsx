@@ -6,10 +6,10 @@ import clsx from "clsx";
 const SuccessStories = () => (
   <div>
     <div className="flex items-end justify-between">
-      <h2 className="text-[52px] font-bold">Our success stories</h2>
+      <h2 className="text-[52px] font-bold text-black">Our success stories</h2>
       <Link
         href="/work"
-        className="flex items-center gap-2 text-xl hover:underline transform transition ease-in-out duration-300"
+        className="flex items-center gap-2 text-xl text-black hover:text-primary transform transition ease-in-out duration-200"
       >
         More case studies
         <RiArrowRightLine className="w-[20px] h-[20px]" />

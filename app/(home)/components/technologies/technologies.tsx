@@ -62,10 +62,10 @@ const Technologies = () => {
                       }
                     }}
                     className={clsx(
-                      "text-left md:w-52 lg:w-[215px] w-[150px] bg-gray-light px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] hover:bg-black text-black hover:text-white hover:shadow-md hover:shadow-gray transition duration-100",
+                      "text-left md:w-52 lg:w-[215px] w-[150px] px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] text-black transition duration-100",
                       index === 5 && category.technologies.length > 6
-                        ? "bg-transparent hover:bg-transparent hover:text-black hover:shadow-none cursor-pointer"
-                        : "cursor-default "
+                        ? "bg-transparent hover:bg-transparent hover:shadow-none cursor-pointer"
+                        : "cursor-default bg-gray-light hover:text-white hover:bg-black hover:shadow-md hover:shadow-gray"
                     )}
                   >
                     <span className="font-normal md:text-lg text-sm">
