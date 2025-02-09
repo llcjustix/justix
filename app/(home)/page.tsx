@@ -1,4 +1,5 @@
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import { ChatButton, ChatButton2 } from "./components/chat-button";
 import SuccessStories from "./components/success-stories";
 import Technologies from "./components/technologies";
@@ -37,6 +38,7 @@ const Home = () => (
       <ChatButton2 />
     </section>
     <div className="my-20" />
+    <Footer />
   </main>
 );
 

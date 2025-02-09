@@ -69,7 +69,7 @@ const Header = () => {
       className={clsx(
         "bg-white transition-transform duration-300",
         isVisible ? "translate-y-0" : "-translate-y-full",
-        hasBorder && "border-b border-gray-light"
+        hasBorder && "border-b border-gray-300"
       )}
     >
       <div className="container">

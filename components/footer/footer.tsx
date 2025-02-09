@@ -1,0 +1,141 @@
+"use client";
+
+import Button from "@/components/button";
+import useSettingsStore from "@/store/settings";
+import { servicesDatabase } from "@/database/services";
+import Link from "next/link";
+import Logo from "@/components/logo/logo";
+import { RiFacebookFill, RiInstagramLine, RiLinkedinFill, RiTwitterXLine } from "@remixicon/react";
+
+const socialMedia = [
+  {
+    id: "linkedin",
+    link: "linkedin.com",
+    icon: <RiLinkedinFill size={24} />,
+  },
+  {
+    id: "x",
+    link: "x.com",
+    icon: <RiTwitterXLine size={24} />,
+  },
+  {
+    id: "facebook",
+    link: "facebook.com",
+    icon: <RiFacebookFill size={24} />,
+  },
+  {
+    id: "instagram",
+    link: "instagram.com",
+    icon: <RiInstagramLine size={24} />,
+  },
+];
+
+const Footer = () => {
+  const { toggleChat } = useSettingsStore();
+  return (
+    <footer>
+      <div className="pt-14 mx-auto text-center max-w-4xl px-6 md:py-24 pb-14 lg:px-8">
+        <p className="text-black mb-2 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
+          Pull the trigger!
+        </p>
+        <h2 className="text-black font-extrabold text-[43px] leading-none lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px] pb-2 2xl:pb-[11px] lg:mb-4 mb-1">
+          Let’s bring your vision to life
+        </h2>
+        <Button rounded size="large" onClick={toggleChat}>
+          Get Started
+        </Button>
+      </div>
+      <div className="bg-black">
+        <div className="container">
+          <div className="flex justify-between pt-14 md:pt-24 lg:pt-20 pb-10">
+            {servicesDatabase.map((service) => (
+              <div key={service.id}>
+                <div className="flex items-center gap-2 md:mb-4 mt-2">
+                  <div className="bg-primary w-2 h-2 rounded-full" />
+                  <p className="font-medium leading-6 text-neutral-500 flex items-center text-sm lg:text-base">
+                    {service.title}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-1.5">
+                  {service.children.map((child) => (
+                    <Link
+                      href={child.link}
+                      key={child.id}
+                      className="text-sm md:text-lg lg:text-xl xl:text-2xl font-medium text-white leading-7 md:leading-12 hover:text-primary"
+                    >
+                      {child.title}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="w-full h-[1px] bg-gray-dark" />
+          <div className="flex justify-between items-end pt-14 md:pt-24 lg:pt-20 pb-10">
+            <div>
+              <div className="flex items-center gap-2 md:mb-4 mt-2">
+                <div className="bg-primary w-2 h-2 rounded-full" />
+                <p className="font-medium leading-6 text-neutral-500 flex items-center text-sm lg:text-base">
+                  Contact
+                </p>
+              </div>
+              <div className="flex flex-col gap-1.5">
+                <Link
+                  href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                  className="text-sm md:text-lg lg:text-xl xl:text-2xl font-medium text-white leading-7 md:leading-12 hover:text-primary"
+                >
+                  {process.env.NEXT_PUBLIC_EMAIL}
+                </Link>
+                <Link
+                  href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
+                  className="text-sm md:text-lg lg:text-xl xl:text-2xl font-medium text-white leading-7 md:leading-12 hover:text-primary"
+                >
+                  {process.env.NEXT_PUBLIC_PHONE}
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <Link href="/">
+                <Logo color="white" />
+              </Link>
+              <p className="text-neutral-500 text-center text-xs lg:text-sm">
+                © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}. All Rights
+                Reserved
+              </p>
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-3">
+                {socialMedia.map((social) => (
+                  <Link
+                    href={social.link}
+                    key={social.id}
+                    className="text-white hover:text-primary"
+                  >
+                    {social.icon}
+                  </Link>
+                ))}
+              </div>
+              <div className="flex gap-x-1.5 items-center">
+                <Link
+                  href="privacy-policy"
+                  className="text-neutral-500 hover:text-primary text-xs lg:text-sm"
+                >
+                  Privacy Policy
+                </Link>
+                <div className="h-3 w-[1px] bg-neutral-500" />
+                <Link
+                  href="terms-of-use"
+                  className="text-neutral-500 hover:text-primary text-xs lg:text-sm"
+                >
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
