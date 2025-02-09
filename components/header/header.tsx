@@ -5,7 +5,7 @@ import Link from "next/link";
 import Button from "@/components/button";
 import { RiCustomerService2Fill } from "@remixicon/react";
 import useSettingsStore from "@/store/settings";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import dynamic from "next/dynamic";
@@ -22,10 +22,34 @@ const Header = () => {
   const { push } = useRouter();
   const { toggleChat } = useSettingsStore();
   const [showPhone, setShowPhone] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [hasBorder, setHasBorder] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const togglePhone = () => {
     setShowPhone((prev) => !prev);
   };
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY === 0) {
+      setHasBorder(false);
+    } else if (currentScrollY > lastScrollY) {
+      setIsVisible(false);
+      setHasBorder(false);
+    } else {
+      setIsVisible(true);
+      setHasBorder(true);
+    }
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   const renderPopover = (link: string) => {
     switch (link) {
@@ -41,7 +65,13 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div
+      className={clsx(
+        "bg-white transition-transform duration-300",
+        isVisible ? "translate-y-0" : "-translate-y-full",
+        hasBorder && "border-b border-gray-light"
+      )}
+    >
       <div className="container">
         <div className="flex justify-between items-center py-4">
           <Link href="/">

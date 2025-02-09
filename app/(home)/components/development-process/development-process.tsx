@@ -70,7 +70,11 @@ const DevelopmentProcess = () => {
             {processesDatabase.map(
               (process) =>
                 visibleProcess === process.id && (
-                  <div key={process.id} id={process.id} className="h-[34rem] w-96 relative">
+                  <div
+                    key={process.id}
+                    id={process.id}
+                    className="h-[34rem] w-96 relative overflow-hidden bg-black"
+                  >
                     <Image src={process.img} alt={process.title} fill />
                   </div>
                 )
