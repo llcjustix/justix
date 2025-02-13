@@ -9,13 +9,17 @@ import clsx from "clsx";
 
 const DevelopmentProcess = () => {
   const [visibleProcess, setVisibleProcess] = useState(processesDatabase[0].id);
+  const [prevVisibleProcess, setPrevVisibleProcess] = useState(processesDatabase[0].id);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setVisibleProcess(entry.target.id);
+            setVisibleProcess((prevState) => {
+              setPrevVisibleProcess(prevState);
+              return entry.target.id;
+            });
           }
         });
       },
@@ -29,6 +33,8 @@ const DevelopmentProcess = () => {
       elements.forEach((el) => observer.unobserve(el));
     };
   }, []);
+
+  console.log("visibleProcess => ", prevVisibleProcess);
 
   return (
     <section className="bg-black pt-16 md:pt-24 lg:pt-[10.5rem] pb-16 md:pb-24 lg:pb-36">
@@ -66,19 +72,21 @@ const DevelopmentProcess = () => {
               </div>
             ))}
           </div>
-          <div className="sticky top-[100px] right-0 h-[34rem] w-96 rounded-full overflow-hidden bg-white ml-20">
-            {processesDatabase.map(
-              (process) =>
-                visibleProcess === process.id && (
-                  <div
-                    key={process.id}
-                    id={process.id}
-                    className="h-[34rem] w-96 relative overflow-hidden bg-black"
-                  >
-                    <Image src={process.img} alt={process.title} fill />
-                  </div>
-                )
-            )}
+          <div className="sticky top-[100px] right-0 h-[34rem] overflow-hidden w-96 rounded-full bg-white ml-20">
+            {processesDatabase.map((process) => (
+              <div
+                key={process.id}
+                id={process.id}
+                className={clsx(
+                  `h-[34rem] w-96 relative overflow-hidden bg-black transition-all duration-500 ease-in-out`
+                )}
+                style={{
+                  transform: `translateY(-${processesDatabase.findIndex((item) => item.id === visibleProcess) * 100}%)`,
+                }}
+              >
+                <Image src={process.img} alt={process.title} fill />
+              </div>
+            ))}
           </div>
         </div>
       </div>

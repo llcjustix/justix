@@ -11,6 +11,7 @@ const colors = {
   black: "bg-black text-white hover:bg-primary",
   white: "bg-white text-black",
   gray: "bg-gray-light text-black",
+  primary: "bg-primary text-white",
 };
 
 interface ButtonProps {
