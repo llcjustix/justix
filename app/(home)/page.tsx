@@ -16,7 +16,7 @@ const Home = () => (
           <h1 className="font-extrabold text-[60px] leading-[60px]">
             We are a Software Development Company
           </h1>
-          <p className="mt-5 text-2xl leading-7">
+          <p className="my-5 text-2xl leading-7">
             We are your trusted development partner with just one goal in focus to build products
             that generate a lasting, profitable impact.
           </p>

@@ -22,6 +22,7 @@ interface ButtonProps {
   size?: keyof typeof sizes;
   color?: keyof typeof colors;
   onClick?: () => void;
+  icon?: React.ReactNode;
 }
 
 const Button = ({
@@ -32,6 +33,7 @@ const Button = ({
   rounded = false,
   fullWidth = false,
   onClick,
+  icon,
 }: ButtonProps) => (
   <button
     type={type}
@@ -39,6 +41,7 @@ const Button = ({
       "px-2 py-1 font-medium text-base active:translate-y-px hover:brightness-95 transition-all duration-200",
       fullWidth && "w-full",
       rounded ? "rounded-3xl" : "rounded-xl",
+      icon && "flex items-center justify-center gap-2",
       sizes[size],
       colors[color]
     )}
@@ -50,6 +53,7 @@ const Button = ({
       }
     }}
   >
+    {icon && icon}
     {children}
   </button>
 );

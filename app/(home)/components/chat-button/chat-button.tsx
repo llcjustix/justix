@@ -7,7 +7,7 @@ import Button from "@/components/button";
 
 export const ChatButton = () => {
   const { toggleChat } = useSettingsStore();
-  const isTablet = useMediaQuery("(max-width: 1024px)");
+  const isTablet = useMediaQuery("(min-width: 1024px)");
   if (isTablet) {
     return (
       <button
@@ -21,5 +21,15 @@ export const ChatButton = () => {
       </button>
     );
   }
-  return <Button color="primary">Let's Discuss</Button>;
+  return (
+    <Button
+      color="primary"
+      rounded
+      icon={<RiArrowRightUpLine size={24} />}
+      onClick={toggleChat}
+      size="large"
+    >
+      Let's Discuss
+    </Button>
+  );
 };
