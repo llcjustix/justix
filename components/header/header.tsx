@@ -1,9 +1,9 @@
 "use client";
 
-import Logo from "@/components/logo/logo";
+import Logo from "@/components/logo";
 import Link from "next/link";
 import Button from "@/components/button";
-import { RiCustomerService2Fill } from "@remixicon/react";
+import { RiCustomerService2Fill, RiMenu3Line } from "@remixicon/react";
 import useSettingsStore from "@/store/settings";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
@@ -11,16 +11,15 @@ import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
 import IconButton from "@/components/icon-button";
+import { navLinks } from "@/database/database";
 
 const HeaderServicesBody = dynamic(() => import("./services"));
 const HeaderSolutionBody = dynamic(() => import("./solution"));
 const HeaderCompanyBody = dynamic(() => import("./company"));
 
-const navLinks = ["services", "solutions", "work", "company", "contact"];
-
 const Header = () => {
   const { push } = useRouter();
-  const { toggleChat } = useSettingsStore();
+  const { toggleChat, toggleSidebar } = useSettingsStore();
   const [showPhone, setShowPhone] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [hasBorder, setHasBorder] = useState(false);
@@ -65,7 +64,7 @@ const Header = () => {
   };
 
   return (
-    <div
+    <header
       className={clsx(
         "bg-white transition-transform duration-300",
         isVisible ? "translate-y-0" : "-translate-y-full",
@@ -73,11 +72,11 @@ const Header = () => {
       )}
     >
       <div className="container">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2 lg:py-4">
           <Link href="/">
             <Logo />
           </Link>
-          <nav className="flex items-center gap-6">
+          <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Popover key={link}>
                 {({ open }) => (
@@ -124,10 +123,13 @@ const Header = () => {
             <Button rounded onClick={toggleChat}>
               Get in Touch
             </Button>
+            <IconButton color="white" className="block lg:hidden" onClick={toggleSidebar}>
+              <RiMenu3Line />
+            </IconButton>
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

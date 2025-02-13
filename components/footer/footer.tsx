@@ -4,31 +4,8 @@ import Button from "@/components/button";
 import useSettingsStore from "@/store/settings";
 import { servicesDatabase } from "@/database/services";
 import Link from "next/link";
-import Logo from "@/components/logo/logo";
-import { RiFacebookFill, RiInstagramLine, RiLinkedinFill, RiTwitterXLine } from "@remixicon/react";
-
-const socialMedia = [
-  {
-    id: "linkedin",
-    link: "linkedin.com",
-    icon: <RiLinkedinFill size={24} />,
-  },
-  {
-    id: "x",
-    link: "x.com",
-    icon: <RiTwitterXLine size={24} />,
-  },
-  {
-    id: "facebook",
-    link: "facebook.com",
-    icon: <RiFacebookFill size={24} />,
-  },
-  {
-    id: "instagram",
-    link: "instagram.com",
-    icon: <RiInstagramLine size={24} />,
-  },
-];
+import Logo from "@/components/logo";
+import { socialMedia } from "@/database/database";
 
 const Footer = () => {
   const { toggleChat } = useSettingsStore();

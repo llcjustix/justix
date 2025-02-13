@@ -4,6 +4,9 @@ import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/re
 import clsx from "clsx";
 import React, { Fragment } from "react";
 import CrossIcon from "@/assets/icons/cross";
+import Logo from "@/components/logo";
+import Link from "next/link";
+import useSettingsStore from "@/store/settings";
 
 const drawerPosition = {
   right: {
@@ -31,6 +34,7 @@ interface DrawerProps extends React.PropsWithChildren {
   position?: keyof typeof drawerPosition;
   color?: "white" | "black";
   duration?: number;
+  withLogo?: boolean;
 }
 
 const Drawer = ({
@@ -41,78 +45,97 @@ const Drawer = ({
   position = "right",
   color = "white",
   duration = 500,
-}: DrawerProps) => (
-  <Transition show={open} as={Fragment} unmount>
-    <Dialog as="div" className="z-10 fixed" onClose={onClose}>
-      <TransitionChild
-        as={Fragment}
-        enter="ease-in-out duration-2500"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="ease-in-out duration-2500"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-      >
-        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
-      </TransitionChild>
+  withLogo = false,
+}: DrawerProps) => {
+  const { toggleSidebar } = useSettingsStore();
+  return (
+    <Transition show={open} as={Fragment} unmount>
+      <Dialog as="div" className="z-10 fixed" onClose={onClose}>
+        <TransitionChild
+          as={Fragment}
+          enter="ease-in-out duration-2500"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in-out duration-2500"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+        </TransitionChild>
 
-      <div className={clsx("fixed inset-0 overflow-hidden")}>
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className={clsx(
-              `pointer-events-none fixed flex `,
-              drawerPosition[position].orientation,
-              drawerPosition[position].width,
-              drawerPosition[position].height
-            )}
-          >
-            <TransitionChild
-              as={Fragment}
-              enter={`transform transition ease-in-out duration-${duration}`}
-              enterFrom={drawerPosition[position].translateFrom}
-              enterTo={drawerPosition[position].translateTo}
-              leave={`transform transition ease-in-out duration-${duration}`}
-              leaveFrom={drawerPosition[position].translateTo}
-              leaveTo={drawerPosition[position].translateFrom}
+        <div className={clsx("fixed inset-0 overflow-hidden")}>
+          <div className="absolute inset-0 overflow-hidden">
+            <div
+              className={clsx(
+                `pointer-events-none fixed flex `,
+                drawerPosition[position].orientation,
+                drawerPosition[position].width,
+                drawerPosition[position].height
+              )}
             >
-              <DialogPanel
-                className={`pointer-events-auto relative z-10 ${
-                  drawerPosition[position].fullScreen ? "w-screen" : drawerPosition[position].width
-                } ${color === "black" ? "bg-black" : "bg-white"}`}
+              <TransitionChild
+                as={Fragment}
+                enter={`transform transition ease-in-out duration-${duration}`}
+                enterFrom={drawerPosition[position].translateFrom}
+                enterTo={drawerPosition[position].translateTo}
+                leave={`transform transition ease-in-out duration-${duration}`}
+                leaveFrom={drawerPosition[position].translateTo}
+                leaveTo={drawerPosition[position].translateFrom}
               >
-                <TransitionChild
-                  as={Fragment}
-                  enter={`ease-in-out duration-${duration}`}
-                  enterFrom="opacity-0"
-                  enterTo="opacity-100"
-                  leave={`ease-in-out duration-${duration}`}
-                  leaveFrom="opacity-100"
-                  leaveTo="opacity-0"
+                <DialogPanel
+                  className={`pointer-events-auto relative z-10 flex flex-col ${
+                    drawerPosition[position].fullScreen
+                      ? "w-screen"
+                      : drawerPosition[position].width
+                  } ${color === "black" ? "bg-black" : "bg-white"}`}
                 >
-                  <div className="flex justify-end px-4 py-2">
-                    <button
-                      type="button"
-                      className={`
-                        rounded-full w-10 h-10 flex items-center justify-center border border-gray-100 ${color === "black" ? "bg-white" : "bg-black"}`}
-                      onClick={onClose}
+                  <TransitionChild
+                    as={Fragment}
+                    enter={`ease-in-out duration-${duration}`}
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave={`ease-in-out duration-${duration}`}
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                  >
+                    <div
+                      className={clsx(
+                        "flex items-center px-5 py-2",
+                        withLogo ? "justify-between" : "justify-end"
+                      )}
                     >
-                      <span className="sr-only">Close panel</span>
-                      <CrossIcon aria-hidden="true" size="24" />
-                    </button>
+                      {withLogo && (
+                        <Link href="/" onClick={toggleSidebar}>
+                          <Logo color="white" />
+                        </Link>
+                      )}
+                      <button
+                        type="button"
+                        className={`
+                        rounded-full w-10 h-10 flex items-center justify-center border border-gray-100 ${color === "black" ? "bg-white" : "bg-black"}`}
+                        onClick={onClose}
+                      >
+                        <span className="sr-only">Close panel</span>
+                        <CrossIcon aria-hidden="true" size="24" />
+                      </button>
+                    </div>
+                  </TransitionChild>
+                  <div
+                    className={clsx(
+                      "flex-1 flex flex-col overflow-y-auto",
+                      container && "container"
+                    )}
+                  >
+                    {children}
                   </div>
-                </TransitionChild>
-                <div
-                  className={clsx("flex h-full flex-col overflow-y-auto", container && "container")}
-                >
-                  <div className="relative flex-1">{children}</div>
-                </div>
-              </DialogPanel>
-            </TransitionChild>
+                </DialogPanel>
+              </TransitionChild>
+            </div>
           </div>
         </div>
-      </div>
-    </Dialog>
-  </Transition>
-);
+      </Dialog>
+    </Transition>
+  );
+};
 
 export default Drawer;
