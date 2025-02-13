@@ -1,7 +1,6 @@
 import Link from "next/link";
 import useSettingsStore from "@/store/settings";
 import { navLinks, socialMedia } from "@/database/database";
-import { RiArrowRightLongLine } from "@remixicon/react";
 
 const Sidebar = () => {
   const { toggleSidebar } = useSettingsStore();
@@ -15,10 +14,7 @@ const Sidebar = () => {
             onClick={toggleSidebar}
             className="capitalize text-2xl font-medium text-white hover:text-primary focus:outline-none transition duration-200 flex items-center justify-between"
           >
-            <span>{link}</span>
-            <span className="text-primary">
-              <RiArrowRightLongLine />
-            </span>
+            {link}
           </Link>
         ))}
       </div>

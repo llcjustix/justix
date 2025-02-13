@@ -8,11 +8,23 @@ import Logo from "@/components/logo";
 import Link from "next/link";
 import useSettingsStore from "@/store/settings";
 
+const drawerSize = {
+  right: {
+    small: "w-full max-w-[400px]",
+    medium: "w-full max-w-[600px]",
+    large: "w-full max-w-[800px]",
+  },
+  bottom: {
+    small: "max-w-full",
+    medium: "max-w-full",
+    large: "max-w-full",
+  },
+};
+
 const drawerPosition = {
   right: {
     translateFrom: "translate-x-full",
     translateTo: "translate-x-0",
-    width: "w-full max-w-[600px]",
     height: "h-full",
     fullScreen: false,
     orientation: "top-0 right-0",
@@ -35,6 +47,7 @@ interface DrawerProps extends React.PropsWithChildren {
   color?: "white" | "black";
   duration?: number;
   withLogo?: boolean;
+  size?: keyof (typeof drawerSize)["right"];
 }
 
 const Drawer = ({
@@ -44,6 +57,7 @@ const Drawer = ({
   container = true,
   position = "right",
   color = "white",
+  size = "medium",
   duration = 500,
   withLogo = false,
 }: DrawerProps) => {
@@ -69,7 +83,7 @@ const Drawer = ({
               className={clsx(
                 `pointer-events-none fixed flex `,
                 drawerPosition[position].orientation,
-                drawerPosition[position].width,
+                drawerSize[position][size],
                 drawerPosition[position].height
               )}
             >
@@ -84,9 +98,7 @@ const Drawer = ({
               >
                 <DialogPanel
                   className={`pointer-events-auto relative z-10 flex flex-col ${
-                    drawerPosition[position].fullScreen
-                      ? "w-screen"
-                      : drawerPosition[position].width
+                    drawerPosition[position].fullScreen ? "w-screen" : drawerSize[position][size]
                   } ${color === "black" ? "bg-black" : "bg-white"}`}
                 >
                   <TransitionChild

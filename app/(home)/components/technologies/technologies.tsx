@@ -35,7 +35,6 @@ const Technologies = () => {
                 className={clsx(
                   "whitespace-nowrap md:whitespace-normal outline-none md:w-full rounded-full py-5 md:px-7 text-left text-xl",
                   currentType.id === item.id ? "font-bold bg-gray-light" : "font-medium"
-                  // ? "font-bold bg-gradient-to-r from-primary to-white"
                 )}
               >
                 {item.title}
@@ -62,14 +61,16 @@ const Technologies = () => {
                       }
                     }}
                     className={clsx(
-                      "text-left md:w-52 lg:w-[215px] w-[150px] px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] text-black transition duration-100",
+                      "text-left md:w-52 lg:w-[215px] w-[150px] px-6 py-3 rounded-3xl sm:rounded-[2.45rem] text-black",
                       index === 5 && category.technologies.length > 6
-                        ? "bg-transparent hover:bg-transparent hover:shadow-none cursor-pointer"
-                        : "cursor-default bg-gray-light hover:text-white hover:bg-black hover:shadow-md hover:shadow-gray"
+                        ? "bg-primary cursor-pointer text-white"
+                        : "cursor-default bg-gray-light"
                     )}
                   >
                     <span className="font-normal md:text-lg text-sm">
-                      {index === 5 && category.technologies.length > 6 ? "..." : technology.title}
+                      {index === 5 && category.technologies.length > 6
+                        ? "View More"
+                        : technology.title}
                     </span>
                   </button>
                 ))}
@@ -84,15 +85,17 @@ const Technologies = () => {
             {viewCategory.title}
           </h4>
           <div className="grid grid-cols-2 gap-4">
-            {viewCategory.technologies.map((technology) => (
-              <div
-                key={technology.id}
-                aria-label={technology.title}
-                className="cursor-default w-full bg-gray-light px-6 py-3 border-transparent rounded-3xl sm:rounded-[2.45rem] hover:bg-black text-black hover:text-white hover:shadow-md hover:shadow-gray transition duration-100"
-              >
-                <span className="font-normal md:text-lg text-sm">{technology.title}</span>
-              </div>
-            ))}
+            {viewCategory.technologies
+              .slice(5, viewCategory.technologies.length)
+              .map((technology) => (
+                <div
+                  key={technology.id}
+                  aria-label={technology.title}
+                  className="cursor-default w-full bg-gray-light px-6 py-3 rounded-3xl sm:rounded-[2.45rem] text-black"
+                >
+                  <span className="font-normal md:text-lg text-sm">{technology.title}</span>
+                </div>
+              ))}
           </div>
         </div>
       </Modal>

@@ -18,7 +18,7 @@ const GlobalProvider = ({ children }: GlobalProviderProps) => {
       <Drawer open={isChatOpen} onClose={toggleChat} color="black">
         <Chat />
       </Drawer>
-      <Drawer open={isSidebarOpen} onClose={toggleSidebar} color="black" withLogo>
+      <Drawer open={isSidebarOpen} onClose={toggleSidebar} color="black" withLogo size="small">
         <Sidebar />
       </Drawer>
     </>
