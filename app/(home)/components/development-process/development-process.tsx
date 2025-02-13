@@ -71,7 +71,7 @@ const DevelopmentProcess = () => {
                 key={process.id}
                 id={process.id}
                 className={clsx(
-                  `h-[34rem] w-96 absolute overflow-hidden bg-black transition-all duration-500 ease-in-out`
+                  `h-[34rem] w-96 absolute overflow-hidden bg-black transition-all duration-700 ease-in-out`
                 )}
                 style={{
                   transform:
