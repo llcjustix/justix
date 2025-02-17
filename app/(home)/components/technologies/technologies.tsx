@@ -63,15 +63,18 @@ const Technologies = () => {
                     className={clsx(
                       "text-left md:w-52 lg:w-[215px] w-[150px] px-6 py-3 rounded-3xl sm:rounded-[2.45rem] text-black",
                       index === 5 && category.technologies.length > 6
-                        ? "bg-primary cursor-pointer text-white"
-                        : "cursor-default bg-gray-light"
+                        ? "cursor-pointer bg-gray-light "
+                        : // ? "bg-black cursor-pointer text-white"
+                          "cursor-default bg-gray-light"
                     )}
                   >
-                    <span className="font-normal md:text-lg text-sm">
-                      {index === 5 && category.technologies.length > 6
-                        ? "View More"
-                        : technology.title}
-                    </span>
+                    {index === 5 && category.technologies.length > 6 ? (
+                      <span className="font-normal md:text-lg text-sm flex justify-center">
+                        ...
+                      </span>
+                    ) : (
+                      <span className="font-normal md:text-lg text-sm">technology.title</span>
+                    )}
                   </button>
                 ))}
               </div>

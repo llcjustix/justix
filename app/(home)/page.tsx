@@ -1,5 +1,3 @@
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import { ChatButton, ChatButton2 } from "./components/chat-button";
 import SuccessStories from "./components/success-stories";
 import Technologies from "./components/technologies";
@@ -7,10 +5,7 @@ import DevelopmentProcess from "./components/development-process";
 
 const Home = () => (
   <main>
-    <div className="h-screen flex flex-col">
-      <div className="fixed inset-0 h-fit z-[1]">
-        <Header />
-      </div>
+    <div className="h-[calc(100vh-70px)] flex flex-col">
       <div className="container flex-1 flex flex-col items-center justify-center">
         <div className="max-w-[650px] relative">
           <h1 className="font-extrabold text-[60px] leading-[60px]">
@@ -38,7 +33,6 @@ const Home = () => (
       <ChatButton2 />
     </section>
     <div className="my-20" />
-    <Footer />
   </main>
 );
 
