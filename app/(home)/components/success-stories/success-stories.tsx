@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { RiArrowRightLine } from "@remixicon/react";
 import { successStoriesDatabase } from "@/database/success-stories";
-import clsx from "clsx";
+import ProjectCard from "@/components/project-card";
 
 const SuccessStories = () => (
   <div>
@@ -17,19 +17,7 @@ const SuccessStories = () => (
     </div>
     <div className="grid md:grid-cols-2 grid-cols-1 gap-x-16 lg:gap-x-28 mt-12 lg:mt-20">
       {successStoriesDatabase.map((story, index) => (
-        <Link
-          key={story.link}
-          href={story.link}
-          className={clsx("flex flex-col gap-5", index & 1 && "mt-12 md:mt-16 lg:mt-32")}
-        >
-          <div className="w-full h-[380px] md:h-[538px] rounded-3xl hidden lg:block bg-gray-light" />
-          <div className="">
-            <h3 className="lg:mb-[20px] mb-3 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
-              {story.title}
-            </h3>
-            <p>{story.description}</p>
-          </div>
-        </Link>
+        <ProjectCard data={story} index={index} />
       ))}
     </div>
   </div>
