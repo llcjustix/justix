@@ -50,14 +50,14 @@ const Header = () => {
     };
   }, [lastScrollY]);
 
-  const renderPopover = (link: string) => {
+  const renderPopover = (link: string, close: () => void) => {
     switch (link) {
       case "services":
-        return <HeaderServicesBody />;
+        return <HeaderServicesBody close={close} />;
       case "solutions":
-        return <HeaderSolutionBody />;
+        return <HeaderSolutionBody close={close} />;
       case "company":
-        return <HeaderCompanyBody />;
+        return <HeaderCompanyBody close={close} />;
       default:
         return link;
     }
@@ -79,7 +79,7 @@ const Header = () => {
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Popover key={link}>
-                {({ open }) => (
+                {({ open, close }) => (
                   <>
                     <PopoverButton
                       className={clsx(
@@ -100,7 +100,7 @@ const Header = () => {
                       transition
                       className="w-full h-hit py-5 bg-white shadow-xl shadow-black-shadow fixed top-[68px] left-0"
                     >
-                      <div className="container min-h-full">{renderPopover(link)}</div>
+                      <div className="container min-h-full">{renderPopover(link, close)}</div>
                     </PopoverPanel>
                   </>
                 )}

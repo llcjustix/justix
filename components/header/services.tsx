@@ -4,7 +4,11 @@ import Link from "next/link";
 import { technologiesDatabase } from "@/database/technologies";
 import clsx from "clsx";
 
-const HeaderServicesBody = () => (
+interface HeaderServicesBodyProps {
+  close: () => void;
+}
+
+const HeaderServicesBody = ({ close }: HeaderServicesBodyProps) => (
   <div className="grid grid-cols-[200px,1px,auto] gap-5 w-full">
     <div className="h-full flex flex-col justify-between">
       <div className="flex items-center justify-between gap-4">
@@ -32,6 +36,7 @@ const HeaderServicesBody = () => (
               <Link
                 key={child.id}
                 href={child.link}
+                onClick={close}
                 className={clsx(
                   "flex items-center gap-2 hover:underline font-medium text-sm",
                   child.id === "web3" ? "text-primary" : "text-black"

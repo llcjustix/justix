@@ -4,7 +4,11 @@ import Link from "next/link";
 import { clientsDatabase } from "@/database/clients";
 import Image from "next/image";
 
-const Company = () => (
+interface CompanyProps {
+  close: () => void;
+}
+
+const Company = ({ close }: CompanyProps) => (
   <div className="grid grid-cols-[200px,1px,auto] gap-5 w-full">
     <div className="flex items-center justify-between h-fit">
       <h2 className="text-2xl font-semibold">Company</h2>
@@ -20,6 +24,7 @@ const Company = () => (
               <Link
                 key={child.link}
                 href={child.link}
+                onClick={close}
                 className="flex items-center gap-2 hover:underline font-medium text-sm"
               >
                 <span className="min-w-1 min-h-1 rounded-full bg-black" />

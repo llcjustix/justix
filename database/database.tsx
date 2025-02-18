@@ -15,7 +15,7 @@ export const socialMedia = [
   },
   {
     id: "facebook",
-    link: "facebook.com",
+    link: "https://www.facebook.com/share/152ssVMd1u/?mibextid=wwXIfr",
     icon: <RiFacebookFill size={24} />,
   },
   {

@@ -6,21 +6,46 @@ import { servicesDatabase } from "@/database/services";
 import Link from "next/link";
 import Logo from "@/components/logo";
 import { socialMedia } from "@/database/database";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
+const darkRoutes = ["/artificial-intelligence"];
 
 const Footer = () => {
   const { toggleChat } = useSettingsStore();
+  const pathname = usePathname();
+  const isInDarkRoutes = darkRoutes.includes(pathname);
   return (
-    <footer>
-      <div className="pt-14 mx-auto text-center max-w-4xl px-6 md:py-24 pb-14 lg:px-8">
-        <p className="text-black mb-2 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-          Pull the trigger!
-        </p>
-        <h2 className="text-black font-extrabold text-[43px] leading-none lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px] pb-2 2xl:pb-[11px] lg:mb-4 mb-1">
-          Let’s bring your vision to life
-        </h2>
-        <Button rounded size="large" onClick={toggleChat}>
-          Get Started
-        </Button>
+    <footer className={clsx(isInDarkRoutes && "bg-black")}>
+      <div className="container">
+        <div className="flex flex-col items-center">
+          <div className="max-w-4xl pt-14 text-center px-6 md:py-24 pb-14 lg:px-8">
+            <p
+              className={clsx(
+                "mb-2 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl text-center",
+                isInDarkRoutes ? "text-white" : "text-black"
+              )}
+            >
+              Pull the trigger!
+            </p>
+            <h2
+              className={clsx(
+                "text-center font-extrabold text-[43px] leading-none lg:text-6xl xl:text-7xl 2xl:text-8xl lg:tracking-[-4px] tracking-[-2px] pb-2 2xl:pb-[11px] lg:mb-4 mb-1",
+                isInDarkRoutes ? "text-white" : "text-black"
+              )}
+            >
+              Let’s bring your vision to life
+            </h2>
+            <Button
+              rounded
+              size="large"
+              onClick={toggleChat}
+              color={isInDarkRoutes ? "primary" : "black"}
+            >
+              Get Started
+            </Button>
+          </div>
+        </div>
       </div>
       <div className="bg-black">
         <div className="container">
