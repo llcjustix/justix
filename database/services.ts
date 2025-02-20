@@ -287,9 +287,8 @@ export const artificialIntelligenceDatabase = {
     },
     {
       id: 3,
-      question: "What sets Cubix apart as an AI Development Company?",
-      answer:
-        "Cubix is known for innovation, a deep understanding of emerging technologies, and a focus on client success. We help streamline operations, engage customers, and monetize data with a skilled AI workforce.",
+      question: `What sets ${process.env.NEXT_PUBLIC_WEBSITE_NAME} apart as an AI Development Company?`,
+      answer: `${process.env.NEXT_PUBLIC_WEBSITE_NAME} is known for innovation, a deep understanding of emerging technologies, and a focus on client success. We help streamline operations, engage customers, and monetize data with a skilled AI workforce.`,
     },
     {
       id: 4,
@@ -302,6 +301,145 @@ export const artificialIntelligenceDatabase = {
       question: "What are the key components of AI App Development Services?",
       answer:
         "AI app development includes data preprocessing, model training, deployment, and ongoing support. This ensures high performance and scalability.",
+    },
+  ],
+};
+
+export const bigDataDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "Big Data Consulting",
+      description: "Helping you develop a clear strategy to manage and analyze your data.",
+    },
+    {
+      id: 2,
+      title: "Big Data Analytics",
+      description: "Converting raw data into actionable insights to guide business decisions.",
+    },
+    {
+      id: 3,
+      title: "Data Management",
+      description: "Structuring and organizing data to ensure easy access and high quality.",
+    },
+    {
+      id: 4,
+      title: "Custom Data Applications",
+      description: "Create tailored apps to analyze data, track trends, and ensure security.",
+    },
+    {
+      id: 5,
+      title: "Platform Integration",
+      description: "Integrating big data technologies like Hadoop, Spark, and cloud solutions.",
+    },
+    {
+      id: 6,
+      title: "Cloud Migration",
+      description:
+        "Moving your data infrastructure to the cloud for better scalability and security.",
+    },
+    {
+      id: 7,
+      title: "Maintenance and Support",
+      description: "Regular monitoring and updates to keep your data system efficient.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Data Strategy",
+      description:
+        "We work with you to outline your goals and determine the best approach to manage your data.",
+    },
+    {
+      id: 2,
+      title: "Data Collection & Cleaning",
+      description: "We gather your data, ensuring it is accurate and ready for analysis.",
+    },
+    {
+      id: 3,
+      title: "Data Analysis",
+      description: "Our team extracts insights from your data using advanced analytics techniques.",
+    },
+    {
+      id: 4,
+      title: "Solution Development",
+      description: "We design and implement a data solution tailored to your needs.",
+    },
+    {
+      id: 5,
+      title: "Testing & Deployment",
+      description: "We thoroughly test the solution before launching it into your system.",
+    },
+    {
+      id: 6,
+      title: "Ongoing Support",
+      description: "Our team provides updates and support to ensure continued success.",
+    },
+  ],
+  experience: [
+    {
+      id: 1,
+      title: "Over 15 years of experience delivering data solutions to global brands",
+    },
+    {
+      id: 2,
+      title: "We are built to manage growing data volumes as your business expands",
+    },
+    {
+      id: 3,
+      title: "Quick setup and support to keep your solution performing optimally",
+    },
+    {
+      id: 4,
+      title: "We apply strict security measures to protect your sensitive information",
+    },
+  ],
+  experienceTechnologies: [
+    {
+      id: 1,
+      title: "Apple",
+      img: "/img/services/apple-pay.svg",
+    },
+    {
+      id: 2,
+      title: "AR Kit",
+      img: "/img/services/ar-kit.svg",
+    },
+    {
+      id: 3,
+      title: "Obj C",
+      img: "/img/services/obj-c.svg",
+    },
+    {
+      id: 4,
+      title: "SwiftUI",
+      img: "/img/services/swift-ui.svg",
+    },
+    {
+      id: 5,
+      title: "Hive",
+      img: "/img/services/hive.svg",
+    },
+    {
+      id: 6,
+      title: "Chopper",
+      img: "/img/services/chopper.svg",
+    },
+    {
+      id: 7,
+      title: "Xamarin",
+      img: "/img/services/xamarin.svg",
+    },
+    {
+      id: 8,
+      title: "Widgets",
+      img: "/img/services/widgets.svg",
+    },
+    {
+      id: 9,
+      title: "C Sharp",
+      img: "/img/services/c-sharp.svg",
     },
   ],
 };

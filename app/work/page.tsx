@@ -9,7 +9,8 @@ const Work = () => (
           Case Studies
         </h1>
         <p className="text-black text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-          See how Cubix has helped its clients achieve their vision of digital innovation.
+          See how {process.env.NEXT_PUBLIC_WEBSITE_NAME} has helped its clients achieve their vision
+          of digital innovation.
         </p>
       </div>
     </div>

@@ -73,7 +73,7 @@ const Header = () => {
     >
       <div className="container">
         <div className="flex justify-between items-center py-2 lg:py-4">
-          <Link href="/">
+          <Link href="/" aria-label={process.env.NEXT_PUBLIC_WEBSITE_NAME}>
             <Logo />
           </Link>
           <nav className="hidden lg:flex items-center gap-6">
@@ -108,7 +108,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <IconButton onClick={togglePhone} className="text-white">
+            <IconButton onClick={togglePhone} className="text-white" aria-label="Phone">
               <RiCustomerService2Fill size={20} />
             </IconButton>
             <Link
@@ -123,7 +123,12 @@ const Header = () => {
             <Button rounded onClick={toggleChat}>
               Get in Touch
             </Button>
-            <IconButton color="white" className="block lg:hidden" onClick={toggleSidebar}>
+            <IconButton
+              color="white"
+              className="block lg:hidden"
+              onClick={toggleSidebar}
+              arial-label="Menu"
+            >
               <RiMenu3Line />
             </IconButton>
           </div>

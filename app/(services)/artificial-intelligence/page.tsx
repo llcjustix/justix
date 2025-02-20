@@ -20,7 +20,7 @@ const ArtificialIntelligence = () => (
         </p>
       </div>
     </section>
-    <div className="w-screen relative lg:mt-40 mt-8">
+    <section className="w-screen relative lg:mt-40 mt-8">
       <Image
         src="/img/services/artificial-intelligence.webp"
         alt="Artificial Intelligence Development Services"
@@ -29,7 +29,7 @@ const ArtificialIntelligence = () => (
         height={475}
         className="object-contain object-center"
       />
-    </div>
+    </section>
     <section className="container">
       <div className="pt-14 md:pt-40 max-w-3xl">
         <h2 className="pb-6 text-white font-bold lg:pb-[2.375rem] sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">

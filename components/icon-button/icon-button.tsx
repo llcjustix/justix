@@ -14,7 +14,13 @@ interface IconButtonProps {
   color?: keyof typeof colors;
 }
 
-const IconButton = ({ children, color = "black", onClick, className }: IconButtonProps) => (
+const IconButton = ({
+  children,
+  color = "black",
+  onClick,
+  className,
+  ...props
+}: IconButtonProps) => (
   <button
     type="button"
     className={clsx(
@@ -28,6 +34,7 @@ const IconButton = ({ children, color = "black", onClick, className }: IconButto
         onClick();
       }
     }}
+    {...props}
   >
     {children}
   </button>

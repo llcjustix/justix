@@ -16,7 +16,7 @@ const Footer = () => {
   const pathname = usePathname();
   const isInDarkRoutes = darkRoutes.includes(pathname);
   return (
-    <footer className={clsx(isInDarkRoutes && "bg-black")}>
+    <footer className={clsx(isInDarkRoutes ? "bg-black" : "bg-white")}>
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="max-w-4xl pt-14 text-center px-6 md:py-24 pb-14 lg:px-8">
@@ -97,7 +97,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex flex-col items-center gap-3">
-              <Link href="/">
+              <Link href="/" aria-label={process.env.NEXT_PUBLIC_WEBSITE_NAME}>
                 <Logo color="white" />
               </Link>
               <p className="text-neutral-500 text-center text-xs lg:text-sm">
@@ -112,6 +112,7 @@ const Footer = () => {
                     href={social.link}
                     key={social.id}
                     className="text-white hover:text-primary"
+                    aria-label={social.id}
                   >
                     {social.icon}
                   </Link>
