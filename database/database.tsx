@@ -1,16 +1,22 @@
-import { RiFacebookFill, RiInstagramLine, RiLinkedinFill, RiTwitterXLine } from "@remixicon/react";
+import {
+  RiFacebookFill,
+  RiInstagramLine,
+  RiLinkedinFill,
+  RiTelegramFill,
+  RiTwitterXLine,
+} from "@remixicon/react";
 
 export const navLinks = ["services", "solutions", "work", "company", "contact"];
 
 export const socialMedia = [
   {
     id: "linkedin",
-    link: "linkedin.com",
+    link: "https://linkedin.com",
     icon: <RiLinkedinFill size={24} />,
   },
   {
     id: "x",
-    link: "x.com",
+    link: "https://x.com",
     icon: <RiTwitterXLine size={24} />,
   },
   {
@@ -20,7 +26,12 @@ export const socialMedia = [
   },
   {
     id: "instagram",
-    link: "instagram.com",
+    link: "https://instagram.com",
     icon: <RiInstagramLine size={24} />,
+  },
+  {
+    id: "telegram",
+    link: "https://t.me/+0QNlJlAYBghlNWRi",
+    icon: <RiTelegramFill size={24} />,
   },
 ];

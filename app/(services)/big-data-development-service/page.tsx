@@ -27,6 +27,7 @@ const BigDataDevelopmentService = () => (
         width={700}
         height={475}
         className="object-contain object-center"
+        priority
       />
     </section>
     <section className="container">

@@ -113,6 +113,7 @@ const Footer = () => {
                     key={social.id}
                     className="text-white hover:text-primary"
                     aria-label={social.id}
+                    target="_blank"
                   >
                     {social.icon}
                   </Link>

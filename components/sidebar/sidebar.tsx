@@ -23,6 +23,7 @@ const Sidebar = () => {
           <Link
             href={social.link}
             key={social.id}
+            target="_blank"
             className="p-2 flex items-center justify-center rounded-full text-black bg-white hover:text-white hover:bg-black transition duration-200"
           >
             {social.icon}
