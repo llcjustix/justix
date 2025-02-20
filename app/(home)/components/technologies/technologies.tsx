@@ -6,7 +6,12 @@ import clsx from "clsx";
 import Modal from "@/components/modal";
 import { useModal } from "@/hooks/use-modal";
 
-const Technologies = () => {
+interface TechnologiesProps {
+  title?: string;
+  description?: string;
+}
+
+const Technologies = ({ title, description }: TechnologiesProps) => {
   const [isOpen, handleOpen, handleClose] = useModal();
   const [currentType, setCurrentType] = useState(categorisedTechnologiesDatabase[0]);
   const [viewCategory, setViewCategory] = useState(
@@ -16,12 +21,11 @@ const Technologies = () => {
     <>
       <div className="max-w-3xl xl:max-w-4xl pb-8 pt-14 md:pt-24 lg:pt-[10.5rem]">
         <h2 className="font-bold pb-1 md:pb-0 sentence-first-letter sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-          Technologies we use
+          {title || "Technologies we use"}
         </h2>
         <p className="lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-          Hire from our pool of 350+ specialized experts in web, mobile, and software engineering,
-          specializing in the latest technologies and frameworks, ready to scale your development
-          teams effortlessly.
+          {description ||
+            "Hire from our pool of 350+ specialized experts in web, mobile, and software engineering, specializing in the latest technologies and frameworks, ready to scale your development teams effortlessly."}
         </p>
       </div>
       <div className="flex flex-wrap flex-col md:flex-row mt-8 md:mt-12 lg:mt-20 md:border-t border-gray-300">
@@ -64,8 +68,7 @@ const Technologies = () => {
                       "text-left md:w-52 lg:w-[215px] w-[150px] px-6 py-3 rounded-3xl sm:rounded-[2.45rem] text-black",
                       index === 5 && category.technologies.length > 6
                         ? "cursor-pointer bg-gray-light "
-                        : // ? "bg-black cursor-pointer text-white"
-                          "cursor-default bg-gray-light"
+                        : "cursor-default bg-gray-light"
                     )}
                   >
                     {index === 5 && category.technologies.length > 6 ? (
@@ -73,7 +76,7 @@ const Technologies = () => {
                         ...
                       </span>
                     ) : (
-                      <span className="font-normal md:text-lg text-sm">technology.title</span>
+                      <span className="font-normal md:text-lg text-sm">{technology.title}</span>
                     )}
                   </button>
                 ))}

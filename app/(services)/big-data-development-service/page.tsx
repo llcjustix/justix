@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Technologies from "@/app/(home)/components/technologies";
 import Solutions from "./components/solutions";
 import Approach from "./components/approach";
 import Experience from "./components/experience";
+import Faq from "./components/faq";
 
 const BigDataDevelopmentService = () => (
   <>
@@ -35,6 +37,15 @@ const BigDataDevelopmentService = () => (
     </section>
     <section className="container">
       <Experience />
+    </section>
+    <section className="container">
+      <Technologies
+        title="Technologies we leverage for big data"
+        description="Our team uses the latest technologies and platforms to ensure your big data system is efficient, scalable, and secure."
+      />
+    </section>
+    <section className="container">
+      <Faq />
     </section>
   </>
 );

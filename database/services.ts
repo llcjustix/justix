@@ -442,4 +442,30 @@ export const bigDataDatabase = {
       img: "/img/services/c-sharp.svg",
     },
   ],
+  faq: [
+    {
+      id: 1,
+      question: "How much does it cost to develop a big data solution?",
+      answer:
+        "The cost depends on your project’s complexity and scope. We typically provide solutions ranging from $25,000 to $300,000 based on your needs.",
+    },
+    {
+      id: 2,
+      question: "What is the typical timeline for a big data project?",
+      answer:
+        "Most projects take 3-6 months to complete, depending on complexity. We provide a clear timeline to ensure fast delivery.",
+    },
+    {
+      id: 3,
+      question: "How do you ensure data security?",
+      answer:
+        "We follow strict industry standards, including encryption, data masking, and compliance with GDPR, to ensure your data is always secure.",
+    },
+    {
+      id: 4,
+      question: "Why should I invest in big data development?",
+      answer:
+        "Big data development helps businesses make informed decisions, improve operations, and better understand customer behavior, leading to long-term growth.",
+    },
+  ],
 };
