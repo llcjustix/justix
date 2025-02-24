@@ -17,8 +17,8 @@ export const servicesDatabase = [
         link: "developent/?section=cloud-backend",
         id: "cloud-backend",
       },
-      { title: "Web Development", link: "developent/?section=web", id: "web" },
-      { title: "Mobile Development", link: "developent/?section=mobile", id: "mobile" },
+      { title: "Web Development", link: "web-development", id: "web" },
+      { title: "Mobile Development", link: "mobile-development", id: "mobile" },
     ],
   },
   {
@@ -631,6 +631,120 @@ export const web3DevelopmentDatabase = {
       question: "How does Web3 development benefit businesses?",
       answer:
         "Web3 development offers numerous benefits, including enhanced security, transparency, and user control, as well as the ability to create decentralized applications and services.",
+    },
+  ],
+};
+
+export const webDevelopmentDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "Web Development Consulting",
+      description:
+        "Get expert advice and define your project scope for a smooth development process.",
+    },
+    {
+      id: 2,
+      title: "Custom Web Development",
+      description:
+        "Create tailored solutions, from CRM systems to SaaS applications, designed to boost engagement and growth.",
+    },
+    {
+      id: 3,
+      title: "Web Design Services",
+      description: "Beautiful and functional web designs that reflect your brand's values.",
+    },
+    {
+      id: 4,
+      title: "Ecommerce Development",
+      description:
+        "Build feature rich ecommerce platforms that drive sales and customer satisfaction.",
+    },
+    {
+      id: 5,
+      title: "Web Application Development",
+      description: "Custom web apps designed for ease of use and operational alignment.",
+    },
+    {
+      id: 6,
+      title: "Progressive Web Apps (PWAs)",
+      description: "Reach your audience anytime with apps that offer native-like experiences.",
+    },
+    {
+      id: 7,
+      title: "CMS Development",
+      description: "Simplify content management with custom CMS platforms.",
+    },
+    {
+      id: 8,
+      title: "API Development & Integration",
+      description: "Enhance functionality with powerful APIs.",
+    },
+    {
+      id: 9,
+      title: "Staff Augmentation",
+      description: "Access skilled web developers on demand to meet your project needs.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Discovery Phase",
+      description: "We start by understanding your vision and setting a clear project scope.",
+    },
+    {
+      id: 2,
+      title: "Architecture",
+      description: "We plan the structure of your project to align with your business goals.",
+    },
+    {
+      id: 3,
+      title: "UI/UX Design",
+      description: "Our designers create intuitive and visually appealing interfaces.",
+    },
+    {
+      id: 4,
+      title: "Front-end Development",
+      description: "We bring designs to life with responsive, user-friendly interfaces.",
+    },
+    {
+      id: 5,
+      title: "Back-end Development",
+      description: "We ensure smooth interactions and robust data management.",
+    },
+    {
+      id: 6,
+      title: "API Integration",
+      description: "Seamlessly connect your web solution with third-party systems.",
+    },
+    {
+      id: 7,
+      title: "QA & Testing",
+      description: "Thorough testing ensures your web solution is flawless.",
+    },
+    {
+      id: 8,
+      title: "Ongoing Support",
+      description:
+        "We provide continuous updates and support to keep your web solution competitive.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "How much does web development cost?",
+      answer:
+        "Costs vary based on complexity. For instance, a simple website might range from $2,000 to $7,000, while custom e-commerce platforms can exceed $10,000.",
+    },
+    {
+      id: 2,
+      question: "How long does the development process take?",
+      answer: "A medium complexity project typically takes between 6-12 months.",
+    },
+    {
+      id: 3,
+      question: `Why choose ${process.env.NEXT_PUBLIC_WEBSITE_NAME}?`,
+      answer: `With over 10 years of experience and 300+ projects, ${process.env.NEXT_PUBLIC_WEBSITE_NAME} is trusted by leading companies for its reliable web development services.`,
     },
   ],
 };
