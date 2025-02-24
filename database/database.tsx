@@ -26,7 +26,7 @@ export const socialMedia = [
   },
   {
     id: "instagram",
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/justix.uz?igsh=YWJraWQ4ZGpicGVv",
     icon: <RiInstagramLine size={24} />,
   },
   {
