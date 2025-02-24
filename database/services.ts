@@ -1,7 +1,6 @@
 export const servicesDatabase = [
   {
     title: "AI & Big Data",
-    link: "/ai-big-data",
     id: "ai-big-data",
     children: [
       { title: "AI Development", link: "artificial-intelligence", id: "ai" },
@@ -10,10 +9,9 @@ export const servicesDatabase = [
   },
   {
     title: "Development",
-    link: "/developent",
     id: "development",
     children: [
-      { title: "Web3.0 Development", link: "developent/?section=web3", id: "web3" },
+      { title: "Web3.0 Development", link: "web3-development", id: "web3" },
       {
         title: "Cloud & Backend",
         link: "developent/?section=cloud-backend",
@@ -466,6 +464,173 @@ export const bigDataDatabase = {
       question: "Why should I invest in big data development?",
       answer:
         "Big data development helps businesses make informed decisions, improve operations, and better understand customer behavior, leading to long-term growth.",
+    },
+  ],
+};
+
+export const web3DevelopmentDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "dApps Development Services",
+      description:
+        "Build decentralized apps with transparency and direct interaction between users and providers.",
+    },
+    {
+      id: 2,
+      title: "DeFi Solutions Development",
+      description:
+        "Develop decentralized exchanges and lending platforms for financial services without central authorities.",
+    },
+    {
+      id: 3,
+      title: "NFT Marketplace Development",
+      description: "Create a secure marketplace for buying, selling, or exchanging NFTs.",
+    },
+    {
+      id: 4,
+      title: "Smart Contract Development",
+      description: "Automate agreements and transactions with secure smart contracts.",
+    },
+    {
+      id: 5,
+      title: "Web3 Game Development",
+      description:
+        "Develop games with in-game asset ownership verification and play-to-earn features.",
+    },
+    {
+      id: 6,
+      title: "Blockchain Technology Services",
+      description:
+        "Build secure systems for various applications, including supply chain management and identity verification.",
+    },
+    {
+      id: 7,
+      title: "Crypto Wallet Development",
+      description: "Develop secure wallets for digital asset storage and transactions.",
+    },
+  ],
+  experience: [
+    {
+      id: 1,
+      title: "600+ Completed Projects",
+    },
+    {
+      id: 2,
+      title: "250+ Designers & Developers",
+    },
+    {
+      id: 3,
+      title: "15+ Years of Experience",
+    },
+    {
+      id: 4,
+      title: "Experts in Ethereum, Cardano, Stellar, Polkadot, Tezos",
+    },
+    {
+      id: 5,
+      title: "Solution built like dApps to DeFi, NFT marketplaces, and more",
+    },
+  ],
+  experienceTechnologies: [
+    {
+      id: 1,
+      title: "Android",
+      img: "/img/services/android.svg",
+    },
+    {
+      id: 2,
+      title: "Ionic",
+      img: "/img/services/ionic.svg",
+    },
+    {
+      id: 3,
+      title: "JavaScript",
+      img: "/img/services/javascript.svg",
+    },
+    {
+      id: 4,
+      title: "React",
+      img: "/img/services/react.svg",
+    },
+    {
+      id: 5,
+      title: "Hive",
+      img: "/img/services/hive.svg",
+    },
+    {
+      id: 6,
+      title: "Chopper",
+      img: "/img/services/chopper.svg",
+    },
+    {
+      id: 7,
+      title: "Xamarin",
+      img: "/img/services/xamarin.svg",
+    },
+    {
+      id: 8,
+      title: "Flutter",
+      img: "/img/services/flutter.svg",
+    },
+    {
+      id: 9,
+      title: "C Sharp",
+      img: "/img/services/c-sharp.svg",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Discovery Phase",
+      description:
+        "Understand your idea, target audience, and business goals to define core features.",
+    },
+    {
+      id: 2,
+      title: "Design and Prototyping",
+      description: "Create wireframes and prototypes to visualize the user journey.",
+    },
+    {
+      id: 3,
+      title: "Development",
+      description: "Build the Web3 solution using the latest technologies and best practices.",
+    },
+    {
+      id: 4,
+      title: "Testing and Feedback",
+      description: "Conduct thorough testing and gather feedback from early users.",
+    },
+    {
+      id: 5,
+      title: "Launch and Support",
+      description: "Help you launch your Web3 solution and provide ongoing support.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "How much does Web3 development cost?",
+      answer:
+        "The cost of Web3 development varies based on the complexity of the project, the technologies used, and the specific requirements. Generally, Web3 projects can range from $10,000 to $200,000 or more. It’s best to discuss your project with us for a detailed estimate.",
+    },
+    {
+      id: 2,
+      question: "How long does it take to develop a Web3 solution?",
+      answer:
+        "The development timeline for a Web3 solution depends on the project’s scope and complexity. On average, it can take anywhere from 3 to 12 months to develop a fully functional Web3 application.",
+    },
+    {
+      id: 3,
+      question: "What technologies are used in Web3 development?",
+      answer:
+        "Web3 development leverages a variety of technologies, including blockchain platforms like Ethereum, Cardano, and Polkadot, as well as tools for smart contract development, decentralized storage, and more.",
+    },
+    {
+      id: 4,
+      question: "How does Web3 development benefit businesses?",
+      answer:
+        "Web3 development offers numerous benefits, including enhanced security, transparency, and user control, as well as the ability to create decentralized applications and services.",
     },
   ],
 };
