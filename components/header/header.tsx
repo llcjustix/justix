@@ -56,7 +56,7 @@ const Header = () => {
         return <HeaderServicesBody close={close} />;
       case "solutions":
         return <HeaderSolutionBody close={close} />;
-      case "company":
+      case "about":
         return <HeaderCompanyBody close={close} />;
       default:
         return link;

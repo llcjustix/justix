@@ -6,7 +6,7 @@ import {
   RiTwitterXLine,
 } from "@remixicon/react";
 
-export const navLinks = ["services", "solutions", "work", "company", "contact"];
+export const navLinks = ["services", "solutions", "work", "about", "contact"];
 
 export const socialMedia = [
   {
