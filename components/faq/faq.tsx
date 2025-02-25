@@ -2,7 +2,7 @@
 
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import clsx from "clsx";
-import { RiAddFill, RiSubtractFill } from "@remixicon/react";
+import { RiAddFill } from "@remixicon/react";
 import { FAQProps } from "@/types/faq";
 
 interface FAQComponentProps {
@@ -38,11 +38,16 @@ const FAQComponent = ({ title, questions = [], color = "black" }: FAQComponentPr
                 </h3>
                 <span
                   className={clsx(
+                    "transition-all duration-200 ease-out",
                     // eslint-disable-next-line no-nested-ternary
-                    open ? "text-primary" : color === "black" ? "text-black" : "text-white"
+                    open
+                      ? "text-primary transform rotate-45"
+                      : color === "black"
+                        ? "text-black"
+                        : "text-white"
                   )}
                 >
-                  {open ? <RiSubtractFill size={28} /> : <RiAddFill size={28} />}
+                  <RiAddFill size={28} />
                 </span>
               </DisclosureButton>
 

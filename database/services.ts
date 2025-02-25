@@ -871,3 +871,186 @@ export const cloudBackendDatabase = {
     },
   ],
 };
+
+export const mobileDevelopmentDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "Mobile Strategy & Consulting",
+      description:
+        "Our experts consult you on all aspects of app development, from staying current with market trends to defining your target audience to creating a roadmap for success.",
+    },
+    {
+      id: 2,
+      title: "UI/UX Design for app",
+      description:
+        "Our top priority is following industry best practices to create visually stunning and highly functional mobile app designs that deliver seamless user experiences across all devices.",
+    },
+    {
+      id: 3,
+      title: "Custom Mobile App Development",
+      description: `With a strong focus on cutting-edge technologies, ${process.env.NEXT_PUBLIC_WEBSITE_NAME} delivers customized mobile app solutions that elevate your brand and seamlessly align with your business objectives.`,
+    },
+    {
+      id: 4,
+      title: "Platform Migration",
+      description:
+        "We seamlessly transition your app across platforms while preserving its core functionalities and optimizing it for platform-specific features.",
+    },
+    {
+      id: 5,
+      title: "Mobile App Testing",
+      description:
+        "Our team of QA engineers and testers helps you release bug-free apps with exceptional functionality, usability, and performance testing for a flawless user experience across devices.",
+    },
+    {
+      id: 6,
+      title: "Cross-Platform Development",
+      description:
+        "We leverage frameworks like Flutter and React Native to build high-quality mobile apps with exceptional user experiences across multiple devices, optimizing both development time and costs.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Planning & Research",
+      description:
+        "We gather requirements, define goals, and conduct market analysis to ensure the app meets user needs and attunes to your business objectives.",
+    },
+    {
+      id: 2,
+      title: "UI/UX Design",
+      description:
+        "Our skilled UI/UX developers design intuitive and seamless user experiences, optimized for smooth navigation across all mobile devices.",
+    },
+    {
+      id: 3,
+      title: "App Development",
+      description:
+        "We then initiate our development process, creating and testing builds simultaneously to ensure exceptional performance, security, and scalability.",
+    },
+    {
+      id: 4,
+      title: "QA & Testing",
+      description:
+        "Our team conducts comprehensive testing on the final build, evaluating functionality, usability, performance, and compatibility across all mobile devices to identify and resolve any potential issues.",
+    },
+    {
+      id: 5,
+      title: "App Refinement",
+      description:
+        "We refine the final build based on feedback from testing, fixing features, UI elements, and the overall user experience to enhance app usability and quality.",
+    },
+    {
+      id: 6,
+      title: "Final Deployment",
+      description:
+        "Next, we focus on ensuring a secure launch of your mobile app, following platform-specific guidelines and making sure all required documentation and assets are properly prepared.",
+    },
+    {
+      id: 7,
+      title: "Post-launch Support",
+      description:
+        "After the final deployment, we provide ongoing support, monitor app performance, collect user feedback, and release updates if required.",
+    },
+  ],
+  experience: [
+    {
+      id: 1,
+      title: "15+ Years of industry experience",
+    },
+    {
+      id: 2,
+      title: "300+ Mobile projects for clients worldwide",
+    },
+    {
+      id: 3,
+      title: "Agile development methodology",
+    },
+    {
+      id: 4,
+      title: "Compliance and security",
+    },
+    {
+      id: 5,
+      title: "Flexible engagement models",
+    },
+  ],
+  experienceTechnologies: [
+    {
+      id: 1,
+      title: "Apple",
+      img: "/img/services/apple-pay.svg",
+    },
+    {
+      id: 2,
+      title: "AR Kit",
+      img: "/img/services/ar-kit.svg",
+    },
+    {
+      id: 3,
+      title: "Obj C",
+      img: "/img/services/obj-c.svg",
+    },
+    {
+      id: 4,
+      title: "SwiftUI",
+      img: "/img/services/swift-ui.svg",
+    },
+    {
+      id: 5,
+      title: "Hive",
+      img: "/img/services/hive.svg",
+    },
+    {
+      id: 6,
+      title: "Chopper",
+      img: "/img/services/chopper.svg",
+    },
+    {
+      id: 7,
+      title: "Xamarin",
+      img: "/img/services/xamarin.svg",
+    },
+    {
+      id: 8,
+      title: "Widgets",
+      img: "/img/services/widgets.svg",
+    },
+    {
+      id: 9,
+      title: "C Sharp",
+      img: "/img/services/c-sharp.svg",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: `Does ${process.env.NEXT_PUBLIC_WEBSITE_NAME} develop apps for all mobile devices?`,
+      answer: `${process.env.NEXT_PUBLIC_WEBSITE_NAME} is a leading mobile application development company in the US, capable of developing apps for all mobile devices. We ensure that apps work seamlessly across all models, whether it’s a newly released device or an older one. With our experienced teams, you can rest assured that your app will perform optimally.`,
+    },
+    {
+      id: 2,
+      question: "What are some advantages of hiring a mobile app development agency?",
+      answer:
+        "A well-reputed mobile app development agency will do everything to provide your clients with the best app experience, featuring intuitive interfaces and advanced functionalities. Here are several other perks that clients get by opting for our mobile app development services:",
+    },
+    {
+      id: 3,
+      question: "How much does mobile app development cost?",
+      answer: `Partnering with a well-established mobile app development company can cost around $100K or more. This amount may vary depending on factors such as the technology used, the size of the team involved, and the project deadlines. For the best quote, visit our website or email us at ${process.env.NEXT_PUBLIC_EMAIL}.`,
+    },
+    {
+      id: 4,
+      question: "How long does it take to develop a mobile app?",
+      answer:
+        "We usually develop a mobile app in 7 to 9 months on average. However, this timeline can vary depending on the complexity and scope of the project. For instance, if we use frameworks like Xamarin to create an app on Windows, the development time might range between 4 to 6 months. Once a client partners with us, we provide detailed project timelines during the initial consultation phase, taking into account factors such as features, integrations, and testing requirements.",
+    },
+    {
+      id: 5,
+      question: "Do you provide maintenance and support services after app deployment?",
+      answer:
+        "Yes, we offer support and maintenance services, which include regular updates to ensure compatibility with new mobile OS versions, bug fixes, performance enhancements, and technical support to address any issues that may arise.",
+    },
+  ],
+};

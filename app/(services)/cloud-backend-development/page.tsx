@@ -3,6 +3,7 @@ import { cloudBackendDatabase } from "@/database/services";
 import SolutionsComponent from "@/components/solutions";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
+import Image from "next/image";
 
 const CloudBackendDevelopment = () => (
   <>
@@ -10,6 +11,17 @@ const CloudBackendDevelopment = () => (
       <ServicesHeader
         title="Cloud & Backend Services"
         description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we specialize in building powerful, scalable cloud and backend solutions that enhance your business operations, ensuring reliability and efficiency.`}
+      />
+    </section>
+    <section className="w-screen relative lg:mt-40 mt-8">
+      <Image
+        src="/img/services/cloud-backend.webp"
+        alt="Cloud & Backend Development"
+        layout="responsive"
+        width={700}
+        height={475}
+        className="object-contain object-center"
+        priority
       />
     </section>
     <section className="container">
