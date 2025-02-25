@@ -29,9 +29,11 @@ const ProcessFlow = () => (
           <div className="relative lg:min-w-[560px] min-w-full h-[300px] md:h-[600px] lg:h-[750px] rounded-2xl overflow-hidden">
             <Image src={item.img} alt={item.title} fill sizes="lg:560px" className="object-cover" />
           </div>
-          <div className="absolute bottom-0">
-            <ArrowDown />
-          </div>
+          {index !== companyProcessFlow.length - 1 && (
+            <div className="absolute bottom-0">
+              <ArrowDown />
+            </div>
+          )}
         </div>
       ))}
     </div>

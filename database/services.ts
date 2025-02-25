@@ -748,3 +748,126 @@ export const webDevelopmentDatabase = {
     },
   ],
 };
+
+export const cloudBackendDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "Cloud Architecture & Consulting",
+      description:
+        "Strategic cloud solutions tailored to your business needs, ensuring scalability, security, and cost-efficiency.",
+    },
+    {
+      id: 2,
+      title: "Backend Development",
+      description:
+        "Robust, high-performance backend solutions to power your web and mobile applications seamlessly.",
+    },
+    {
+      id: 3,
+      title: "Serverless Computing",
+      description:
+        "Reduce operational overhead and scale effortlessly with serverless architectures.",
+    },
+    {
+      id: 4,
+      title: "Cloud Migration Services",
+      description:
+        "Seamlessly transition from on-premise to cloud-based infrastructure without disruptions.",
+    },
+    {
+      id: 5,
+      title: "Database Management & Optimization",
+      description:
+        "Ensure fast, reliable, and scalable database performance with expert tuning and management.",
+    },
+    {
+      id: 6,
+      title: "DevOps & CI/CD Automation",
+      description:
+        "Streamline deployment processes and improve efficiency with automated DevOps pipelines.",
+    },
+    {
+      id: 7,
+      title: "API Development & Microservices",
+      description:
+        "Build scalable, maintainable, and efficient APIs using microservices architecture.",
+    },
+    {
+      id: 8,
+      title: "Cloud Security & Compliance",
+      description:
+        "Protect your data and applications with enterprise-grade security measures and compliance adherence.",
+    },
+    {
+      id: 9,
+      title: "Infrastructure as Code (IaC)",
+      description:
+        "Automate cloud infrastructure management with Terraform, AWS CloudFormation, and more.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Assessment & Strategy",
+      description:
+        "We analyze your business needs and define a cloud and backend strategy tailored to your goals.",
+    },
+    {
+      id: 2,
+      title: "System Architecture Design",
+      description:
+        "We design scalable, high-availability cloud and backend architectures to support future growth.",
+    },
+    {
+      id: 3,
+      title: "Development & Implementation",
+      description:
+        "Our team builds, tests, and optimizes backend and cloud solutions to ensure peak performance.",
+    },
+    {
+      id: 4,
+      title: "Security & Compliance Integration",
+      description:
+        "We implement security best practices to safeguard data and meet industry regulations.",
+    },
+    {
+      id: 5,
+      title: "Performance Optimization",
+      description:
+        "Continuous monitoring and fine-tuning to maintain optimal performance and cost efficiency.",
+    },
+    {
+      id: 6,
+      title: "Deployment & Scaling",
+      description:
+        "We ensure smooth deployments with automated CI/CD pipelines and scalable cloud solutions.",
+    },
+    {
+      id: 7,
+      title: "Monitoring & Support",
+      description:
+        "24/7 monitoring, proactive issue resolution, and ongoing support for long-term success.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "What cloud providers do you support?",
+      answer:
+        "We work with AWS, Google Cloud, Azure, and other major cloud platforms, depending on your business needs.",
+    },
+    {
+      id: 2,
+      question: "How do you ensure data security in cloud solutions?",
+      answer:
+        "We implement industry-standard security measures, including encryption, IAM policies, firewalls, and compliance frameworks.",
+    },
+    {
+      id: 3,
+      question: "What are the benefits of using microservices over a monolithic architecture?",
+      answer:
+        "Microservices provide better scalability, easier maintenance, and faster development cycles compared to monolithic architectures.",
+    },
+  ],
+};
