@@ -14,7 +14,7 @@ export const servicesDatabase = [
       { title: "Web3.0 Development", link: "web3-development", id: "web3" },
       {
         title: "Cloud & Backend",
-        link: "developent/?section=cloud-backend",
+        link: "cloud-backend-development",
         id: "cloud-backend",
       },
       { title: "Web Development", link: "web-development", id: "web" },
@@ -28,17 +28,17 @@ export const servicesDatabase = [
     children: [
       {
         title: "MLOps",
-        link: "unified-engineering/?section=mlops",
+        link: "ml-ops-development",
         id: "mlops",
       },
       {
         title: "DevOps",
-        link: "unified-engineering/?section=devops",
+        link: "devops-development",
         id: "devops",
       },
       {
         title: "DevSecOps",
-        link: "unified-engineering/?section=devsecops",
+        link: "devsecops-development",
         id: "devsecops",
       },
     ],
@@ -50,17 +50,17 @@ export const servicesDatabase = [
     children: [
       {
         title: "UX/UI Design",
-        link: "others/?section=ux-ui",
+        link: "ux-ui-design-development",
         id: "ux-ui",
       },
       {
         title: "System/Business Analytics",
-        link: "others/?section=system-business-analytics",
+        link: "system-business-analytics",
         id: "system-business-analytics",
       },
       {
         title: "Product Management",
-        link: "others/?section=product-management",
+        link: "product-management",
         id: "product-management",
       },
     ],
