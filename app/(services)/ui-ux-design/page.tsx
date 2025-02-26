@@ -32,7 +32,7 @@ const UIUXDesign = () => (
     </section>
     <section className="container">
       <ApproachComponent
-        title="How we transform ideas into beautiful, high-performing designs"
+        title="Crafting Impactful Designs"
         description="Our design approach focuses on user behavior, aesthetics, and usability, creating experiences that captivate and convert."
         steps={uiUxDesignDatabase.approach}
       />
