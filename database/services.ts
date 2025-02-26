@@ -50,8 +50,8 @@ export const servicesDatabase = [
     children: [
       {
         title: "UX/UI Design",
-        link: "ux-ui-design-development",
-        id: "ux-ui",
+        link: "ui-ux-design",
+        id: "ui-ux",
       },
       {
         title: "System/Business Analytics",
@@ -1396,6 +1396,123 @@ export const devSecOpsDatabase = {
       question: "How do you ensure compliance with security regulations?",
       answer:
         "We implement security controls aligned with GDPR, HIPAA, SOC 2, and other compliance frameworks.",
+    },
+  ],
+};
+
+export const uiUxDesignDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "UI/UX Strategy & Consulting",
+      description:
+        "Tailored UI/UX strategies to enhance user experience and engagement through intuitive design and research-driven decisions.",
+    },
+    {
+      id: 2,
+      title: "User Research & Analysis",
+      description:
+        "Understand user needs and behaviors through detailed research, personas, and usability testing.",
+    },
+    {
+      id: 3,
+      title: "Wireframing & Prototyping",
+      description:
+        "Create low and high-fidelity wireframes and interactive prototypes to visualize and refine design concepts.",
+    },
+    {
+      id: 4,
+      title: "Visual & Interaction Design",
+      description:
+        "Craft aesthetically pleasing and intuitive interfaces with a focus on usability and accessibility.",
+    },
+    {
+      id: 5,
+      title: "Design Systems & Branding",
+      description:
+        "Develop scalable design systems, UI components, and brand guidelines for consistency and efficiency.",
+    },
+    {
+      id: 6,
+      title: "Usability Testing & Optimization",
+      description:
+        "Conduct usability testing and continuous improvements based on user feedback and data analytics.",
+    },
+    {
+      id: 7,
+      title: "Mobile & Web App UI/UX Design",
+      description:
+        "Design engaging and responsive experiences tailored for web and mobile applications.",
+    },
+    {
+      id: 8,
+      title: "Accessibility & Inclusive Design",
+      description:
+        "Ensure compliance with WCAG standards and create inclusive digital experiences for all users.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Discovery & Research",
+      description:
+        "We analyze business goals, user personas, and market trends to inform our design process.",
+    },
+    {
+      id: 2,
+      title: "Concept & Ideation",
+      description:
+        "Brainstorm design ideas and create wireframes to define user flows and interactions.",
+    },
+    {
+      id: 3,
+      title: "Prototyping & Validation",
+      description:
+        "Develop interactive prototypes and test them with users to refine usability and experience.",
+    },
+    {
+      id: 4,
+      title: "Design & Development Handoff",
+      description:
+        "Create high-fidelity UI designs and collaborate with developers for smooth implementation.",
+    },
+    {
+      id: 5,
+      title: "Testing & Iteration",
+      description:
+        "Continuously test, collect feedback, and refine designs to enhance user satisfaction.",
+    },
+    {
+      id: 6,
+      title: "Deployment & Optimization",
+      description:
+        "Ensure seamless design integration and optimize experiences for better engagement and performance.",
+    },
+    {
+      id: 7,
+      title: "Ongoing Support & Enhancements",
+      description:
+        "Provide continuous design updates, usability improvements, and user experience enhancements.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "What is the importance of UI/UX design?",
+      answer:
+        "A well-designed UI/UX improves user satisfaction, increases conversions, and enhances brand perception.",
+    },
+    {
+      id: 2,
+      question: "Which tools do you use for UI/UX design?",
+      answer:
+        "We use tools like Figma, Adobe XD, Sketch, InVision, and Axure for designing and prototyping.",
+    },
+    {
+      id: 3,
+      question: "How do you ensure accessibility in designs?",
+      answer:
+        "We follow WCAG guidelines, conduct accessibility audits, and use contrast and keyboard navigation testing.",
     },
   ],
 };
