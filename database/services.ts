@@ -28,17 +28,17 @@ export const servicesDatabase = [
     children: [
       {
         title: "MLOps",
-        link: "ml-ops-development",
+        link: "mlops",
         id: "mlops",
       },
       {
         title: "DevOps",
-        link: "devops-development",
+        link: "devops",
         id: "devops",
       },
       {
         title: "DevSecOps",
-        link: "devsecops-development",
+        link: "devsecops",
         id: "devsecops",
       },
     ],
@@ -1051,6 +1051,351 @@ export const mobileDevelopmentDatabase = {
       question: "Do you provide maintenance and support services after app deployment?",
       answer:
         "Yes, we offer support and maintenance services, which include regular updates to ensure compatibility with new mobile OS versions, bug fixes, performance enhancements, and technical support to address any issues that may arise.",
+    },
+  ],
+};
+
+export const mlOpsDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "MLOps Strategy & Consulting",
+      description:
+        "Tailored MLOps strategies to streamline your AI/ML workflows, ensuring efficiency, scalability, and compliance.",
+    },
+    {
+      id: 2,
+      title: "Model Training & Optimization",
+      description:
+        "Optimize machine learning models for performance, accuracy, and efficiency with automated pipelines.",
+    },
+    {
+      id: 3,
+      title: "Model Deployment & Serving",
+      description:
+        "Deploy and manage machine learning models in production with scalable, real-time inference solutions.",
+    },
+    {
+      id: 4,
+      title: "CI/CD for Machine Learning",
+      description:
+        "Automate model training, validation, and deployment with robust CI/CD pipelines.",
+    },
+    {
+      id: 5,
+      title: "Data Engineering & Feature Store",
+      description:
+        "Build and manage scalable data pipelines, ensuring high-quality data for model training and inference.",
+    },
+    {
+      id: 6,
+      title: "Monitoring & Model Drift Detection",
+      description:
+        "Continuous monitoring of ML models to detect drift, performance degradation, and retraining needs.",
+    },
+    {
+      id: 7,
+      title: "ML Security & Compliance",
+      description:
+        "Implement security best practices and ensure compliance with industry standards for responsible AI.",
+    },
+    {
+      id: 8,
+      title: "Infrastructure as Code for MLOps",
+      description:
+        "Automate and manage ML infrastructure using Terraform, Kubernetes, and cloud-native tools.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Assessment & Planning",
+      description:
+        "We analyze your ML workflows and define a scalable and efficient MLOps strategy tailored to your needs.",
+    },
+    {
+      id: 2,
+      title: "Data & Feature Engineering",
+      description:
+        "Design and implement robust data pipelines for feature extraction, transformation, and storage.",
+    },
+    {
+      id: 3,
+      title: "Model Development & Experimentation",
+      description:
+        "Enable rapid experimentation with automated tracking, versioning, and hyperparameter tuning.",
+    },
+    {
+      id: 4,
+      title: "Model Deployment & Lifecycle Management",
+      description:
+        "Implement automated deployment strategies for scalable and reliable ML model serving.",
+    },
+    {
+      id: 5,
+      title: "Observability & Continuous Improvement",
+      description:
+        "Set up monitoring, logging, and alerting to detect issues and ensure model reliability.",
+    },
+    {
+      id: 6,
+      title: "Security & Governance",
+      description:
+        "Apply best practices for model security, explainability, and regulatory compliance.",
+    },
+    {
+      id: 7,
+      title: "Maintenance & Support",
+      description:
+        "Ongoing model maintenance, retraining, and support to adapt to changing data patterns.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "What cloud platforms do you support for MLOps?",
+      answer:
+        "We support AWS, Google Cloud, Azure, and on-premise environments for MLOps workflows.",
+    },
+    {
+      id: 2,
+      question: "How do you ensure model performance in production?",
+      answer:
+        "We implement continuous monitoring, model drift detection, and automated retraining pipelines.",
+    },
+    {
+      id: 3,
+      question: "What tools and frameworks do you use for MLOps?",
+      answer: "We work with Kubeflow, MLflow, TensorFlow Extended (TFX), Apache Airflow, and more.",
+    },
+  ],
+};
+
+export const devOpsDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "DevOps Strategy & Consulting",
+      description:
+        "Tailored DevOps strategies to streamline your development and deployment workflows, ensuring agility, scalability, and security.",
+    },
+    {
+      id: 2,
+      title: "CI/CD Implementation",
+      description:
+        "Automate build, test, and deployment processes with robust CI/CD pipelines for faster releases.",
+    },
+    {
+      id: 3,
+      title: "Infrastructure as Code (IaC)",
+      description:
+        "Automate and manage infrastructure with Terraform, Ansible, AWS CloudFormation, and Kubernetes.",
+    },
+    {
+      id: 4,
+      title: "Cloud & On-Prem Infrastructure Management",
+      description:
+        "Optimize and manage cloud-native and hybrid infrastructure for maximum efficiency and performance.",
+    },
+    {
+      id: 5,
+      title: "Monitoring & Logging",
+      description:
+        "Implement robust monitoring, alerting, and logging solutions to ensure system reliability.",
+    },
+    {
+      id: 6,
+      title: "Security & Compliance",
+      description:
+        "Apply best security practices, including DevSecOps, vulnerability management, and compliance adherence.",
+    },
+    {
+      id: 7,
+      title: "Containerization & Orchestration",
+      description:
+        "Leverage Docker and Kubernetes to deploy and manage scalable applications efficiently.",
+    },
+    {
+      id: 8,
+      title: "Automated Testing & Quality Assurance",
+      description:
+        "Ensure software quality with automated testing strategies integrated into the DevOps lifecycle.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Assessment & Planning",
+      description:
+        "We analyze your current infrastructure and define a strategic DevOps roadmap tailored to your needs.",
+    },
+    {
+      id: 2,
+      title: "Toolchain Selection & Implementation",
+      description: "We integrate the best DevOps tools for automation, monitoring, and deployment.",
+    },
+    {
+      id: 3,
+      title: "Infrastructure Automation",
+      description:
+        "Design and implement infrastructure as code to achieve consistency and scalability.",
+    },
+    {
+      id: 4,
+      title: "Continuous Integration & Deployment",
+      description: "Automate development workflows with CI/CD pipelines for seamless releases.",
+    },
+    {
+      id: 5,
+      title: "Security & Compliance Integration",
+      description:
+        "Embed security practices into DevOps processes to safeguard applications and data.",
+    },
+    {
+      id: 6,
+      title: "Performance Optimization & Monitoring",
+      description: "Implement monitoring and analytics to ensure system performance and uptime.",
+    },
+    {
+      id: 7,
+      title: "Ongoing Support & Maintenance",
+      description:
+        "Provide continuous support, updates, and enhancements for long-term efficiency.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "Which cloud providers do you support for DevOps?",
+      answer: "We support AWS, Google Cloud, Azure, and hybrid on-premise environments.",
+    },
+    {
+      id: 2,
+      question: "What are the benefits of CI/CD pipelines?",
+      answer:
+        "CI/CD pipelines automate testing and deployment, reducing errors and improving release speed.",
+    },
+    {
+      id: 3,
+      question: "What security measures do you implement in DevOps?",
+      answer:
+        "We apply DevSecOps principles, including vulnerability scanning, access controls, and automated security checks.",
+    },
+  ],
+};
+
+export const devSecOpsDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "DevSecOps Strategy & Consulting",
+      description:
+        "Tailored DevSecOps strategies to integrate security seamlessly into your development and deployment workflows.",
+    },
+    {
+      id: 2,
+      title: "Secure CI/CD Pipelines",
+      description:
+        "Implement security best practices in CI/CD pipelines to detect vulnerabilities early in the development lifecycle.",
+    },
+    {
+      id: 3,
+      title: "Infrastructure as Code (IaC) Security",
+      description:
+        "Ensure secure infrastructure deployments with automated security checks in Terraform, Ansible, and CloudFormation.",
+    },
+    {
+      id: 4,
+      title: "Cloud Security & Compliance",
+      description:
+        "Implement security policies, identity management, and compliance frameworks for cloud environments.",
+    },
+    {
+      id: 5,
+      title: "Application Security Testing",
+      description:
+        "Perform automated and manual security testing, including SAST, DAST, and penetration testing.",
+    },
+    {
+      id: 6,
+      title: "Container & Kubernetes Security",
+      description:
+        "Harden containerized applications and Kubernetes clusters against security threats.",
+    },
+    {
+      id: 7,
+      title: "Threat Monitoring & Incident Response",
+      description:
+        "Set up continuous monitoring and automated response mechanisms to detect and mitigate security threats.",
+    },
+    {
+      id: 8,
+      title: "Security Automation & Governance",
+      description:
+        "Automate security controls, enforce compliance policies, and streamline security governance processes.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Assessment & Risk Analysis",
+      description:
+        "Evaluate current security practices, identify vulnerabilities, and define a DevSecOps roadmap.",
+    },
+    {
+      id: 2,
+      title: "Security Toolchain Integration",
+      description:
+        "Integrate security tools seamlessly into your DevOps workflows for automated security checks.",
+    },
+    {
+      id: 3,
+      title: "Secure Software Development Lifecycle (SDLC)",
+      description:
+        "Implement security controls at every stage of the SDLC to prevent security issues early.",
+    },
+    {
+      id: 4,
+      title: "Continuous Monitoring & Threat Detection",
+      description:
+        "Deploy real-time security monitoring, logging, and automated threat detection mechanisms.",
+    },
+    {
+      id: 5,
+      title: "Compliance & Regulatory Alignment",
+      description:
+        "Ensure compliance with industry standards such as GDPR, HIPAA, SOC 2, and ISO 27001.",
+    },
+    {
+      id: 6,
+      title: "Automated Incident Response & Remediation",
+      description:
+        "Develop and deploy automated response strategies to mitigate security incidents swiftly.",
+    },
+    {
+      id: 7,
+      title: "Ongoing Security Training & Awareness",
+      description: "Educate teams on security best practices and foster a security-first culture.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "How does DevSecOps improve security in development?",
+      answer:
+        "DevSecOps integrates security early in the development lifecycle, reducing vulnerabilities and improving compliance.",
+    },
+    {
+      id: 2,
+      question: "What tools do you use for security automation?",
+      answer:
+        "We use tools like SonarQube, Snyk, Aqua Security, Twistlock, and AWS Security Hub for automated security checks.",
+    },
+    {
+      id: 3,
+      question: "How do you ensure compliance with security regulations?",
+      answer:
+        "We implement security controls aligned with GDPR, HIPAA, SOC 2, and other compliance frameworks.",
     },
   ],
 };
