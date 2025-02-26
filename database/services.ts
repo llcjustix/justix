@@ -1516,3 +1516,83 @@ export const uiUxDesignDatabase = {
     },
   ],
 };
+
+export const systemBusinessAnalyticsDatabase = {
+  solutions: [
+    {
+      id: 1,
+      title: "Data-Driven Strategy",
+      description:
+        "Transform raw data into actionable insights to drive business growth and efficiency.",
+    },
+    {
+      id: 2,
+      title: "Process Optimization",
+      description:
+        "Analyze workflows, eliminate inefficiencies, and improve operational performance.",
+    },
+    {
+      id: 3,
+      title: "Predictive Analytics",
+      description:
+        "Leverage AI and machine learning to forecast trends and make data-backed decisions.",
+    },
+    {
+      id: 4,
+      title: "Market & Customer Insights",
+      description: "Understand customer behavior and market dynamics to refine your strategy.",
+    },
+    {
+      id: 5,
+      title: "Dashboard & Reporting",
+      description:
+        "Visualize complex data with intuitive dashboards for real-time decision-making.",
+    },
+    {
+      id: 6,
+      title: "Risk & Compliance Analysis",
+      description: "Mitigate risks and ensure compliance with intelligent data monitoring.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Discovery & Data Collection",
+      description: "Gather and analyze data to uncover opportunities and challenges.",
+    },
+    {
+      id: 2,
+      title: "Modeling & Insights",
+      description: "Develop analytical models to identify patterns and predict outcomes.",
+    },
+    {
+      id: 3,
+      title: "Strategic Implementation",
+      description: "Turn insights into action with data-backed business strategies.",
+    },
+    {
+      id: 4,
+      title: "Monitoring & Continuous Improvement",
+      description: "Track performance and optimize strategies for sustained success.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "How can analytics improve my business?",
+      answer:
+        "Analytics provides clarity, optimizes operations, and helps make smarter, data-driven decisions.",
+    },
+    {
+      id: 2,
+      question: "What tools do you use for analysis?",
+      answer:
+        "We use Power BI, Tableau, Google Analytics, Python, and AI-driven solutions for comprehensive insights.",
+    },
+    {
+      id: 3,
+      question: "Can you customize reports for specific business needs?",
+      answer: "Absolutely! We tailor dashboards and reports to fit your unique objectives.",
+    },
+  ],
+};
