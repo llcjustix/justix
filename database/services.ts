@@ -1596,3 +1596,80 @@ export const systemBusinessAnalyticsDatabase = {
     },
   ],
 };
+
+export const productManagementService = {
+  solutions: [
+    {
+      id: 1,
+      title: "Product Strategy",
+      description:
+        "Craft a clear roadmap to bring your product vision to life and meet market needs.",
+    },
+    {
+      id: 2,
+      title: "User-Centric Design",
+      description:
+        "Create intuitive and engaging user experiences based on real feedback and data.",
+    },
+    {
+      id: 3,
+      title: "Agile Execution",
+      description:
+        "Drive iterative progress with agile methodologies to deliver faster and smarter.",
+    },
+    {
+      id: 4,
+      title: "Market Fit & Growth",
+      description: "Refine your product to reach its perfect market fit and fuel scalable growth.",
+    },
+    {
+      id: 5,
+      title: "Performance Tracking",
+      description:
+        "Monitor product performance with actionable metrics to ensure sustained success.",
+    },
+  ],
+  approach: [
+    {
+      id: 1,
+      title: "Idea to Execution",
+      description: "Turn creative ideas into tangible products with a seamless execution strategy.",
+    },
+    {
+      id: 2,
+      title: "User Feedback Loop",
+      description: "Incorporate real-time feedback to refine and enhance the product continuously.",
+    },
+    {
+      id: 3,
+      title: "Cross-Functional Collaboration",
+      description: "Work across teams to align goals, ensuring product excellence at every stage.",
+    },
+    {
+      id: 4,
+      title: "Sustain & Scale",
+      description:
+        "Focus on optimizing and scaling your product for long-term growth and market impact.",
+    },
+  ],
+  faq: [
+    {
+      id: 1,
+      question: "How can product management enhance my product?",
+      answer:
+        "It ensures your product meets user needs, stays ahead of market trends, and drives business growth.",
+    },
+    {
+      id: 2,
+      question: "What methodologies do you use?",
+      answer:
+        "We use Agile, Lean, and Design Thinking to deliver impactful and innovative products.",
+    },
+    {
+      id: 3,
+      question: "Can you help with scaling products?",
+      answer:
+        "Absolutely! We focus on product sustainability, ensuring it scales seamlessly to meet growing demand.",
+    },
+  ],
+};

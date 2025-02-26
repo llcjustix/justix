@@ -16,7 +16,7 @@ const SystemBusinessAnalytics = () => (
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
         src="/img/services/system-business-analytics.webp"
-        alt="UI/UX Design"
+        alt="System/Business Analytics"
         layout="responsive"
         width={700}
         height={475}
@@ -32,8 +32,7 @@ const SystemBusinessAnalytics = () => (
     </section>
     <section className="container">
       <ApproachComponent
-        title="How we transform raw data into strategic intelligence"
-        description="Our approach leverages cutting-edge analytics, predictive modeling, and data visualization to uncover hidden opportunities and improve efficiency."
+        title="Data-driven insights"
         steps={systemBusinessAnalyticsDatabase.approach}
       />
     </section>
