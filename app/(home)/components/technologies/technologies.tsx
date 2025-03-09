@@ -29,7 +29,7 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
         </p>
       </div>
       <div className="flex flex-wrap flex-col md:flex-row mt-8 md:mt-12 lg:mt-20 md:border-t border-gray-300">
-        <div className="md:border-r border-b border-gray-300 md:pt-12 md:pr-12 lg:w-[25%] w-full overflow-auto pb-4">
+        <div className="md:border-r border-gray-300 md:pt-12 md:pr-12 lg:w-[25%] w-full overflow-auto pb-4">
           <div className="flex md:flex-col md:gap-2 gap-6">
             {categorisedTechnologiesDatabase.map((item) => (
               <button
@@ -46,6 +46,7 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
             ))}
           </div>
         </div>
+        <div className="w-full h-[1px] bg-gray-300 md:hidden block" />
         <div className="pt-12 w-full flex-1 md:ps-12 lg:pb-[18px] flex flex-col gap-6">
           {currentType.categories.map((category) => (
             <div key={category.id}>

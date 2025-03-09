@@ -19,7 +19,7 @@ const SuccessStories = () => (
     </div>
     <div className="grid md:grid-cols-2 grid-cols-1 gap-x-16 lg:gap-x-28 mt-12 lg:mt-20">
       {successStoriesDatabase.map((story, index) => (
-        <ProjectCard data={story} index={index} />
+        <ProjectCard data={story} key={story.id} index={index} />
       ))}
     </div>
   </div>

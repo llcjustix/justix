@@ -86,7 +86,7 @@ const DevelopmentProcess = () => {
         </div>
         <div className="overflow-y-auto lg:hidden flex gap-10">
           {processesDatabase.map((process) => (
-            <div key={process.id} className="min-w-96">
+            <div key={process.id} className="min-w-[340px]">
               <div className="relative h-[400px] w-[300px] overflow-hidden bg-black rounded-full mb-10 mx-auto">
                 <Image
                   src={process.img}

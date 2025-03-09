@@ -16,7 +16,7 @@ const Work = () => (
     </div>
     <div className="grid md:grid-cols-2 grid-cols-1 gap-x-16 lg:gap-x-28 my-12 lg:my-20">
       {successStoriesDatabase.map((story, index) => (
-        <ProjectCard data={story} index={index} />
+        <ProjectCard key={story.id} data={story} index={index} />
       ))}
     </div>
   </section>

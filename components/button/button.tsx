@@ -23,6 +23,7 @@ interface ButtonProps {
   color?: keyof typeof colors;
   onClick?: () => void;
   icon?: React.ReactNode;
+  className?: string;
 }
 
 const Button = ({
@@ -34,6 +35,7 @@ const Button = ({
   fullWidth = false,
   onClick,
   icon,
+  className,
 }: ButtonProps) => (
   <button
     type={type}
@@ -43,7 +45,8 @@ const Button = ({
       rounded ? "rounded-3xl" : "rounded-xl",
       icon && "flex items-center justify-center gap-2",
       sizes[size],
-      colors[color]
+      colors[color],
+      className
     )}
     onClick={(e) => {
       e.stopPropagation();
