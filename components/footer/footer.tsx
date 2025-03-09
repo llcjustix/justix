@@ -49,7 +49,7 @@ const Footer = () => {
       </div>
       <div className="bg-black">
         <div className="container">
-          <div className="flex justify-between pt-14 md:pt-24 lg:pt-20 pb-10">
+          <div className="grid lg:grid-cols-4 grid-cols-2 justify-between pt-14 md:pt-24 lg:pt-20 pb-10">
             {servicesDatabase.map((service) => (
               <div key={service.id}>
                 <div className="flex items-center gap-2 md:mb-4 mt-2">
@@ -96,7 +96,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col items-center gap-3">
+            <div className="sm:flex hidden flex-col items-center gap-3">
               <Link href="/" aria-label={process.env.NEXT_PUBLIC_WEBSITE_NAME}>
                 <Logo color="white" />
               </Link>
@@ -134,6 +134,17 @@ const Footer = () => {
                   Terms & Conditions
                 </Link>
               </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-dark py-10">
+            <div className="sm:hidden flex flex-col items-center gap-3">
+              <Link href="/" aria-label={process.env.NEXT_PUBLIC_WEBSITE_NAME}>
+                <Logo color="white" />
+              </Link>
+              <p className="text-neutral-500 text-center text-xs lg:text-sm">
+                © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}. All Rights
+                Reserved
+              </p>
             </div>
           </div>
         </div>

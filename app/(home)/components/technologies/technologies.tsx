@@ -29,15 +29,15 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
         </p>
       </div>
       <div className="flex flex-wrap flex-col md:flex-row mt-8 md:mt-12 lg:mt-20 md:border-t border-gray-300">
-        <div className="md:border-r border-gray-300 md:pt-12 md:pr-12 w-[25%]">
-          <div className="flex flex-col gap-2">
+        <div className="md:border-r border-b border-gray-300 md:pt-12 md:pr-12 lg:w-[25%] w-full overflow-auto pb-4">
+          <div className="flex md:flex-col md:gap-2 gap-6">
             {categorisedTechnologiesDatabase.map((item) => (
               <button
                 type="button"
                 key={item.id}
                 onClick={() => setCurrentType(item)}
                 className={clsx(
-                  "whitespace-nowrap md:whitespace-normal outline-none md:w-full rounded-full py-5 md:px-7 text-left text-xl",
+                  "whitespace-nowrap md:whitespace-normal outline-none md:w-full max-w-max rounded-full md:py-5 py-3 md:px-7 px-4 text-left text-xl",
                   currentType.id === item.id ? "font-bold bg-gray-light" : "font-medium"
                 )}
               >
@@ -46,7 +46,7 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
             ))}
           </div>
         </div>
-        <div className="pt-12 w-full md:w-8/12 lg:w-9/12 md:ps-12 lg:pb-[18px] flex flex-col gap-6">
+        <div className="pt-12 w-full flex-1 md:ps-12 lg:pb-[18px] flex flex-col gap-6">
           {currentType.categories.map((category) => (
             <div key={category.id}>
               <h4 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
