@@ -44,8 +44,7 @@ const DevelopmentProcess = () => {
         >
           View More <RiArrowRightLongLine />
         </Link>
-
-        <div className="relative flex">
+        <div className="relative lg:flex hidden">
           <div className="gap-36 w-2/4">
             {processesDatabase.map((process, index) => (
               <div key={process.id} id={process.id} className="process-item">
@@ -84,6 +83,33 @@ const DevelopmentProcess = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="overflow-y-auto flex gap-10">
+          {processesDatabase.map((process) => (
+            <div key={process.id} className="min-w-96">
+              <div className="relative h-[400px] w-[300px] overflow-hidden bg-black rounded-full mb-10 mx-auto">
+                <Image
+                  src={process.img}
+                  alt={process.title}
+                  sizes="300px"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div key={process.id} id={process.id} className="process-item">
+                <div className="font-bold text-theme text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[60px] 2xl:!leading-[75px] text-primary">
+                  {process.title}
+                </div>
+                <p
+                  className={clsx(
+                    "my-7 leading-5 text-white font-normal text-sm lg:text-md xl:text-lg 2xl:text-xl"
+                  )}
+                >
+                  {process.shortDescription}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
