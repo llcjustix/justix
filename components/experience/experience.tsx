@@ -64,7 +64,7 @@ const ExperienceComponent = ({
             Let's Discuss
           </Button>
         </div>
-        <ul className="grid grid-cols-3 gap-3">
+        <ul className="md:grid hidden grid-cols-3 gap-3">
           {technologies.map((item, index) => (
             <div
               key={item.id}

@@ -15,7 +15,7 @@ const FAQComponent = ({ title, questions = [], color = "black" }: FAQComponentPr
   <div className="pb-8 pt-14 md:pt-24 lg:pt-[10.5rem]">
     <h2
       className={clsx(
-        "font-bold lg:pb-[2.375rem] sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]",
+        "font-bold pb-[2.375rem] sentence-first-letter text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]",
         color === "black" ? "text-black" : "text-white"
       )}
     >
@@ -26,10 +26,10 @@ const FAQComponent = ({ title, questions = [], color = "black" }: FAQComponentPr
         <Disclosure key={item.id} as="div" className="rounded-3xl border border-[#CCCCCC] p-6">
           {({ open }) => (
             <>
-              <DisclosureButton className="w-full flex justify-between items-center">
+              <DisclosureButton className="w-full flex justify-between items-start">
                 <h3
                   className={clsx(
-                    "font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]",
+                    "font-bold text-lg md:text-xl xl:text-2xl 2xl:text-3xl tracking-[0px] text-left",
                     // eslint-disable-next-line no-nested-ternary
                     open ? "text-primary" : color === "black" ? "text-black" : "text-white"
                   )}
