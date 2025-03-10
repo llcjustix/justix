@@ -9,12 +9,18 @@ const ProcessFlow = () => (
     </h2>
     <div className="flex flex-col gap-40 my-40">
       {companyProcessFlow.map((item, index) => (
-        <div key={item.id} className="relative flex items-center justify-between gap-8 md:gap-x-24">
+        <div
+          key={item.id}
+          className="relative flex lg:flex-row-reverse flex-col items-center justify-between gap-8 md:gap-x-24"
+        >
           {index === 0 && (
-            <div className="absolute top-0">
+            <div className="lg:block hidden absolute left-0 top-0">
               <ArrowDown />
             </div>
           )}
+          <div className="relative lg:min-w-[560px] min-w-full h-[300px] md:h-[500px] lg:h-[750px] rounded-2xl overflow-hidden">
+            <Image src={item.img} alt={item.title} fill sizes="lg:560px" className="object-cover" />
+          </div>
           <div className="flex-1">
             <h2 className="text-black font-bold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
               0{index + 1}
@@ -26,11 +32,8 @@ const ProcessFlow = () => (
               {item.description}
             </p>
           </div>
-          <div className="md:block hidden relative lg:min-w-[560px] min-w-full h-[300px] md:h-[600px] lg:h-[750px] rounded-2xl overflow-hidden">
-            <Image src={item.img} alt={item.title} fill sizes="lg:560px" className="object-cover" />
-          </div>
           {index !== companyProcessFlow.length - 1 && (
-            <div className="absolute bottom-0">
+            <div className="lg:block hidden absolute left-0 bottom-0">
               <ArrowDown />
             </div>
           )}
