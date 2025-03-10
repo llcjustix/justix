@@ -32,7 +32,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit(handleSendMessage)}>
       <div className="grid grid-cols-2 gap-y-6 gap-x-4">
-        <div className="col-span-1">
+        <div className="md:col-span-1 col-span-2">
           <Input
             placeholder="Firstname"
             {...register("firstname")}
@@ -40,13 +40,13 @@ const ContactForm = () => {
             inputSize="large"
           />
         </div>
-        <div className="col-span-1">
+        <div className="md:col-span-1 col-span-2">
           <Input placeholder="Lastname" {...register("lastname")} color="white" inputSize="large" />
         </div>
-        <div className="col-span-1">
+        <div className="md:col-span-1 col-span-2">
           <Input placeholder="Email" {...register("email")} color="white" inputSize="large" />
         </div>
-        <div className="col-span-1">
+        <div className="md:col-span-1 col-span-2">
           <Input placeholder="Phone" {...register("phone")} color="white" inputSize="large" />
         </div>
         <div className="col-span-2">

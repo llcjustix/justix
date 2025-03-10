@@ -51,6 +51,7 @@ const Sidebar = () => {
               {solutionsDatabase.map((solution) => (
                 <Link
                   href={solution.link}
+                  replace
                   key={solution.id}
                   onClick={toggleSidebar}
                   className="text-base hover:text-primary transition-colors duration-300"
@@ -75,6 +76,7 @@ const Sidebar = () => {
                   href={solution.link}
                   key={solution.link}
                   onClick={toggleSidebar}
+                  replace
                   className="text-base hover:text-primary transition-colors duration-300"
                 >
                   {solution.title}
@@ -89,6 +91,7 @@ const Sidebar = () => {
           <Link
             href={link}
             key={link}
+            replace
             onClick={toggleSidebar}
             className="group capitalize text-2xl font-medium text-white hover:text-primary focus:outline-none transition duration-200 w-full flex items-center justify-between"
           >
