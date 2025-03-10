@@ -25,7 +25,7 @@ const Sidebar = () => {
                   <div className="flex flex-col gap-1.5 ml-1.5">
                     {service.children.map((child) => (
                       <Link
-                        href={child.link}
+                        href={`/${child.link}`}
                         key={child.id}
                         onClick={toggleSidebar}
                         className="text-sm font-normal hover:text-primary transition-colors duration-300"
