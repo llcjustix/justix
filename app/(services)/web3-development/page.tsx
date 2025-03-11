@@ -5,6 +5,7 @@ import { web3DevelopmentDatabase } from "@/database/services";
 import ExperienceComponent from "@/components/experience";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
+import MainImagePath from "@/public/img/services/web3.webp";
 
 const Web3DevelopmentService = () => (
   <>
@@ -16,13 +17,15 @@ const Web3DevelopmentService = () => (
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
-        src="/img/services/web3.webp"
+        // src="/img/services/web3.webp"
+        src={MainImagePath}
         alt="Web-3.0 Development Services"
         layout="responsive"
         width={700}
         height={475}
         className="object-contain object-center"
         priority
+        placeholder="blur"
       />
     </section>
     <section className="container">

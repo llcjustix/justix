@@ -4,6 +4,7 @@ import SolutionsComponent from "@/components/solutions";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
 import Image from "next/image";
+import MainImagePath from "@/public/img/services/devsecops.jpeg";
 
 const DevSecOps = () => (
   <>
@@ -15,7 +16,8 @@ const DevSecOps = () => (
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
-        src="/img/services/devsecops.jpeg"
+        // src="/img/services/devsecops.jpeg"
+        src={MainImagePath}
         alt="DevSecOps"
         layout="responsive"
         width={700}

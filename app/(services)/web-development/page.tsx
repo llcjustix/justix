@@ -4,6 +4,7 @@ import SolutionsComponent from "@/components/solutions";
 import { webDevelopmentDatabase } from "@/database/services";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
+import MainImagePath from "@/public/img/services/web.webp";
 
 const WebDevelopment = () => (
   <>
@@ -15,13 +16,15 @@ const WebDevelopment = () => (
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
-        src="/img/services/web.webp"
+        // src="/img/services/web.webp"
+        src={MainImagePath}
         alt="Web Development"
         layout="responsive"
         width={700}
         height={475}
         className="object-contain object-center"
         priority
+        placeholder="blur"
       />
     </section>
     <section className="container">

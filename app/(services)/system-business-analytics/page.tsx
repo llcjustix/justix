@@ -4,6 +4,7 @@ import SolutionsComponent from "@/components/solutions";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
 import Image from "next/image";
+import MainImagePath from "@/public/img/services/system-business-analytics.webp";
 
 const SystemBusinessAnalytics = () => (
   <>
@@ -15,13 +16,15 @@ const SystemBusinessAnalytics = () => (
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
-        src="/img/services/system-business-analytics.webp"
+        // src="/img/services/system-business-analytics.webp"
+        src={MainImagePath}
         alt="System/Business Analytics"
         layout="responsive"
         width={700}
         height={475}
         className="object-contain object-center"
         priority
+        placeholder="blur"
       />
     </section>
     <section className="container">

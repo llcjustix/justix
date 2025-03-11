@@ -4,6 +4,7 @@ import SolutionsComponent from "@/components/solutions";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
 import Image from "next/image";
+import MainImagePath from "@/public/img/services/ui-ux-design.webp";
 
 const UIUXDesign = () => (
   <>
@@ -15,13 +16,15 @@ const UIUXDesign = () => (
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
-        src="/img/services/ui-ux-design.webp"
+        // src="/img/services/ui-ux-design.webp"
+        src={MainImagePath}
         alt="UI/UX Design"
         layout="responsive"
         width={700}
         height={475}
         className="object-contain object-center"
         priority
+        placeholder="blur"
       />
     </section>
     <section className="container">

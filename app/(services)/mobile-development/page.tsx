@@ -5,6 +5,7 @@ import { mobileDevelopmentDatabase } from "@/database/services";
 import ApproachComponent from "@/components/approach";
 import ExperienceComponent from "@/components/experience";
 import FAQComponent from "@/components/faq";
+import MainImagePath from "@/public/img/services/mobile-development.webp";
 
 const MobileDevelopment = () => (
   <>
@@ -16,13 +17,15 @@ const MobileDevelopment = () => (
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
-        src="/img/services/mobile-development.webp"
+        // src="/img/services/mobile-development.webp"
+        src={MainImagePath}
         alt="Mobile App Development"
         layout="responsive"
         width={700}
         height={475}
         className="object-contain object-center"
         priority
+        placeholder="blur"
       />
     </section>
     <section className="container">
