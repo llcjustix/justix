@@ -68,16 +68,16 @@ const Chat = () => {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-y-4 gap-x-2">
-          <div className="col-span-1">
+          <div className="sm:col-span-1 col-span-2">
             <Input placeholder="Firstname" {...register("firstname")} />
           </div>
-          <div className="col-span-1">
+          <div className="sm:col-span-1 col-span-2">
             <Input placeholder="Lastname" {...register("lastname")} />
           </div>
-          <div className="col-span-1">
+          <div className="sm:col-span-1 col-span-2">
             <Input placeholder="Email" {...register("email")} />
           </div>
-          <div className="col-span-1">
+          <div className="sm:col-span-1 col-span-2">
             <Input placeholder="Phone" {...register("phone")} />
           </div>
           <div className="col-span-2">
