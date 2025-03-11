@@ -81,7 +81,7 @@ const Drawer = ({
           <div className="absolute inset-0 overflow-hidden">
             <div
               className={clsx(
-                `pointer-events-none fixed flex `,
+                "pointer-events-none fixed flex",
                 drawerPosition[position].orientation,
                 drawerSize[position][size],
                 drawerPosition[position].height
@@ -101,37 +101,27 @@ const Drawer = ({
                     drawerPosition[position].fullScreen ? "w-screen" : drawerSize[position][size]
                   } ${color === "black" ? "bg-black" : "bg-white"}`}
                 >
-                  <TransitionChild
-                    as={Fragment}
-                    enter={`ease-in-out duration-${duration}`}
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                    leave={`ease-in-out duration-${duration}`}
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
+                  <div
+                    className={clsx(
+                      "flex items-center px-5 py-2",
+                      withLogo ? "justify-between" : "justify-end"
+                    )}
                   >
-                    <div
-                      className={clsx(
-                        "flex items-center px-5 py-2",
-                        withLogo ? "justify-between" : "justify-end"
-                      )}
-                    >
-                      {withLogo && (
-                        <Link href="/" onClick={toggleSidebar}>
-                          <Logo color="white" />
-                        </Link>
-                      )}
-                      <button
-                        type="button"
-                        className={`
+                    {withLogo && (
+                      <Link href="/" onClick={toggleSidebar}>
+                        <Logo color="white" />
+                      </Link>
+                    )}
+                    <button
+                      type="button"
+                      className={`
                         rounded-full w-10 h-10 flex items-center justify-center border border-gray-100 ${color === "black" ? "bg-white" : "bg-black"}`}
-                        onClick={onClose}
-                      >
-                        <span className="sr-only">Close panel</span>
-                        <CrossIcon aria-hidden="true" size="24" />
-                      </button>
-                    </div>
-                  </TransitionChild>
+                      onClick={onClose}
+                    >
+                      <span className="sr-only">Close panel</span>
+                      <CrossIcon aria-hidden="true" size="24" />
+                    </button>
+                  </div>
                   <div
                     className={clsx(
                       "flex-1 flex flex-col overflow-y-auto",
