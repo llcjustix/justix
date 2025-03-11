@@ -10,7 +10,7 @@ import useSettingsStore from "@/store/settings";
 
 const drawerSize = {
   right: {
-    small: "w-full max-w-[400px]",
+    small: "w-full sm:max-w-[400px]",
     medium: "w-full max-w-[600px]",
     large: "w-full max-w-[800px]",
   },
