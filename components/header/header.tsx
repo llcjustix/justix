@@ -33,6 +33,7 @@ const Header = () => {
     const currentScrollY = window.scrollY;
     if (currentScrollY <= 40) {
       setHasBorder(false);
+      setIsVisible(true);
     } else if (currentScrollY > lastScrollY) {
       setIsVisible(false);
       setHasBorder(false);
