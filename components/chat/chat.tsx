@@ -6,6 +6,7 @@ import Input from "@/components/input";
 import Button from "@/components/button";
 import Link from "next/link";
 import Textarea from "@/components/textarea";
+import useSettingsStore from "@/store/settings";
 
 const categories = ["AI Solutions", "Customer Software", "Mobile App", "Web App"];
 
@@ -20,6 +21,7 @@ const schema = yup.object({
 type FormType = yup.InferType<typeof schema>;
 
 const Chat = () => {
+  const { toggleChat } = useSettingsStore();
   const {
     watch,
     setValue,
@@ -93,10 +95,9 @@ const Chat = () => {
       <div className="text-sm font-medium text-gray-secondary-text mt-5">
         We'll keep your information in our CRM to respond to your request. For more details, consult
         our{" "}
-        <Link href="/privacy-policy" className="text-white">
-          privacy policy
+        <Link href="/privacy-policy" className="text-white" onClick={toggleChat}>
+          privacy policy.
         </Link>
-        .
       </div>
     </div>
   );
