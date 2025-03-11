@@ -5,6 +5,7 @@ import ApproachComponent from "@/components/approach";
 import ExperienceComponent from "@/components/experience";
 import SolutionsComponent from "@/components/solutions";
 import ServicesHeader from "@/components/services-header";
+import MainImagePath from "@/public/img/services/artificial-intelligence.webp";
 import Benefits from "./components/benefits";
 import AiModels from "./components/ai-models";
 
@@ -21,7 +22,9 @@ const ArtificialIntelligence = () => (
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
       <Image
-        src="/img/services/artificial-intelligence.webp"
+        // src="/img/services/artificial-intelligence.webp"
+        src={MainImagePath}
+        placeholder="blur"
         alt="Artificial Intelligence Development Services"
         layout="responsive"
         width={700}
