@@ -121,7 +121,7 @@ const Footer = () => {
               </div>
               <div className="flex gap-x-1.5 items-center">
                 <Link
-                  href="privacy-policy"
+                  href="/privacy-policy"
                   className="text-neutral-500 hover:text-primary text-xs lg:text-sm"
                 >
                   Privacy Policy
