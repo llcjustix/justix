@@ -6,6 +6,7 @@ import React from "react";
 import Drawer from "@/components/drawer";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import "@/lib/i18n";
 
 const Chat = dynamic(() => import("@/components/chat"));
 const Sidebar = dynamic(() => import("@/components/sidebar"));
