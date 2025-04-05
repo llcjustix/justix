@@ -1,20 +1,27 @@
 import clsx from "clsx";
-import Link from "next/link";
 
 interface ProjectCardProps {
   data: {
     link: string;
     title: string;
     description: string;
+    large_description: string;
   };
+  onClick: (data: {
+    link: string;
+    title: string;
+    description: string;
+    large_description: string;
+  }) => void;
   index: number;
 }
 
-const ProjectCard = ({ data, index }: ProjectCardProps) => (
-  <Link
+const ProjectCard = ({ data, index, onClick }: ProjectCardProps) => (
+  <button
+    type="button"
+    onClick={() => onClick(data)}
     key={data.link}
-    href={data.link}
-    className={clsx("flex flex-col gap-5", index & 1 && "mt-12 md:mt-16 lg:mt-32")}
+    className={clsx("text-left flex flex-col gap-5", index & 1 && "mt-12 md:mt-16 lg:mt-32")}
   >
     <div className="w-full sm:h-[538px] h-[380px] rounded-3xl lg:block bg-gray-light" />
     <div>
@@ -23,7 +30,7 @@ const ProjectCard = ({ data, index }: ProjectCardProps) => (
       </h3>
       <p>{data.description}</p>
     </div>
-  </Link>
+  </button>
 );
 
 export default ProjectCard;

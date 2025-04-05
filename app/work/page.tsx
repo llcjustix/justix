@@ -1,5 +1,4 @@
-import ProjectCard from "@/components/project-card";
-import { successStoriesDatabase } from "@/database/success-stories";
+import { WorksList } from "@/app/work/components/list";
 
 const Work = () => (
   <section className="container">
@@ -14,11 +13,7 @@ const Work = () => (
         </p>
       </div>
     </div>
-    <div className="grid md:grid-cols-2 grid-cols-1 gap-x-16 lg:gap-x-28 my-12 lg:my-20">
-      {successStoriesDatabase.map((story, index) => (
-        <ProjectCard key={story.id} data={story} index={index} />
-      ))}
-    </div>
+    <WorksList />
   </section>
 );
 
