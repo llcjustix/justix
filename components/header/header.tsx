@@ -135,7 +135,10 @@ const Header = () => {
               <Popover className="relative">
                 {({ close }) => (
                   <>
-                    <PopoverButton className="text-white bg-black p-2 rounded-full hover:bg-primary transition duration-200 active:translate-y-px  hover:brightness-95">
+                    <PopoverButton
+                      aria-label="language"
+                      className="text-white bg-black p-2 rounded-full hover:bg-primary transition duration-200 active:translate-y-px  hover:brightness-95"
+                    >
                       <RiGlobalLine size={20} />
                     </PopoverButton>
                     <PopoverPanel
