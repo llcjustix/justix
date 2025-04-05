@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import clsx from "clsx";
 import { cookies } from "next/headers";
+import NextTopLoader from "nextjs-toploader";
 import GlobalProvider from "./global-provider";
 
 const manrope = Manrope({
@@ -50,6 +51,7 @@ export default async ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang={selectedLanguage}>
       <body className={clsx(manrope.className)}>
+        <NextTopLoader color="#2ed06e" showSpinner={false} />
         <GlobalProvider>{children}</GlobalProvider>
       </body>
     </html>
