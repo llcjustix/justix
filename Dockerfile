@@ -1,41 +1,41 @@
-# Этап сборки
-FROM node:20-alpine AS builder
+# Этап 1: Сборка приложения
+FROM node:18-alpine AS builder
 
+# Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Устанавливаем системные зависимости для сборки нативных модулей
-RUN apk add --no-cache python3 make g++
-
-# Копируем только lock-файл и package.json для кэширования зависимостей
+# Копируем package.json и yarn.lock
 COPY package.json yarn.lock ./
 
 # Устанавливаем зависимости
 RUN yarn install --frozen-lockfile
 
-# Копируем остальные файлы проекта
+# Копируем остальной код проекта
 COPY . .
 
-# Копируем .env файл (важно для переменных окружения при сборке)
-COPY .env .env
-
-# Сборка проекта Next.js
+# Собираем приложение
 RUN yarn build
 
-# Этап запуска (продакшн)
-FROM node:20-alpine AS runner
+# Этап 2: Продакшн-образ
+FROM node:18-alpine AS runner
 
+# Создаем рабочую директорию
 WORKDIR /app
 
-ENV NODE_ENV=production
+# Устанавливаем только runtime зависимости
+COPY package.json yarn.lock ./
+RUN yarn install --production --frozen-lockfile
 
-# Копируем только нужные артефакты из builder-а
-COPY --from=builder /app/public ./public
+# Копируем собранный проект
 COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/next.config.js ./next.config.js
 COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/yarn.lock ./yarn.lock
-COPY --from=builder /app/.env .env
 
+# Опционально: копируем другие конфиги, если они нужны (например, tsconfig, .env.example и т.п.)
+
+# Указываем порт
 EXPOSE 3000
 
+# Стартуем сервер
 CMD ["yarn", "start"]
