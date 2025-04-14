@@ -1,41 +1,38 @@
 # Этап 1: Сборка приложения
 FROM node:18-alpine AS builder
 
-# Устанавливаем рабочую директорию
+# Установим рабочую директорию внутри контейнера
 WORKDIR /app
 
-# Копируем package.json и yarn.lock
+# Копируем package.json и yarn.lock, чтобы установить зависимости
 COPY package.json yarn.lock ./
 
-# Устанавливаем зависимости
+# Копируем файл .env для использования переменных окружения
+COPY .env .env
+
+# Установим зависимости с флагом frozen-lockfile
 RUN yarn install --frozen-lockfile
 
-# Копируем остальной код проекта
+# Копируем весь проект
 COPY . .
 
-# Собираем приложение
+# Собираем проект
 RUN yarn build
 
 # Этап 2: Продакшн-образ
-FROM node:18-alpine AS runner
+FROM node:18-alpine AS production
 
-# Создаем рабочую директорию
+# Установим рабочую директорию
 WORKDIR /app
 
-# Устанавливаем только runtime зависимости
-COPY package.json yarn.lock ./
-RUN yarn install --production --frozen-lockfile
+# Копируем только необходимые файлы для продакшн-образа
+COPY --from=builder /app ./
 
-# Копируем собранный проект
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.js ./next.config.js
-COPY --from=builder /app/package.json ./package.json
+# Устанавливаем переменные окружения из .env (если требуется)
+# Пример: ENV NEXT_PUBLIC_API_URL=https://api.example.com
 
-# Опционально: копируем другие конфиги, если они нужны (например, tsconfig, .env.example и т.п.)
-
-# Указываем порт
+# Открываем порт 3000 для приложения
 EXPOSE 3000
 
-# Стартуем сервер
+# Запускаем приложение
 CMD ["yarn", "start"]
