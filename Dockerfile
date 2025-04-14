@@ -1,38 +1,37 @@
+# Этап сборки
 FROM node:20-alpine AS builder
 
-# Устанавливаем рабочую директорию
 WORKDIR /app
 
-# Копируем только package.json и package-lock.json (если он есть) для кэширования зависимостей
-COPY package*.json ./
+# Устанавливаем системные зависимости для сборки нативных модулей
+RUN apk add --no-cache python3 make g++
 
-# Устанавливаем зависимости без кэширования
-RUN npm install --no-cache --verbose
+# Копируем только lock-файл и package.json для кэширования зависимостей
+COPY package.json yarn.lock ./
+
+# Устанавливаем зависимости
+RUN yarn install --frozen-lockfile
 
 # Копируем остальные файлы проекта
 COPY . .
 
-# Собираем проект
-RUN npm run build
+# Сборка проекта Next.js
+RUN yarn build
 
-# Новый этап для производственного окружения
+# Этап запуска (продакшн)
 FROM node:20-alpine AS runner
 
-# Устанавливаем рабочую директорию для финального контейнера
 WORKDIR /app
 
-# Устанавливаем переменную окружения для продакшн-режима
 ENV NODE_ENV=production
 
-# Копируем файлы из этапа сборки
+# Копируем только нужные артефакты из builder-а
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/yarn.lock ./yarn.lock
 
-# Открываем порт для приложения
 EXPOSE 3000
 
-# Запускаем приложение
-CMD ["npm", "start"]
-
+CMD ["yarn", "start"]
