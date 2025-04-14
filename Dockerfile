@@ -7,7 +7,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Устанавливаем зависимости без кэширования
-RUN npm install --no-cache
+RUN npm install --no-cache --verbose
 
 # Копируем остальные файлы проекта
 COPY . .
