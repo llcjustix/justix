@@ -47,6 +47,8 @@ jobs:
             docker pull jvmshid/justix:latest
             docker rm -f justix || true
             docker run -d --restart=always --network academy \
-              -p 3000:3000 \
+              -p 8000:8000 \
               --name justix \
+              -e API_URL=${{ secrets.API_URL }} \
+              -e OTHER_SECRET=${{ secrets.OTHER_SECRET }} \
               jvmshid/justix:latest
