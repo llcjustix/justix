@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - 'master'
-      - 'demo'
+
 
 jobs:
   build-and-push:
