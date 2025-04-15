@@ -8,6 +8,6 @@ RUN yarn install --ignore-engines
 
 COPY . .
 
-EXPOSE 3000
+EXPOSE 5736
 
 CMD yarn start
