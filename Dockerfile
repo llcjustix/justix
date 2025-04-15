@@ -8,6 +8,8 @@ RUN yarn install --ignore-engines
 
 COPY . .
 
+RUN yarn build 
+
 EXPOSE 5736
 
-CMD yarn start
+CMD ["yarn", "start"]
