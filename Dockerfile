@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install --legacy-peer-deps
+RUN yarn install --ignore-engines
 
 COPY . .
 
-EXPOSE 5736
+EXPOSE 3000
 
-CMD npm run dev
+CMD yarn start
