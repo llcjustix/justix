@@ -15,6 +15,13 @@
 #CMD ["yarn", "start"]
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 6568f12 (multistage Dockerfile)
 # Stage 1 — Build
 FROM node:18-alpine AS builder
 
@@ -46,3 +53,4 @@ RUN yarn install --ignore-engines --production
 EXPOSE 3000
 
 CMD ["yarn", "start"]
+
