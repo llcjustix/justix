@@ -17,7 +17,7 @@ const GlobalProvider = ({ children }: GlobalProviderProps) => {
   const { isChatOpen, isSidebarOpen, toggleChat, toggleSidebar } = useSettingsStore();
   return (
     <>
-      <div className="sticky inset-0 h-fit z-[1]">
+      <div className="sticky inset-0 h-fit z-[2]">
         <Header />
       </div>
       {children}

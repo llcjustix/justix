@@ -1,11 +1,15 @@
 "use client";
 
-import { RiArrowRightLongLine } from "@remixicon/react";
+import { RiArrowLeftLine, RiArrowRightLine, RiArrowRightLongLine } from "@remixicon/react";
 import Link from "next/link";
 import { processesDatabase } from "@/database/processes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const DevelopmentProcess = () => {
   const [visibleProcess, setVisibleProcess] = useState(processesDatabase[0].id);
@@ -85,31 +89,53 @@ const DevelopmentProcess = () => {
           </div>
         </div>
         <div className="overflow-y-auto lg:hidden flex gap-10">
-          {processesDatabase.map((process) => (
-            <div key={process.id} className="min-w-[340px]">
-              <div className="relative h-[400px] w-[300px] overflow-hidden bg-black rounded-full mb-10 mx-auto">
-                <Image
-                  src={process.img}
-                  alt={process.title}
-                  sizes="300px"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div key={process.id} id={process.id} className="process-item">
-                <div className="font-bold text-theme text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[60px] 2xl:!leading-[75px] text-primary">
-                  {process.title}
+          <Swiper
+            slidesPerView={1}
+            navigation={{ enabled: true, nextEl: ".next", prevEl: ".prev" }}
+            modules={[Navigation]}
+          >
+            {processesDatabase.map((process) => (
+              <SwiperSlide key={process.id}>
+                <div className="relative h-[400px] w-[300px] overflow-hidden bg-black rounded-full mb-10 mx-auto">
+                  <Image
+                    src={process.img}
+                    alt={process.title}
+                    sizes="300px"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <p
-                  className={clsx(
-                    "my-7 leading-5 text-white font-normal text-sm lg:text-md xl:text-lg 2xl:text-xl"
-                  )}
+                <div
+                  key={process.id}
+                  id={process.id}
+                  className="process-item max-w-[400px] mx-auto"
                 >
-                  {process.shortDescription}
-                </p>
-              </div>
-            </div>
-          ))}
+                  <div className="font-bold text-theme text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[60px] 2xl:!leading-[75px] text-primary">
+                    {process.title}
+                  </div>
+                  <p
+                    className={clsx(
+                      "my-7 leading-5 text-white font-normal text-sm lg:text-md xl:text-lg 2xl:text-xl"
+                    )}
+                  >
+                    {process.shortDescription}
+                  </p>
+                </div>
+              </SwiperSlide>
+            ))}
+            <button
+              aria-label="previous slide"
+              className="prev w-8 h-8 flex items-center justify-center disabled:hidden opacity-80 hover:opacity-100 bg-black border border-gray-700 rounded-full absolute top-[calc(50%-16px)] left-0 z-[1]"
+            >
+              <RiArrowLeftLine size={20} color="white" />
+            </button>
+            <button
+              aria-label="next slide"
+              className="next w-8 h-8 flex items-center justify-center disabled:hidden opacity-90 hover:opacity-100 bg-black border border-gray-700 rounded-full absolute top-[calc(50%-16px)] right-0 z-[1]"
+            >
+              <RiArrowRightLine size={20} color="white" />
+            </button>
+          </Swiper>
         </div>
       </div>
     </section>
