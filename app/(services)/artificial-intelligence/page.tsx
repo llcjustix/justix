@@ -6,8 +6,53 @@ import ExperienceComponent from "@/components/experience";
 import SolutionsComponent from "@/components/solutions";
 import ServicesHeader from "@/components/services-header";
 import MainImagePath from "@/public/img/services/artificial-intelligence.webp";
+import { Metadata } from "next";
 import Benefits from "./components/benefits";
 import AiModels from "./components/ai-models";
+
+export const metadata: Metadata = {
+  title: "Artificial Intelligence Services",
+  description:
+    "Expert AI solutions to transform your business. We deliver cutting-edge machine learning, natural language processing, and computer vision solutions.",
+  openGraph: {
+    title: `Artificial Intelligence Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Expert AI solutions to transform your business. We deliver cutting-edge machine learning, natural language processing, and computer vision solutions.",
+    images: [
+      {
+        url: "/img/services/artificial-intelligence.webp", // You'll need to create this image
+        width: 1200,
+        height: 630,
+        alt: "AI Services",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Artificial Intelligence Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Expert AI solutions to transform your business. We deliver cutting-edge machine learning, natural language processing, and computer vision solutions.",
+    images: [
+      {
+        url: "/img/services/artificial-intelligence.webp", // Same image as for OpenGraph
+        width: 1200,
+        height: 630,
+        alt: "AI Services",
+      },
+    ],
+  },
+  keywords: [
+    "artificial intelligence",
+    "AI services",
+    "machine learning",
+    "natural language processing",
+    "computer vision",
+    "business AI solutions",
+    "AI consulting",
+    "AI integration",
+  ],
+};
 
 const ArtificialIntelligence = () => (
   <div className="bg-black w-full h-full py-24">

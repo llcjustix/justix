@@ -5,6 +5,56 @@ import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
 import Image from "next/image";
 import MainImagePath from "@/public/img/services/mlops.jpg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ML Ops Services",
+  description:
+    "Streamline your machine learning operations with our ML Ops services. We provide end-to-end solutions for deploying, monitoring, and maintaining ML models in production environments.",
+  openGraph: {
+    title: `ML Ops Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Streamline your machine learning operations with our ML Ops services. We provide end-to-end solutions for deploying, monitoring, and maintaining ML models in production environments.",
+    images: [
+      {
+        url: "/img/services/mlops.jpg", // You'll need to create this image
+        width: 1200,
+        height: 630,
+        alt: "ML Ops Services",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `ML Ops Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Streamline your machine learning operations with our ML Ops services. We provide end-to-end solutions for deploying, monitoring, and maintaining ML models in production environments.",
+    images: [
+      {
+        url: "/img/services/mlops.jpg", // Same image as for OpenGraph
+        width: 1200,
+        height: 630,
+        alt: "ML Ops Services",
+      },
+    ],
+  },
+  keywords: [
+    "ML Ops",
+    "machine learning operations",
+    "ML model deployment",
+    "model monitoring",
+    "model maintenance",
+    "CI/CD for ML",
+    "MLOps pipeline",
+    "model versioning",
+    "machine learning infrastructure",
+    "automated ML workflows",
+    "ML model optimization",
+    "model governance",
+    "production ML systems",
+  ],
+};
 
 const MLOps = () => (
   <>

@@ -5,6 +5,56 @@ import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
 import Image from "next/image";
 import MainImagePath from "@/public/img/services/devsecops.jpeg";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DevSecOps Services",
+  description:
+    "Integrate security throughout your software development lifecycle with our DevSecOps services. We implement automated security testing, vulnerability management, and compliance frameworks.",
+  openGraph: {
+    title: `DevSecOps Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Integrate security throughout your software development lifecycle with our DevSecOps services. We implement automated security testing, vulnerability management, and compliance frameworks.",
+    images: [
+      {
+        url: "/img/services/devsecops.jpeg", // You'll need to create this image
+        width: 1200,
+        height: 630,
+        alt: "DevSecOps Services",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `DevSecOps Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Integrate security throughout your software development lifecycle with our DevSecOps services. We implement automated security testing, vulnerability management, and compliance frameworks.",
+    images: [
+      {
+        url: "/img/services/devsecops.jpeg", // Same image as for OpenGraph
+        width: 1200,
+        height: 630,
+        alt: "DevSecOps Services",
+      },
+    ],
+  },
+  keywords: [
+    "DevSecOps",
+    "security automation",
+    "secure software development",
+    "application security",
+    "infrastructure security",
+    "vulnerability management",
+    "threat modeling",
+    "compliance automation",
+    "security testing",
+    "SAST",
+    "DAST",
+    "security monitoring",
+    "security as code",
+  ],
+};
 
 const DevSecOps = () => (
   <>

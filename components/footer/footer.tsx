@@ -61,7 +61,7 @@ const Footer = () => {
                 <div className="flex flex-col gap-1.5">
                   {service.children.map((child) => (
                     <Link
-                      href={child.link}
+                      href={`/${child.link}`}
                       key={child.id}
                       className="text-sm md:text-lg lg:text-xl xl:text-2xl font-medium text-white leading-7 md:leading-12 hover:text-primary"
                     >

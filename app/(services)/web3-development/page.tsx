@@ -6,6 +6,54 @@ import ExperienceComponent from "@/components/experience";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
 import MainImagePath from "@/public/img/services/web3.webp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Web3.0 Services",
+  description:
+    "Cutting-edge Web3.0 solutions for forward-thinking businesses. We specialize in blockchain development, smart contracts, decentralized applications (dApps), and cryptocurrency integration.",
+  openGraph: {
+    title: `Web3.0 Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Cutting-edge Web3.0 solutions for forward-thinking businesses. We specialize in blockchain development, smart contracts, decentralized applications (dApps), and cryptocurrency integration.",
+    images: [
+      {
+        url: "/img/services/web3.webp", // You'll need to create this image
+        width: 1200,
+        height: 630,
+        alt: "Web3.0 Services",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Web3.0 Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Cutting-edge Web3.0 solutions for forward-thinking businesses. We specialize in blockchain development, smart contracts, decentralized applications (dApps), and cryptocurrency integration.",
+    images: [
+      {
+        url: "/img/services/web3.webp", // Same image as for OpenGraph
+        width: 1200,
+        height: 630,
+        alt: "Web3.0 Services",
+      },
+    ],
+  },
+  keywords: [
+    "Web3.0",
+    "blockchain",
+    "smart contracts",
+    "decentralized applications",
+    "dApps",
+    "cryptocurrency",
+    "tokenization",
+    "NFT",
+    "DeFi solutions",
+    "blockchain consulting",
+    "web3 development",
+  ],
+};
 
 const Web3DevelopmentService = () => (
   <>

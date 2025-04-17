@@ -1,5 +1,52 @@
 import { RiCustomerService2Fill, RiMailFill } from "@remixicon/react";
+import { Metadata } from "next";
 import Form from "./components/form";
+
+export const metadata: Metadata = {
+  title: "Contact Us – Let’s Build Something Great Together",
+  description:
+    "Ready to turn your ideas into reality? Reach out to our team to discuss your project, ask questions, or start a collaboration. We’re here to help you succeed.",
+  openGraph: {
+    title: `Contact Us – Let’s Build Something Great Together | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Have a project in mind? Get in touch with us to start the conversation. Whether you need consultation, a quote, or strategic guidance—we’re just a message away.",
+    images: [
+      {
+        url: "/img/processes/ideate.webp",
+        width: 1200,
+        height: 630,
+        alt: "Contact Justix – Let's Ideate Together",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Contact Us – Let’s Build Something Great Together | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Get in touch with our expert team to discuss your needs. We’re open to collaboration, consultation, and creating powerful digital solutions tailored to you.",
+    images: [
+      {
+        url: "/img/processes/ideate.webp",
+        width: 1200,
+        height: 630,
+        alt: "Contact Justix – Let's Ideate Together",
+      },
+    ],
+  },
+  keywords: [
+    "contact us",
+    "get in touch",
+    "start a project",
+    "consultation",
+    "business inquiries",
+    "project collaboration",
+    "client support",
+    "digital solutions contact",
+    "tech consultation",
+    "Justix contact page",
+  ],
+};
 
 const Contact = () => (
   <section className="container">

@@ -1,5 +1,57 @@
+import { Metadata } from "next";
 import { SolutionsAbout } from "../components/about";
 import { SolutionsBody } from "../components/body";
+
+export const metadata: Metadata = {
+  title: "JustixAI – AI Solutions for Business Transformation",
+  description:
+    "Explore JustixAI, your gateway to cutting-edge AI services. We specialize in machine learning, generative AI, data forecasting, and intelligent process automation to help businesses thrive in the digital age.",
+  openGraph: {
+    title: `JustixAI – AI Solutions for Business Transformation | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Discover JustixAI – a hub of AI innovation. From GPT-based systems to custom ML models, we build intelligent tools to automate, optimize, and future-proof your business.",
+    images: [
+      {
+        url: "/img/solutions/justix-ai.jpg", // Already used in the page, ensure the image exists
+        width: 1200,
+        height: 630,
+        alt: "JustixAI – AI Solutions",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `JustixAI – AI Solutions for Business Transformation | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Discover JustixAI – a hub of AI innovation. From GPT-based systems to custom ML models, we build intelligent tools to automate, optimize, and future-proof your business.",
+    images: [
+      {
+        url: "/img/solutions/justix-ai.jpg",
+        width: 1200,
+        height: 630,
+        alt: "JustixAI – AI Solutions",
+      },
+    ],
+  },
+  keywords: [
+    "JustixAI",
+    "AI solutions",
+    "machine learning",
+    "business AI",
+    "generative AI",
+    "GPT",
+    "DALL·E",
+    "Stable Diffusion",
+    "predictive analytics",
+    "AI automation",
+    "AI assistants",
+    "natural language processing",
+    "computer vision",
+    "enterprise AI",
+    "AI consulting",
+  ],
+};
 
 const JustixAI = () => (
   <>

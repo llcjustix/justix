@@ -1,5 +1,56 @@
+import { Metadata } from "next";
 import { SolutionsAbout } from "../components/about";
 import { SolutionsBody } from "../components/body";
+
+export const metadata: Metadata = {
+  title: "Justix DevOps – Scalable & Secure Infrastructure Solutions",
+  description:
+    "Streamline deployment, boost reliability, and secure your systems with Justix DevOps. We provide CI/CD automation, cloud infrastructure management, container orchestration, and DevSecOps practices for modern enterprises.",
+  openGraph: {
+    title: `Justix DevOps – Scalable & Secure Infrastructure Solutions | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Accelerate your infrastructure with Justix DevOps. From CI/CD to Kubernetes, we deliver automation, scalability, and reliability tailored to your business needs.",
+    images: [
+      {
+        url: "/img/solutions/justix-ai.jpg", // Consider replacing with a unique image for DevOps
+        width: 1200,
+        height: 630,
+        alt: "Justix DevOps Infrastructure Solutions",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Justix DevOps – Scalable & Secure Infrastructure Solutions | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Accelerate your infrastructure with Justix DevOps. From CI/CD to Kubernetes, we deliver automation, scalability, and reliability tailored to your business needs.",
+    images: [
+      {
+        url: "/img/solutions/justix-ai.jpg", // Same image as OpenGraph for consistency
+        width: 1200,
+        height: 630,
+        alt: "Justix DevOps Infrastructure Solutions",
+      },
+    ],
+  },
+  keywords: [
+    "DevOps",
+    "Justix DevOps",
+    "CI/CD pipelines",
+    "cloud infrastructure",
+    "on-premise management",
+    "Kubernetes",
+    "containerization",
+    "infrastructure automation",
+    "DevSecOps",
+    "system observability",
+    "real-time monitoring",
+    "infrastructure security",
+    "deployment automation",
+    "compliance solutions",
+  ],
+};
 
 const DevOps = () => (
   <>

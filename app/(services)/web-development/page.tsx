@@ -5,6 +5,56 @@ import { webDevelopmentDatabase } from "@/database/services";
 import ApproachComponent from "@/components/approach";
 import FAQComponent from "@/components/faq";
 import MainImagePath from "@/public/img/services/web.webp";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Web Development Services",
+  description:
+    "Professional web development solutions for businesses of all sizes. We create responsive, modern websites and web applications using the latest technologies and best practices.",
+  openGraph: {
+    title: `Web Development Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Professional web development solutions for businesses of all sizes. We create responsive, modern websites and web applications using the latest technologies and best practices.",
+    images: [
+      {
+        url: "/img/services/web.webp", // You'll need to create this image
+        width: 1200,
+        height: 630,
+        alt: "Web Development Services",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `Web Development Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Professional web development solutions for businesses of all sizes. We create responsive, modern websites and web applications using the latest technologies and best practices.",
+    images: [
+      {
+        url: "/img/services/web.webp", // Same image as for OpenGraph
+        width: 1200,
+        height: 630,
+        alt: "Web Development Services",
+      },
+    ],
+  },
+  keywords: [
+    "web development",
+    "website design",
+    "web applications",
+    "responsive design",
+    "frontend development",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "e-commerce solutions",
+    "CMS development",
+    "progressive web apps",
+    "SEO optimization",
+  ],
+};
 
 const WebDevelopment = () => (
   <>

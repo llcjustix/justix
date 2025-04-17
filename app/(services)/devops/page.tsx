@@ -6,6 +6,57 @@ import FAQComponent from "@/components/faq";
 import Image from "next/image";
 import MainImagePage from "@/public/img/services/devops.webp";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "DevOps Services",
+  description:
+    "Accelerate your software delivery with our comprehensive DevOps services. We implement CI/CD pipelines, infrastructure automation, and monitoring solutions to improve operational efficiency.",
+  openGraph: {
+    title: `DevOps Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Accelerate your software delivery with our comprehensive DevOps services. We implement CI/CD pipelines, infrastructure automation, and monitoring solutions to improve operational efficiency.",
+    images: [
+      {
+        url: "/img/services/devops.webp", // You'll need to create this image
+        width: 1200,
+        height: 630,
+        alt: "DevOps Services",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `DevOps Services | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    description:
+      "Accelerate your software delivery with our comprehensive DevOps services. We implement CI/CD pipelines, infrastructure automation, and monitoring solutions to improve operational efficiency.",
+    images: [
+      {
+        url: "/img/services/devops.webp", // Same image as for OpenGraph
+        width: 1200,
+        height: 630,
+        alt: "DevOps Services",
+      },
+    ],
+  },
+  keywords: [
+    "DevOps",
+    "continuous integration",
+    "continuous deployment",
+    "CI/CD pipelines",
+    "infrastructure as code",
+    "containerization",
+    "Docker",
+    "Kubernetes",
+    "automated testing",
+    "configuration management",
+    "cloud infrastructure",
+    "monitoring solutions",
+    "DevSecOps",
+  ],
+};
+
 const DevOps = () => (
   <>
     <section className="container">
