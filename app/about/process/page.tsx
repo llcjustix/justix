@@ -47,6 +47,8 @@ export const metadata: Metadata = {
     "deployment strategy",
     "custom software development",
     "Justix process",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

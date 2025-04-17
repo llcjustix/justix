@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "cloud migration",
     "DevOps",
     "scalable solutions",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

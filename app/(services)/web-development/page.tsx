@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "CMS development",
     "progressive web apps",
     "SEO optimization",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

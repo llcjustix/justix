@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     "data mining",
     "predictive analytics",
     "data-driven solutions",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

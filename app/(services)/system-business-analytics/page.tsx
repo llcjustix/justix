@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "KPI management",
     "decision support systems",
     "operational intelligence",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

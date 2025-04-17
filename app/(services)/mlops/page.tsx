@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "ML model optimization",
     "model governance",
     "production ML systems",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

@@ -49,6 +49,8 @@ export const metadata: Metadata = {
     "infrastructure security",
     "deployment automation",
     "compliance solutions",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

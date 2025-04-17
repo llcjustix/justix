@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "user-centered design",
     "go-to-market strategy",
     "product optimization",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

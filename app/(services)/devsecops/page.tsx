@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "DAST",
     "security monitoring",
     "security as code",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

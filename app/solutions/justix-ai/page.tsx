@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     "computer vision",
     "enterprise AI",
     "AI consulting",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

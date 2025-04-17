@@ -52,6 +52,8 @@ export const metadata: Metadata = {
     "DeFi solutions",
     "blockchain consulting",
     "web3 development",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

@@ -45,6 +45,8 @@ export const metadata: Metadata = {
     "digital solutions contact",
     "tech consultation",
     "Justix contact page",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

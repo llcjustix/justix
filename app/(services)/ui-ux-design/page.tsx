@@ -53,6 +53,8 @@ export const metadata: Metadata = {
     "responsive design",
     "accessibility",
     "mobile design",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

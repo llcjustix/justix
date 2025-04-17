@@ -54,6 +54,8 @@ export const metadata: Metadata = {
     "mobile app testing",
     "app maintenance",
     "mobile app strategy",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

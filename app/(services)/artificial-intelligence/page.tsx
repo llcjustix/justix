@@ -51,6 +51,8 @@ export const metadata: Metadata = {
     "business AI solutions",
     "AI consulting",
     "AI integration",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 

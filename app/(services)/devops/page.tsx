@@ -54,6 +54,8 @@ export const metadata: Metadata = {
     "cloud infrastructure",
     "monitoring solutions",
     "DevSecOps",
+    "justix",
+    process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
 };
 
