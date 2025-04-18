@@ -35,7 +35,7 @@ const HeaderServicesBody = ({ close }: HeaderServicesBodyProps) => (
             {service.children.map((child) => (
               <Link
                 key={child.id}
-                href={child.link}
+                href={`/${child.link}`}
                 onClick={close}
                 className={clsx(
                   "flex items-center gap-2 hover:underline font-medium text-sm",
