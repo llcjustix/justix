@@ -18,6 +18,7 @@ export const WorksList = () => {
     title: string;
     description: string;
     large_description: string;
+    img: string;
   } | null>(null);
 
   return (
@@ -35,10 +36,12 @@ export const WorksList = () => {
           />
         ))}
       </div>
-      <Modal isOpen={isOpen} onClose={handleClose}>
-        <div className="p-5">
-          <SuccessStoryDetails data={selectedStory} />
-        </div>
+      <Modal isOpen={isOpen && !!selectedStory} onClose={handleClose}>
+        {!!selectedStory && (
+          <div className="p-5">
+            <SuccessStoryDetails data={selectedStory} />
+          </div>
+        )}
       </Modal>
     </>
   );

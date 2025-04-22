@@ -8,6 +8,7 @@ export const successStoriesDatabase = [
     link: "/success-stories/planix",
     websiteLink: "https://planix.uz/",
     id: 1,
+    img: "/img/work/planix.png",
   },
   {
     title: "Justix Academy",
@@ -18,5 +19,6 @@ export const successStoriesDatabase = [
     link: "/success-stories/academy-justix",
     websiteLink: "https://academy.justix.uz/",
     id: 2,
+    img: "",
   },
 ];
