@@ -47,4 +47,4 @@ jobs:
         script: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_TOKEN }} \
           && docker pull jvmshid/justix:latest && docker rm -f justix \
-          && docker run -e TZ=Asia/Tashkent --restart=always --network academy -d -p 8000:3000 --name justix -v /var/data/sqlite/db.sqlite3:/app/db.sqlite3 jvmshid/justix
+          && docker run -e TZ=Asia/Tashkent --restart=always --network academy -d -p 7000:3000 --name justix -v /var/data/sqlite/db.sqlite3:/app/db.sqlite3 jvmshid/justix
