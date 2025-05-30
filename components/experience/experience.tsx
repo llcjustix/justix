@@ -6,6 +6,7 @@ import CheckIcon from "@/assets/icons/check";
 import Button from "@/components/button";
 import clsx from "clsx";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 interface ExperienceComponentProps {
   title: string;
@@ -22,6 +23,7 @@ const ExperienceComponent = ({
   technologies,
   color = "black",
 }: ExperienceComponentProps) => {
+  const { t } = useTranslation();
   const { toggleChat } = useSettingsStore();
   return (
     <>
@@ -32,7 +34,7 @@ const ExperienceComponent = ({
             color === "black" ? "text-black" : "text-white"
           )}
         >
-          {title}
+          {t(title)}
         </h2>
         <p
           className={clsx(
@@ -40,7 +42,7 @@ const ExperienceComponent = ({
             color === "black" ? "text-black" : "text-white"
           )}
         >
-          {description}
+          {t(description)}
         </p>
       </div>
       <div className="flex justify-between mb-12">
@@ -55,13 +57,13 @@ const ExperienceComponent = ({
                     color === "black" ? "text-black" : "text-white"
                   )}
                 >
-                  {item.title}
+                  {t(item.title)}
                 </p>
               </li>
             ))}
           </ul>
           <Button onClick={toggleChat} color={color === "black" ? "black" : "primary"} size="large">
-            Let's Discuss
+            {t("Let's Discuss")}
           </Button>
         </div>
         <ul className="md:grid hidden grid-cols-3 gap-3">
@@ -81,7 +83,7 @@ const ExperienceComponent = ({
               )}
             >
               <Image src={item.img} alt={item.title} width={86} height={49} />
-              <p className="text-sm font-medium leading-tight text-center">{item.title}</p>
+              <p className="text-sm font-medium leading-tight text-center">{t(item.title)}</p>
             </div>
           ))}
         </ul>

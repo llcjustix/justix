@@ -6,6 +6,7 @@ import { RiArrowDownSLine, RiArrowRightLongLine } from "@remixicon/react";
 import { servicesDatabase } from "@/database/services";
 import { solutionsDatabase } from "@/database/solutions";
 import { companyDatabase } from "@/database/company";
+import { Translate } from "@/components/translate";
 
 const Sidebar = () => {
   const { toggleSidebar } = useSettingsStore();
@@ -79,7 +80,7 @@ const Sidebar = () => {
                   replace
                   className="text-base hover:text-primary transition-colors duration-300"
                 >
-                  {solution.title}
+                  <Translate value={solution.title} />
                 </Link>
               ))}
             </DisclosurePanel>

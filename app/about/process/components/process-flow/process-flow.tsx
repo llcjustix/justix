@@ -1,5 +1,6 @@
 import { companyProcessFlow } from "@/database/company";
 import Image from "next/image";
+import { Translate } from "@/components/translate";
 import ArrowDown from "./arrow-down";
 
 const ProcessFlow = () => (
@@ -26,10 +27,10 @@ const ProcessFlow = () => (
               0{index + 1}
             </h2>
             <h3 className="text-black font-bold pt-2.5 pb-6 lg:pb-[2.375rem] text-2xl xl:text-3xl 2xl:text-4xl tracking-[0px]">
-              {item.title}
+              <Translate value={item.title} />
             </h3>
             <p className="text-black text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-              {item.description}
+              <Translate value={item.description} />
             </p>
           </div>
           {index !== companyProcessFlow.length - 1 && (

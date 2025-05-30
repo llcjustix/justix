@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Translate } from "@/components/translate";
 
 interface ServicesHeaderProps {
   title: string;
@@ -14,7 +15,7 @@ const ServicesHeader = ({ title, description, color = "black" }: ServicesHeaderP
         color === "black" ? "text-black" : "text-white"
       )}
     >
-      {title}
+      <Translate value={title} />
     </h1>
     <p
       className={clsx(
@@ -22,7 +23,7 @@ const ServicesHeader = ({ title, description, color = "black" }: ServicesHeaderP
         color === "black" ? "text-black" : "text-white"
       )}
     >
-      {description}
+      <Translate value={description} />
     </p>
   </div>
 );

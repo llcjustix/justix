@@ -1,5 +1,6 @@
 import { RiCustomerService2Fill, RiMailFill } from "@remixicon/react";
 import { Metadata } from "next";
+import { Translate } from "@/components/translate";
 import Form from "./components/form";
 
 export const metadata: Metadata = {
@@ -55,10 +56,10 @@ const Contact = () => (
     <div className="flex lg:flex-row flex-col lgitems-center justify-between gap-20 mt-24">
       <div className="flex-1">
         <h1 className=" font-bold pb-6 lg:pb-[2.375rem] text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-          Got an Idea for your Project?
+          <Translate value="Got an Idea for your Project?" />
         </h1>
         <p className="text-md md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
-          We’d love to learn more about you and what we can design and build together.
+          <Translate value="We’d love to learn more about you and what we can design and build together." />
         </p>
         <div className="mt-8 lg:mt-[175px] flex flex-col wrap md:gap-x-0 gap-2 gap-x-4">
           <div className="flex items-center gap-3">

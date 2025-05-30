@@ -62,9 +62,9 @@ const ArtificialIntelligence = () => (
       <ServicesHeader
         color="white"
         title="Artificial Intelligence Development Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we deliver AI solutions that help your business
+        description="At Justix, we deliver AI solutions that help your business
           grow and run more efficiently. Our team is here to help you use AI to improve your
-          operations and stay ahead in the market.`}
+          operations and stay ahead in the market."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">
@@ -82,7 +82,7 @@ const ArtificialIntelligence = () => (
     </section>
     <section className="container">
       <ExperienceComponent
-        title={`Why choose ${process.env.NEXT_PUBLIC_WEBSITE_NAME} for AI development?`}
+        title="Why choose Justix for AI development?"
         description="Our experience and skills in AI allow us to create custom solutions that meet your
           business needs."
         color="white"

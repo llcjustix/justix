@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Integrate security throughout your software development lifecycle with our DevSecOps services. We implement automated security testing, vulnerability management, and compliance frameworks.",
     images: [
       {
-        url: "/img/services/devsecops.jpeg", // You'll need to create this image
+        url: "/img/services/devsecops.jpeg",
         width: 1200,
         height: 630,
         alt: "DevSecOps Services",
@@ -63,7 +63,7 @@ const DevSecOps = () => (
     <section className="container">
       <ServicesHeader
         title="DevSecOps Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we integrate security into every phase of development, delivering DevSecOps solutions that automate threat detection, ensure compliance, and fortify your infrastructure—without slowing down innovation.`}
+        description="At Justix, we integrate security into every phase of development, delivering DevSecOps solutions that automate threat detection, ensure compliance, and fortify your infrastructure—without slowing down innovation."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

@@ -59,14 +59,14 @@ const JustixAI = () => (
   <>
     <section className="container">
       <SolutionsAbout
-        mainTitle={`${process.env.NEXT_PUBLIC_WEBSITE_NAME} AI`}
+        mainTitle="Justix AI"
         title=" - your guide to the world of AI"
-        imagePath="/img/solutions/justix-ai.jpg"
+        // imagePath="/img/solutions/justix-ai.jpg"
       />
     </section>
     <section className="container">
       <SolutionsBody
-        text1={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME} AI, we develop cutting-edge AI solutions for businesses, helping automate processes, analyze data, and enhance efficiency. Our experts specialize in machine learning, computer vision, natural language processing, and generative models, bringing the future of AI to you today.`}
+        text1="At Justix AI, we develop cutting-edge AI solutions for businesses, helping automate processes, analyze data, and enhance efficiency. Our experts specialize in machine learning, computer vision, natural language processing, and generative models, bringing the future of AI to you today."
         text2="We don’t just build AI products—we transform businesses, making them smarter and more competitive."
         text3="🚀 Let’s shape the future together with AI."
         listTitle="Our Expertise"

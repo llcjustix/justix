@@ -7,6 +7,7 @@ import Button from "@/components/button";
 import Link from "next/link";
 import Textarea from "@/components/textarea";
 import useSettingsStore from "@/store/settings";
+import { useTranslation } from "react-i18next";
 
 const categories = ["AI Solutions", "Customer Software", "Mobile App", "Web App"];
 
@@ -21,6 +22,7 @@ const schema = yup.object({
 type FormType = yup.InferType<typeof schema>;
 
 const Chat = () => {
+  const { t } = useTranslation();
   const { toggleChat } = useSettingsStore();
   const {
     watch,
@@ -38,15 +40,16 @@ const Chat = () => {
 
   return (
     <div className="bg-black text-white min-w-full">
-      <h1 className="font-bold text-white text-4xl mb-5">Got a project?</h1>
+      <h1 className="font-bold text-white text-4xl mb-5">{t("Got a project?")}</h1>
       <p className="text-sm font-medium text-gray-secondary-text">
-        Share the details of your project – like scope, timeframes, or business challenges. Our team
-        will thoroughly review the materials and respond to you promptly.
+        {t(
+          "Share the details of your project – like scope, timeframes, or business challenges. Our team will thoroughly review the materials and respond to you promptly."
+        )}
       </p>
       <form onSubmit={handleSubmit(handleSendMessage)}>
         <div className="my-8">
           <span className="mb-2 block font-normal text-sm text-gray-secondary-text">
-            I'm interested in
+            {t("I'm interested in")}
           </span>
           <div className="flex gap-2">
             {categories.map((category) => (
@@ -64,39 +67,40 @@ const Chat = () => {
                   setValue("category", category);
                 }}
               >
-                {category}
+                {t(category)}
               </button>
             ))}
           </div>
         </div>
         <div className="grid grid-cols-2 gap-y-4 gap-x-2">
           <div className="sm:col-span-1 col-span-2">
-            <Input placeholder="Firstname" {...register("firstname")} />
+            <Input placeholder={t("Firstname")} {...register("firstname")} />
           </div>
           <div className="sm:col-span-1 col-span-2">
-            <Input placeholder="Lastname" {...register("lastname")} />
+            <Input placeholder={t("Lastname")} {...register("lastname")} />
           </div>
           <div className="sm:col-span-1 col-span-2">
-            <Input placeholder="Email" {...register("email")} />
+            <Input placeholder={t("Email")} {...register("email")} />
           </div>
           <div className="sm:col-span-1 col-span-2">
-            <Input placeholder="Phone" {...register("phone")} />
+            <Input placeholder={t("Phone")} {...register("phone")} />
           </div>
           <div className="col-span-2">
-            <Textarea placeholder="Message" {...register("message")} />
+            <Textarea placeholder={t("Message")} {...register("message")} />
           </div>
           <div className="col-span-2">
             <Button type="submit" color="gray" fullWidth rounded>
-              Send Message
+              {t("Send Message")}
             </Button>
           </div>
         </div>
       </form>
       <div className="text-sm font-medium text-gray-secondary-text mt-5">
-        We'll keep your information in our CRM to respond to your request. For more details, consult
-        our{" "}
+        {t(
+          "We'll keep your information in our CRM to respond to your request. For more details, consult our"
+        )}{" "}
         <Link href="/privacy-policy" className="text-white" onClick={toggleChat}>
-          privacy policy.
+          {t("privacy policy")}.
         </Link>
       </div>
     </div>

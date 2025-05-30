@@ -21,6 +21,7 @@ import { navLinks } from "@/database/database";
 import { useTranslation } from "react-i18next";
 import { languageList } from "@/database/languages";
 import { setCookie } from "cookies-next";
+import { Translate } from "@/components/translate";
 
 const HeaderServicesBody = dynamic(() => import("./services"));
 const HeaderSolutionBody = dynamic(() => import("./solution"));
@@ -186,7 +187,7 @@ const Header = () => {
               </Link>
             </div>
             <Button rounded onClick={toggleChat}>
-              Get in Touch
+              <Translate value="Get in Touch" />
             </Button>
             <IconButton
               color="white"

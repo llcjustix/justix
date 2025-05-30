@@ -8,10 +8,12 @@ import Logo from "@/components/logo";
 import { socialMedia } from "@/database/database";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { useTranslation } from "react-i18next";
 
 const darkRoutes = ["/artificial-intelligence"];
 
 const Footer = () => {
+  const { t } = useTranslation();
   const { toggleChat } = useSettingsStore();
   const pathname = usePathname();
   const isInDarkRoutes = darkRoutes.includes(pathname);
@@ -26,7 +28,7 @@ const Footer = () => {
                 isInDarkRoutes ? "text-white" : "text-black"
               )}
             >
-              Pull the trigger!
+              {t("Pull the trigger!")}
             </p>
             <h2
               className={clsx(
@@ -34,7 +36,7 @@ const Footer = () => {
                 isInDarkRoutes ? "text-white" : "text-black"
               )}
             >
-              Let’s bring your vision to life
+              {t("Let’s bring your vision to life")}
             </h2>
             <Button
               rounded
@@ -42,7 +44,7 @@ const Footer = () => {
               onClick={toggleChat}
               color={isInDarkRoutes ? "primary" : "black"}
             >
-              Get Started
+              {t("Get Started")}
             </Button>
           </div>
         </div>
@@ -55,7 +57,7 @@ const Footer = () => {
                 <div className="flex items-center gap-2 md:mb-4 mt-2">
                   <div className="bg-primary w-2 h-2 rounded-full" />
                   <p className="font-medium leading-6 text-neutral-500 flex items-center text-sm lg:text-base">
-                    {service.title}
+                    {t(service.title)}
                   </p>
                 </div>
                 <div className="flex flex-col gap-1.5">
@@ -65,7 +67,7 @@ const Footer = () => {
                       key={child.id}
                       className="text-sm md:text-lg lg:text-xl xl:text-2xl font-medium text-white leading-7 md:leading-12 hover:text-primary"
                     >
-                      {child.title}
+                      {t(child.title)}
                     </Link>
                   ))}
                 </div>
@@ -78,7 +80,7 @@ const Footer = () => {
               <div className="flex items-center gap-2 md:mb-4 mt-2">
                 <div className="bg-primary w-2 h-2 rounded-full" />
                 <p className="font-medium leading-6 text-neutral-500 flex items-center text-sm lg:text-base">
-                  Contact
+                  {t("Contact")}
                 </p>
               </div>
               <div className="flex flex-col gap-1.5">
@@ -101,8 +103,8 @@ const Footer = () => {
                 <Logo color="white" />
               </Link>
               <p className="text-neutral-500 text-center text-xs lg:text-sm">
-                © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}. All Rights
-                Reserved
+                © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}.{" "}
+                {t("All Rights Reserved")}
               </p>
             </div>
             <div>
@@ -124,14 +126,14 @@ const Footer = () => {
                   href="/privacy-policy"
                   className="text-neutral-500 hover:text-primary text-xs lg:text-sm"
                 >
-                  Privacy Policy
+                  {t("Privacy Policy")}
                 </Link>
                 <div className="h-3 w-[1px] bg-neutral-500" />
                 <Link
-                  href="terms-of-use"
+                  href="/terms-of-use"
                   className="text-neutral-500 hover:text-primary text-xs lg:text-sm"
                 >
-                  Terms & Conditions
+                  {t("Terms & Conditions")}
                 </Link>
               </div>
             </div>
@@ -142,8 +144,8 @@ const Footer = () => {
                 <Logo color="white" />
               </Link>
               <p className="text-neutral-500 text-center text-xs lg:text-sm">
-                © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}. All Rights
-                Reserved
+                © {new Date().getFullYear()} {process.env.NEXT_PUBLIC_WEBSITE_NAME}.{" "}
+                {t("All Rights Reserved")}
               </p>
             </div>
           </div>

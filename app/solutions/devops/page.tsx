@@ -58,16 +58,16 @@ const DevOps = () => (
   <>
     <section className="container">
       <SolutionsAbout
-        mainTitle={`${process.env.NEXT_PUBLIC_WEBSITE_NAME} DevOps`}
-        title=" Scalable & Secure Infrastructure"
-        imagePath="/img/solutions/justix-ai.jpg"
+        mainTitle="Justix DevOps"
+        title="Scalable & Secure Infrastructure"
+        // imagePath="/img/solutions/justix-ai.jpg"
       />
     </section>
     <section className="container">
       <SolutionsBody
-        text1={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME} DevOps, we provide end-to-end automation and infrastructure management solutions, helping businesses accelerate deployment, minimize risks, and enhance service reliability.`}
+        text1="At Justix DevOps, we provide end-to-end automation and infrastructure management solutions, helping businesses accelerate deployment, minimize risks, and enhance service reliability."
         text2="We build robust, scalable, and secure DevOps platforms to keep your business running smoothly."
-        text3={`🚀 Optimize your infrastructure with ${process.env.NEXT_PUBLIC_WEBSITE_NAME} DevOps.`}
+        text3="🚀 Optimize your infrastructure with Justix DevOps."
         listTitle="Our Expertise"
         list={[
           {

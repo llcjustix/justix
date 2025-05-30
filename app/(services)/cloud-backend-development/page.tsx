@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Enterprise-grade cloud and backend solutions for your business. We deliver scalable cloud infrastructure, serverless applications, database optimization, and robust API development.",
     images: [
       {
-        url: "/img/services/cloud-backend.webp", // You'll need to create this image
+        url: "/img/services/cloud-backend.webp",
         width: 1200,
         height: 630,
         alt: "Cloud & Backend Services",
@@ -63,7 +63,7 @@ const CloudBackendDevelopment = () => (
     <section className="container">
       <ServicesHeader
         title="Cloud & Backend Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we specialize in building powerful, scalable cloud and backend solutions that enhance your business operations, ensuring reliability and efficiency.`}
+        description="At Justix, we specialize in building powerful, scalable cloud and backend solutions that enhance your business operations, ensuring reliability and efficiency."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

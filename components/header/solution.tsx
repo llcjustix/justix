@@ -1,6 +1,7 @@
 import { RiArrowRightLongLine } from "@remixicon/react";
 import Link from "next/link";
 import { solutionsDatabase } from "@/database/solutions";
+import { Translate } from "@/components/translate";
 
 interface SolutionsProps {
   close: () => void;
@@ -9,7 +10,9 @@ interface SolutionsProps {
 const Solutions = ({ close }: SolutionsProps) => (
   <div className="grid grid-cols-[200px,1px,auto] gap-5 w-full">
     <div className="h-fit flex items-center justify-between">
-      <h2 className="text-2xl font-semibold">Solutions</h2>
+      <h2 className="text-2xl font-semibold">
+        <Translate value="Solutions" />
+      </h2>
       <RiArrowRightLongLine size={24} />
     </div>
     <div className="w-[1px] bg-gray-300" />
@@ -21,7 +24,7 @@ const Solutions = ({ close }: SolutionsProps) => (
           onClick={close}
           className="font-semibold text-base hover:underline"
         >
-          {solution.title}
+          <Translate value={solution.title} />
         </Link>
       ))}
     </div>

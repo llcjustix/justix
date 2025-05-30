@@ -63,7 +63,7 @@ const UIUXDesign = () => (
     <section className="container">
       <ServicesHeader
         title="UI/UX Design Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we craft intuitive, visually stunning user experiences that blend creativity with functionality, ensuring seamless interactions and user satisfaction.`}
+        description="At Justix, we craft intuitive, visually stunning user experiences that blend creativity with functionality, ensuring seamless interactions and user satisfaction."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

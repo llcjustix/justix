@@ -3,6 +3,7 @@ import { companyDatabase } from "@/database/company";
 import Link from "next/link";
 import { clientsDatabase } from "@/database/clients";
 import Image from "next/image";
+import { Translate } from "@/components/translate";
 
 interface CompanyProps {
   close: () => void;
@@ -11,14 +12,18 @@ interface CompanyProps {
 const Company = ({ close }: CompanyProps) => (
   <div className="grid grid-cols-[200px,1px,auto] gap-5 w-full">
     <div className="flex items-center justify-between h-fit">
-      <h2 className="text-2xl font-semibold">Company</h2>
+      <h2 className="text-2xl font-semibold">
+        <Translate value="Company" />
+      </h2>
       <RiArrowRightLongLine size={24} />
     </div>
     <div className="w-[1px] bg-gray-300" />
     <div className="flex gap-40 items-start">
       {companyDatabase.map((service) => (
         <div className="flex flex-col gap-3" key={service.title}>
-          <h3 className="font-semibold text-base">{service.title}</h3>
+          <h3 className="font-semibold text-base">
+            <Translate value={service.title} />
+          </h3>
           <div className="flex flex-col gap-2">
             {service.children.map((child) => (
               <Link
@@ -28,14 +33,16 @@ const Company = ({ close }: CompanyProps) => (
                 className="flex items-center gap-2 hover:underline font-medium text-sm"
               >
                 <span className="min-w-1 min-h-1 rounded-full bg-black" />
-                {child.title}
+                <Translate value={child.title} />
               </Link>
             ))}
           </div>
         </div>
       ))}
       <div className="w-full flex flex-col gap-4">
-        <h3 className="font-normal text-2xl">We partner with</h3>
+        <h3 className="font-normal text-2xl">
+          <Translate value="We partner with" />
+        </h3>
         <div className="flex gap-3">
           {clientsDatabase.map((client) => (
             <Link

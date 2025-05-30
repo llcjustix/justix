@@ -1,13 +1,18 @@
 import { artificialIntelligenceDatabase } from "@/database/services";
 import Image from "next/image";
+import { Translate } from "@/components/translate";
 
 const AiModels = () => (
   <>
     <h2 className="text-white font-bold lg:pb-[2.375rem] sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-      Cutting-edge <span className="text-primary">AI models</span> we work withAI solutions
+      <Translate value="Cutting-edge" />{" "}
+      <span className="text-primary">
+        <Translate value="AI models" />
+      </span>{" "}
+      <Translate value="we work with AI solutions" />
     </h2>
     <p className="pt-6 lg:pt-[2.375rem] empty:hidden text-white lg:pe-[5rem] text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-      Our team is proficient in the latest AI models, including.
+      <Translate value="Our team is proficient in the latest AI models, including." />
     </p>
     <div className="mt-8 lg:mt-24">
       <div className="grid grid-cols-2 gap-6 lg:gap-10 sm:grid-cols-3 lg:grid-cols-5">

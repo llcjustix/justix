@@ -64,7 +64,7 @@ const DevOps = () => (
     <section className="container">
       <ServicesHeader
         title="DevOps Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we accelerate software delivery with cutting-edge DevOps solutions, automating workflows, optimizing infrastructure, and ensuring seamless CI/CD for scalable, resilient, and high-performing systems.`}
+        description="At Justix, we accelerate software delivery with cutting-edge DevOps solutions, automating workflows, optimizing infrastructure, and ensuring seamless CI/CD for scalable, resilient, and high-performing systems."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

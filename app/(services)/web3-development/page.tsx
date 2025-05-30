@@ -62,7 +62,7 @@ const Web3DevelopmentService = () => (
     <section className="container">
       <ServicesHeader
         title="Next-Gen Web3 Development Company"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we help you take the next step in the new era of the internet with our personalized Web3 development services.`}
+        description="At Justix, we help you take the next step in the new era of the internet with our personalized Web3 development services."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

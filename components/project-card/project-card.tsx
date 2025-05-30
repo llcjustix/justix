@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Image from "next/image";
+import { Translate } from "@/components/translate";
 
 interface ProjectCardProps {
   data: {
@@ -33,9 +34,11 @@ const ProjectCard = ({ data, index, onClick }: ProjectCardProps) => (
     </div>
     <div>
       <h3 className="lg:mb-[20px] mb-3 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
-        {data.title}
+        <Translate value={data.title} />
       </h3>
-      <p>{data.description}</p>
+      <p>
+        <Translate value={data.description} />
+      </p>
     </div>
   </button>
 );

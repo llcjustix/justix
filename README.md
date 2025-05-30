@@ -14,12 +14,7 @@ pnpm dev
 bun dev
 ```
 
-
-FOR A WHILE - Dockerfile.slim is used for containerization - run this file instead of Dockerfile 
-
-
-
-
+FOR A WHILE - Dockerfile.slim is used for containerization - run this file instead of Dockerfile
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

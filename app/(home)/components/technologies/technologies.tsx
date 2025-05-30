@@ -5,6 +5,7 @@ import { categorisedTechnologiesDatabase } from "@/database/technologies";
 import clsx from "clsx";
 import Modal from "@/components/modal";
 import { useModal } from "@/hooks/use-modal";
+import { Translate } from "@/components/translate";
 
 interface TechnologiesProps {
   title?: string;
@@ -21,11 +22,15 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
     <>
       <div className="max-w-3xl xl:max-w-4xl pb-8 pt-14 md:pt-24 lg:pt-[10.5rem]">
         <h2 className="font-bold pb-1 md:pb-0 sentence-first-letter sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px]">
-          {title || "Technologies we use"}
+          <Translate value={title || "Technologies we use"} />
         </h2>
         <p className="lg:pt-[2.375rem] pt-6 text-base md:text-md lg:text-lg xl:text-xl 2xl:text-2xl">
-          {description ||
-            "Hire from our pool of 350+ specialized experts in web, mobile, and software engineering, specializing in the latest technologies and frameworks, ready to scale your development teams effortlessly."}
+          <Translate
+            value={
+              description ||
+              "Hire from our pool of 350+ specialized experts in web, mobile, and software engineering, specializing in the latest technologies and frameworks, ready to scale your development teams effortlessly."
+            }
+          />
         </p>
       </div>
       <div className="flex flex-wrap flex-col md:flex-row mt-8 md:mt-12 lg:mt-20 md:border-t border-gray-300">
@@ -41,7 +46,7 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
                   currentType.id === item.id ? "font-bold bg-gray-light" : "font-medium"
                 )}
               >
-                {item.title}
+                <Translate value={item.title} />
               </button>
             ))}
           </div>
@@ -51,7 +56,7 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
           {currentType.categories.map((category) => (
             <div key={category.id}>
               <h4 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
-                {category.title}
+                <Translate value={category.title} />
               </h4>
               <div className="flex flex-wrap gap-2 lg:gap-4">
                 {category.technologies.slice(0, 6).map((technology, index) => (
@@ -77,7 +82,9 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
                         ...
                       </span>
                     ) : (
-                      <span className="font-normal md:text-lg text-sm">{technology.title}</span>
+                      <span className="font-normal md:text-lg text-sm">
+                        <Translate value={technology.title} />
+                      </span>
                     )}
                   </button>
                 ))}
@@ -89,7 +96,7 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
       <Modal isOpen={isOpen} onClose={handleClose} withCloseButton>
         <div key={viewCategory.id} className="py-6 px-5">
           <h4 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px] w-full">
-            {viewCategory.title}
+            <Translate value={viewCategory.title} />
           </h4>
           <div className="grid grid-cols-2 gap-4">
             {viewCategory.technologies
@@ -100,7 +107,9 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
                   aria-label={technology.title}
                   className="cursor-default w-full bg-gray-light px-6 py-3 rounded-3xl sm:rounded-[2.45rem] text-black"
                 >
-                  <span className="font-normal md:text-lg text-sm">{technology.title}</span>
+                  <span className="font-normal md:text-lg text-sm">
+                    <Translate value={technology.title} />
+                  </span>
                 </div>
               ))}
           </div>
