@@ -63,7 +63,7 @@ const WebDevelopment = () => (
     <section className="container">
       <ServicesHeader
         title="Web Development Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we specialize in creating powerful and effective web solutions that help your business stand out online by creating user-friendly websites.`}
+        description="At Justix, we specialize in creating powerful and effective web solutions that help your business stand out online by creating user-friendly websites."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

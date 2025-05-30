@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { Translate } from "@/components/translate";
 
 interface SolutionsComponentProps {
   title: string;
@@ -14,7 +15,7 @@ const SolutionsComponent = ({ title, steps, color = "black" }: SolutionsComponen
         color === "black" ? "text-black" : "text-white"
       )}
     >
-      {title}
+      <Translate value={title} />
     </h2>
     <div className="grid grid-cols-1 lg:gap-14 gap-6 md:gap-y-16 text-base leading-7 sm:grid-cols-2 lg:grid-cols-3">
       {steps.map((item) => (
@@ -25,7 +26,7 @@ const SolutionsComponent = ({ title, steps, color = "black" }: SolutionsComponen
               color === "black" ? "text-black" : "text-white"
             )}
           >
-            {item.title}
+            <Translate value={item.title} />
           </h3>
           <p
             className={clsx(
@@ -33,7 +34,7 @@ const SolutionsComponent = ({ title, steps, color = "black" }: SolutionsComponen
               color === "black" ? "text-black" : "text-white"
             )}
           >
-            {item.description}
+            <Translate value={item.description} />
           </p>
         </div>
       ))}

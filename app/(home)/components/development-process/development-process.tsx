@@ -10,6 +10,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Translate } from "@/components/translate";
 
 const DevelopmentProcess = () => {
   const [visibleProcess, setVisibleProcess] = useState(processesDatabase[0].id);
@@ -38,15 +39,19 @@ const DevelopmentProcess = () => {
     <section className="bg-black pt-16 md:pt-24 lg:pt-[10.5rem] pb-16 md:pb-24 lg:pb-36">
       <div className="container">
         <h2 className="text-white font-extrabold sentence-first-letter text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[55px] 2xl:!leading-[65px] mb-6">
-          <span>Our product</span>
+          <span>
+            <Translate value="Our product" />
+          </span>
           <br />
-          <span className="text-primary">development process</span>
+          <span className="text-primary">
+            <Translate value="development process" />
+          </span>
         </h2>
         <Link
           href="/about/process"
           className="text-white hover:text-primary text-md lg:text-xl inline-flex items-center gap-4 group transition-all duration-200 ease-in-out mb-20"
         >
-          View More <RiArrowRightLongLine />
+          <Translate value="View More" /> <RiArrowRightLongLine />
         </Link>
         <div className="relative lg:flex hidden">
           <div className="gap-36 w-2/4">
@@ -56,14 +61,14 @@ const DevelopmentProcess = () => {
                   0{index + 1}/0{processesDatabase.length}
                 </p>
                 <div className="font-bold text-theme text-4xl xl:text-5xl 2xl:text-6xl tracking-[-2px] lg:-translate-y-[7px] xl:!leading-[60px] 2xl:!leading-[75px] text-primary">
-                  {process.title}
+                  <Translate value={process.title} />
                 </div>
                 <p
                   className={clsx(
                     "mt-7 mb-36 leading-9 text-white font-normal text-sm lg:text-md xl:text-lg 2xl:text-xl"
                   )}
                 >
-                  {process.shortDescription}
+                  <Translate value={process.shortDescription} />
                 </p>
               </div>
             ))}

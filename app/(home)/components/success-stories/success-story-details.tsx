@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Translate } from "@/components/translate";
 
 interface SuccessStoryDetailsProps {
   data: {
@@ -17,9 +18,11 @@ const SuccessStoryDetails = ({ data }: SuccessStoryDetailsProps) => (
     </div>
     <div>
       <h3 className="lg:mb-[20px] mb-3 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
-        {data?.title}
+        <Translate value={data?.title} />
       </h3>
-      <p>{data?.large_description}</p>
+      <p>
+        <Translate value={data?.large_description} />
+      </p>
     </div>
   </div>
 );

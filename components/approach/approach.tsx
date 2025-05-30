@@ -1,5 +1,6 @@
 import { ApproachProps } from "@/types/approach";
 import clsx from "clsx";
+import { Translate } from "@/components/translate";
 
 interface ApproachComponentProps {
   title: string;
@@ -24,7 +25,7 @@ const ApproachComponent = ({
               color === "white" ? "text-white" : "text-black"
             )}
           >
-            {title}
+            <Translate value={title} />
           </h2>
           {!!description && (
             <p
@@ -33,7 +34,7 @@ const ApproachComponent = ({
                 color === "white" ? "text-white" : "text-black"
               )}
             >
-              {description}
+              <Translate value={description} />
             </p>
           )}
         </div>
@@ -62,7 +63,7 @@ const ApproachComponent = ({
                   color === "black" ? "text-black" : "text-white"
                 )}
               >
-                {item.title}
+                <Translate value={item.title} />
               </h3>
               <p
                 className={clsx(
@@ -70,7 +71,7 @@ const ApproachComponent = ({
                   color === "black" ? "text-black" : "text-white"
                 )}
               >
-                {item.description}
+                <Translate value={item.description} />
               </p>
             </div>
           ))}

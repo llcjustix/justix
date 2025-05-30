@@ -3,6 +3,7 @@
 import useSettingsStore from "@/store/settings";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import Button from "@/components/button";
+import { Translate } from "@/components/translate";
 
 export const ChatButton = () => {
   const { toggleChat } = useSettingsStore();
@@ -15,7 +16,7 @@ export const ChatButton = () => {
         onClick={toggleChat}
       >
         <RiArrowRightUpLine size={36} />
-        Let's Discuss Your Idea
+        <Translate value="Let's Discuss Your Idea" />
       </button>
       <Button
         color="primary"
@@ -25,7 +26,7 @@ export const ChatButton = () => {
         size="large"
         className="lg:hidden"
       >
-        Let's Discuss
+        <Translate value="Let's Discuss" />
       </Button>
     </>
   );

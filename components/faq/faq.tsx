@@ -4,6 +4,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react
 import clsx from "clsx";
 import { RiAddFill } from "@remixicon/react";
 import { FAQProps } from "@/types/faq";
+import { Translate } from "@/components/translate";
 
 interface FAQComponentProps {
   title: string;
@@ -19,7 +20,7 @@ const FAQComponent = ({ title, questions = [], color = "black" }: FAQComponentPr
         color === "black" ? "text-black" : "text-white"
       )}
     >
-      {title}
+      <Translate value={title} />
     </h2>
     <div className="flex flex-col gap-6">
       {questions.map((item) => (
@@ -34,7 +35,7 @@ const FAQComponent = ({ title, questions = [], color = "black" }: FAQComponentPr
                     open ? "text-primary" : color === "black" ? "text-black" : "text-white"
                   )}
                 >
-                  {item.question}
+                  <Translate value={item.question} />
                 </h3>
                 <span
                   className={clsx(
@@ -61,7 +62,7 @@ const FAQComponent = ({ title, questions = [], color = "black" }: FAQComponentPr
                     color === "black" ? "text-black" : "text-white"
                   )}
                 >
-                  {item.answer}
+                  <Translate value={item.answer} />
                 </p>
               </DisclosurePanel>
             </>

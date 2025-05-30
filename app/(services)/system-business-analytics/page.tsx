@@ -63,7 +63,7 @@ const SystemBusinessAnalytics = () => (
     <section className="container">
       <ServicesHeader
         title="System/Business Analytics Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we turn data into actionable insights, helping you optimize operations, enhance decision-making, and drive business growth with advanced analytics.`}
+        description="At Justix, we turn data into actionable insights, helping you optimize operations, enhance decision-making, and drive business growth with advanced analytics."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

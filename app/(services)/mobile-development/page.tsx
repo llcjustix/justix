@@ -91,7 +91,7 @@ const MobileDevelopment = () => (
     </section>
     <section className="container">
       <ExperienceComponent
-        title={`Why ${process.env.NEXT_PUBLIC_WEBSITE_NAME} for mobile application development?`}
+        title="Why Justix for mobile application development?"
         description="Gain the competitive edge required to meet changing global technology trends and overcome challenges while consistently exceeding customer expectations with our custom mobile app solutions."
         experience={mobileDevelopmentDatabase.experience}
         technologies={mobileDevelopmentDatabase.experienceTechnologies}

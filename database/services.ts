@@ -1038,7 +1038,8 @@ export const mobileDevelopmentDatabase = {
     {
       id: 3,
       question: "How much does mobile app development cost?",
-      answer: `Partnering with a well-established mobile app development company can cost around $100K or more. This amount may vary depending on factors such as the technology used, the size of the team involved, and the project deadlines. For the best quote, visit our website or email us at ${process.env.NEXT_PUBLIC_EMAIL}.`,
+      answer:
+        "Partnering with a well-established mobile app development company can cost around $100K or more. This amount may vary depending on factors such as the technology used, the size of the team involved, and the project deadlines. For the best quote, visit our website or email us at info@justix.uz.", // ${process.env.NEXT_PUBLIC_EMAIL}
     },
     {
       id: 4,

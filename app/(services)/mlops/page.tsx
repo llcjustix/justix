@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Streamline your machine learning operations with our ML Ops services. We provide end-to-end solutions for deploying, monitoring, and maintaining ML models in production environments.",
     images: [
       {
-        url: "/img/services/mlops.jpg", // You'll need to create this image
+        url: "/img/services/mlops.jpg",
         width: 1200,
         height: 630,
         alt: "ML Ops Services",
@@ -63,7 +63,7 @@ const MLOps = () => (
     <section className="container">
       <ServicesHeader
         title="ML Ops Services"
-        description={`At ${process.env.NEXT_PUBLIC_WEBSITE_NAME}, we specialize in ML Ops solutions that streamline and automate machine learning workflows, ensuring scalable, reliable, and efficient deployment, monitoring, and management of your models in production.`}
+        description="At Justix, we specialize in ML Ops solutions that streamline and automate machine learning workflows, ensuring scalable, reliable, and efficient deployment, monitoring, and management of your models in production."
       />
     </section>
     <section className="w-screen relative lg:mt-40 mt-8">

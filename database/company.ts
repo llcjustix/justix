@@ -18,7 +18,8 @@ export const companyProcessFlow = [
   {
     id: 1,
     title: "Ip Protection",
-    description: `${process.env.NEXT_PUBLIC_WEBSITE_NAME} prioritizes intellectual property protection, commencing every project with an NDA to safeguard crucial client information.`,
+    description:
+      "Justix prioritizes intellectual property protection, commencing every project with an NDA to safeguard crucial client information.",
     img: "/img/about/ip-protection.webp",
   },
   {
@@ -31,7 +32,8 @@ export const companyProcessFlow = [
   {
     id: 3,
     title: "Rapid Strategy Workshop",
-    description: `${process.env.NEXT_PUBLIC_WEBSITE_NAME} identifies the optimal development approach, evaluates risks, and prepares a detailed (LOE) level of effort document.`,
+    description:
+      "Justix identifies the optimal development approach, evaluates risks, and prepares a detailed (LOE) level of effort document.",
     img: "/img/about/strategy.webp",
   },
   {
@@ -58,7 +60,8 @@ export const companyProcessFlow = [
   {
     id: 7,
     title: "Support & Maintenance",
-    description: `After deployment, ${process.env.NEXT_PUBLIC_WEBSITE_NAME} provides comprehensive maintenance and responsive support to guarantee lasting project success.`,
+    description:
+      "After deployment, Justix provides comprehensive maintenance and responsive support to guarantee lasting project success.",
     img: "/img/about/process-support.webp",
   },
   {
