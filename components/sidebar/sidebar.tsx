@@ -7,8 +7,10 @@ import { servicesDatabase } from "@/database/services";
 import { solutionsDatabase } from "@/database/solutions";
 import { companyDatabase } from "@/database/company";
 import { Translate } from "@/components/translate";
+import { useTranslation } from "react-i18next";
 
 const Sidebar = () => {
+  const { t } = useTranslation();
   const { toggleSidebar } = useSettingsStore();
   const renderView = (link: string) => {
     switch (link) {
@@ -16,7 +18,7 @@ const Sidebar = () => {
         return (
           <Disclosure as="div" key={link}>
             <DisclosureButton className="group capitalize text-2xl font-medium text-white hover:text-primary focus:outline-none transition duration-200 w-full flex items-center justify-between">
-              {link}
+              {t(link)}
               <RiArrowDownSLine className="group-data-[open]:rotate-180 transition-all duration-200 ease-in-out" />
             </DisclosureButton>
             <DisclosurePanel className="text-white mt-3 flex flex-col gap-4 ml-1.5">
@@ -31,7 +33,7 @@ const Sidebar = () => {
                         onClick={toggleSidebar}
                         className="text-sm font-normal hover:text-primary transition-colors duration-300"
                       >
-                        {child.title}
+                        {t(child.title)}
                       </Link>
                     ))}
                   </div>

@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "digital transformation",
     "technology consulting",
     "justix",
+    "AI",
     process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   ],
   authors: [{ name: process.env.NEXT_PUBLIC_WEBSITE_NAME }],
