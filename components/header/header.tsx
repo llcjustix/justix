@@ -132,7 +132,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="flex items-center gap-2">
-            <div className="sm:flex hidden items-center gap-2">
+            <div className="flex items-center gap-2">
               <Popover className="relative">
                 {({ close }) => (
                   <>
@@ -173,13 +173,17 @@ const Header = () => {
                   </>
                 )}
               </Popover>
-              <IconButton onClick={togglePhone} className="text-white" aria-label="Phone">
+              <IconButton
+                onClick={togglePhone}
+                className="sm:block hidden text-white"
+                aria-label="Phone"
+              >
                 <RiCustomerService2Fill size={20} />
               </IconButton>
               <Link
                 href={`tel:${process.env.NEXT_PUBLIC_PHONE}`}
                 className={clsx(
-                  "capitalize text-sm font-semibold hover:text-gray items-center gap-[2px] cursor-pointer transition-all duration-200 h-5 overflow-hidden text-center",
+                  "sm:block hidden capitalize text-sm font-semibold hover:text-gray items-center gap-[2px] cursor-pointer transition-all duration-200 h-5 overflow-hidden text-center",
                   showPhone ? "flex w-[124px] min-w-max" : "w-0 invisible"
                 )}
               >
