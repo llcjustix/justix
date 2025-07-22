@@ -94,9 +94,8 @@ const BigDataDevelopmentService = () => (
     </section>
     <section className="container">
       <ExperienceComponent
-        title="Why choose Justix for AI development?"
-        description="Our experience and skills in AI allow us to create custom solutions that meet your
-          business needs."
+        title="Why choose Justix for big data?"
+        description="Our experience and skills in big data allow us to create custom solutions that turn your data into actionable insights and drive business growth."
         experience={bigDataDatabase.experience}
         technologies={bigDataDatabase.experienceTechnologies}
       />
