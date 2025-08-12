@@ -55,9 +55,9 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
         <div className="pt-12 w-full flex-1 md:ps-12 lg:pb-[18px] flex flex-col gap-6">
           {currentType.categories.map((category) => (
             <div key={category.id}>
-              <h4 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
+              <h3 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px]">
                 <Translate value={category.title} />
-              </h4>
+              </h3>
               <div className="flex flex-wrap gap-2 lg:gap-4">
                 {category.technologies.slice(0, 6).map((technology, index) => (
                   <button
@@ -95,9 +95,9 @@ const Technologies = ({ title, description }: TechnologiesProps) => {
       </div>
       <Modal isOpen={isOpen} onClose={handleClose} withCloseButton>
         <div key={viewCategory.id} className="py-6 px-5">
-          <h4 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px] w-full">
+          <h3 className="mb-4 font-bold text-xl xl:text-2xl 2xl:text-3xl tracking-[0px] w-full">
             <Translate value={viewCategory.title} />
-          </h4>
+          </h3>
           <div className="grid grid-cols-2 gap-4">
             {viewCategory.technologies
               .slice(5, viewCategory.technologies.length)

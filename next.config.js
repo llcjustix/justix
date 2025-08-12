@@ -6,6 +6,19 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const nextConfig = {
   /* config options here */
+  productionBrowserSourceMaps: true,
+  compiler: {
+    // Remove all console logs
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "i.ibb.co",
+      },
+    ],
+  },
 };
 
 module.exports = withBundleAnalyzer(nextConfig);

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import "./globals.css";
 import React from "react";
 import clsx from "clsx";
 import { cookies } from "next/headers";
 import NextTopLoader from "nextjs-toploader";
+import "@/public/globals.css";
 import GlobalProvider from "./global-provider";
+import { StyleLoader } from "./style-loader";
 
 const manrope = Manrope({
   subsets: ["latin", "cyrillic"],
@@ -14,7 +15,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_WEBSITE_URL as string),
   title: {
-    template: `%s | ${process.env.NEXT_PUBLIC_WEBSITE_NAME}`,
+    template: `%s | ${process.env.NEXT_PUBLIC_WEBSITE_NAME || "Justix"}`,
     default: process.env.NEXT_PUBLIC_WEBSITE_NAME as string,
   },
   description: "Experts in IT services for business",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   creator: process.env.NEXT_PUBLIC_WEBSITE_NAME,
   publisher: process.env.NEXT_PUBLIC_WEBSITE_NAME,
   robots: "index, follow",
-  icons: process.env.NEXT_PUBLIC_FAVICON,
+  icons: { icon: "/favicon.png" },
   openGraph: {
     type: "website",
     url: process.env.NEXT_PUBLIC_WEBSITE_URL,
@@ -83,6 +84,10 @@ export default async ({ children }: { children: React.ReactNode }) => {
     (await cookies()).get("lang")?.value || process.env.NEXT_PUBLIC_DEFAULT_LANG;
   return (
     <html lang={selectedLanguage}>
+      <head>
+        {/* Preload the non-critical CSS */}
+        <StyleLoader />
+      </head>
       <body className={clsx(manrope.className)}>
         <NextTopLoader color="#2ed06e" showSpinner={false} />
         <GlobalProvider>{children}</GlobalProvider>
